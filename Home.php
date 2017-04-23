@@ -31,6 +31,13 @@ if(isset ($_SESSION['sv07cdtp'])) {
 <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span> &nbsp;Nuevo Tramite</button>
 
 </form>
+
+
+<form role="form" method="post" action="Cliente.php"> 
+
+<button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span> &nbsp;Holis</button>
+
+</form>
 <br>
 <div class="table-responsive">   
     <div style="width: 98%" class="well well-sm text-left">
