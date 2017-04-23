@@ -13,8 +13,6 @@ if(isset ($_SESSION['sv07cdtp'])) {
 <link href="assets/datatables.min.css" rel="stylesheet" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script type="text/javascript" src="public\JS\jquery-3.1.0.min.js"></script>
-<script type="text/javascript" src="assets/jquery-1.11.3-jquery.min.js"></script>
-<script type="text/javascript" src="public/JS/validaciones.js"></script>
 </head>
 <body>
 <?php       if ($_SESSION['sv05codu'] == 1) {
@@ -287,7 +285,8 @@ if(isset ($_SESSION['sv07cdtp'])) {
 
     
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="public\bootstrap\bootstrap\js\bootstrap.js"></script>
+<script type="text/javascript" src="assets/jquery-1.11.3-jquery.min.js"></script>
+<script type="text/javascript" src="public/bootstrap/bootstrap/js/bootstrap.js"></script>
 <script type="text/javascript" src="assets/datatables.min.js"></script>
 
 
