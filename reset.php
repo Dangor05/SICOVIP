@@ -19,6 +19,13 @@
         var _mnt = $(_trEdit).find('td:eq(10)').text();
         var _top = $(_trEdit).find('td:eq(11)').text();        
         
+
+
+
+
+
+
+        
         $('input[name="sv09npln"]').val(_pln);
         $('input[name="sv09nfol"]').val(_fol);
         $('input[name="sv09npre"]').val(_pre);
