@@ -16,7 +16,7 @@ if (!empty($_FILES['pln']) && !empty($_FILES['car']) && !empty($_FILES['dib']) &
 		$crta=$_FILES['car'];
 		$dib=$_FILES['dib']['name'];
 		$aut=$_FILES['dib'];
-		$path='C:\xampp\htdocs\SICOVIP\archivos/'.$cedpr.'/';
+		$path ="../archivos/".$cedpr."\ ";
 
 		$stm="INSERT INTO sv04reqtos(sv04nfin,sv04apln,sv04aact,sv04acta)VALUES ('$nfin','$pln','$dib','$car')";
 		$stmt="INSERT INTO sv08trmte(sv08conse,sv08fchs,sv08fumt,sv01cedc,sv03cedp,sv04nfin,sv02code)VALUES ('$conse',NOW(),NOW(),'$cedcli','$cedpr','$nfin','7')";

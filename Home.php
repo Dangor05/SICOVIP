@@ -31,18 +31,13 @@ if(isset ($_SESSION['sv07cdtp'])) {
 </form>
 
 
-<form role="form" method="post" action="Cliente.php"> 
-
-<button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span> &nbsp;Holis</button>
-
-</form>
 <br>
 <div class="table-responsive">   
     <div style="width: 98%" class="well well-sm text-left">
     
    <div class="content-loader">
         
-        <table align="CENTER" cellspacing="0" style="width: 90%" id="example" class="table table-striped table-hover">
+        <table align="CENTER" cellspacing="0" style="width: 80%" id="example" class="table table-striped table-hover">
         <thead>
         <tr>
           <th>Propietario</th>
@@ -64,7 +59,7 @@ if(isset ($_SESSION['sv07cdtp'])) {
 			<tr>
       <td style="width: 5%"><?php echo $elementos["sv03cedp"]; ?></td>
       <td style="width: 5%"><?php echo $elementos["sv08conse"]; ?></td>
-      <td style="width: 5%"><?php echo $elementos["sv04nfin"]; ?></td>
+      <td style="width: 8%"><?php echo $elementos["sv04nfin"]; ?></td>
       <td style="width: 5%"><?php echo $elementos["sv08fchs"]; ?></td>
       
       
@@ -74,7 +69,7 @@ if(isset ($_SESSION['sv07cdtp'])) {
       <td style="width: 10%"><?php if($elementos["sv02code"] == 7){echo 'En Proceso';}?></td>
       <!--variable de sesion-->
       
-      <td align="center" style="width: 5%">
+      <td align="center" style="width: 3%">
       <a href="Visado.php?conse=<?php echo $elementos["sv08conse"];?>" class="btn btn-info"><span class="glyphicon glyphicon-edit"></span> &nbsp;Procesar</a>
       <td align="center"><button class="btn btn-sm btn-warning" id="btnModi" type="button" onclick="seleccionarTabla()" data-toggle="modal" data-target="#modal-4"> <span class="glyphicon glyphicon-trash-align-center"></span>Editar</button></td>
 			</tr>
@@ -220,8 +215,8 @@ if(isset ($_SESSION['sv07cdtp'])) {
               <select name="opcion" class="form-control" id="opci" name="opcion" required>
               <option value="1">Todos</option>
               <option value="2">Plano</option>
-              <option value="4">Cartas de Agua</option>
-              <option value="3">AutoCad</option>
+              <option value="3">Cartas de Agua</option>
+              <option value="4">AutoCad</option>
               </select>
              </div>
              </div>
@@ -251,13 +246,13 @@ if(isset ($_SESSION['sv07cdtp'])) {
            <div class="form-group row">
         <label for="example-text-input" class="col-xs-3 col-form-label">Carta de Agua:</label>
           <div class="col-xs-3">
-            <input  type="file" id="aact" name="aact" value="">
+            <input  type="file" id="acta" name="acta" value="">
           </div>
           </div>
           <div class="form-group row">
               <label for="example-text-input" class="col-xs-3 col-form-label">AUTOCAD:</label>
              <div class="col-xs-7">
-                <input  type="file" id="acta" name="acta" value="">
+                <input  type="file" id="aact" name="aact" value="">
              </div>
            </div>  
            <input type="hidden" name="cedp" value="">        

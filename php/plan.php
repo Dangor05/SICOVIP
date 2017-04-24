@@ -1,9 +1,10 @@
 <?php 
-//$root = 'C:\xampp\htdocs\pruebas\funciona16\Sicovip\archivos/'.$_GET['id'].'/';
-$root = 'C:\xampp\htdocs\SICOVIP\archivos/'.$_GET['id'].'/';
-$file =$_GET['plan'];
-$path = $root.$file;
-    header("Content-type: application/octet-stream");
+  if (isset($_GET['id']) && isset($_GET['plan'])) {
+  	$root="../archivos/".$_GET['id']."/";
+  	$file =$_GET['plan'];
+  	$path = $root.$file;
+  	header("Content-type: application/octet-stream");
     header("Content-Disposition: attachment; filename=$file");
     readfile($path);
+  	}
 ?>
