@@ -3,7 +3,7 @@ include ('conexion.php');
 if (!empty($_FILES) && !empty($_POST)) {
 	if(isset($_POST['conse']) && isset($_POST['nfin']) && isset($_POST['cedp']) && isset($_FILES['pln']) && isset($_FILES['aact']) && isset($_FILES['acta']) && isset($_POST['opcion']))
 	{
-		$path='C:\xampp\htdocs\SICOVIP\archivos/'.$_POST['cedp'].'\ ';
+		$path="C:\apache\htdocs\SICOVIP\archivos/".$_POST['cedp']."\ ";
 		$opcion=$_POST['opcion'];
 		$sv08conse=$_POST['conse'];
 		$sv03cedp=$_POST['cedp'];
@@ -48,10 +48,10 @@ if (!empty($_FILES) && !empty($_POST)) {
 					if($query!=null){
 						move_uploaded_file($sv04apl['tmp_name'],$path.$apl);
 						mysqli_close($con);
-						print "<script>alert(\"Exito!!.\");window.location='../Home.php';</script>";
+						//print "<script>alert(\"Exito!!.\");window.location='../Home.php';</script>";
 			}else{
 				mysqli_close($con);
-				print "<script>alert(\"A la Verga!!.\");window.location='../Home.php';</script>";
+				//print "<script>alert(\"A la Verga!!.\");window.location='../Home.php';</script>";
 
 			}
 					}
@@ -81,7 +81,7 @@ if (!empty($_FILES) && !empty($_POST)) {
 				print "<script>alert(\"Agregado exitosamente.\");window.location='../Home.php';</script>";
 			}else{
 				mysqli_close($con);
-				print "<script>alert(\"Verga.\");window.location='../Home.php';</script>";
+				//print "<script>alert(\"Verga.\");window.location='../Home.php';</script>";
 
 			}
 
