@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 	<title>Inicio de sesion</title>
 	<link rel="stylesheet" type="text/css" href="public/bootstrap/css/bootstrap.min.css">
 	<script src="public/js/jquery-1.11.3.min.js"></script>

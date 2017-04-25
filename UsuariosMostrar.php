@@ -6,6 +6,7 @@ if(isset ($_SESSION['sv07cdtp'])) {
 <html lang="es">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 <TITLE>Topografos</TITLE>
 <link href="public\bootstrap\bootstrap\css\bootstrap.min.css" rel="stylesheet" media="screen">
 <link href="public\bootstrap\bootstrap\css\bootstrap-theme.min.css" rel="stylesheet" media="screen">
@@ -167,22 +168,22 @@ return ((key >= 48 && key <= 57) || (key==8))
              <div class="form-group row">
             <label for="example-text-input" class="col-xs-2 col-form-label">Contraseña:</label>
              <div class="col-xs-7">
-              <input class="form-control" type="password" id="sv07pass" name="svpass" required>
+              <input class="form-control" type="password" minlength="8" maxlength="16" id="svpass" name="svpass" required>
               </div>
         </div> 
          <div class="form-group row">
             <label for="example-text-input" class="col-xs-2 col-form-label">Repetir contraseña:</label>
              <div class="col-xs-7">
-              <input class="form-control" type="password" id="pass2" name="pass2" required>
+              <input class="form-control" type="password" minlength="8" maxlength="16" id="pass2" name="pass2" required>
               </div>
         </div> 
           <div class="form-group row">
               <label for="example-text-input" class="col-xs-2 col-form-label">Tipo:</label>
              <div class="col-xs-7">
               <select name="svcodu" class="form-control" id="impu" name="svcodu" required>
-                 <option value="1">Administrador</option>
                  <option value="2">Usuario</option>
-                 </select>
+                 <option value="1">Administrador</option>
+                </select>
              </div>
              </div>
     <div class="form-group row"><br>
@@ -275,8 +276,8 @@ return ((key >= 48 && key <= 57) || (key==8))
               <label for="example-text-input" class="col-xs-2 col-form-label">Tipo:</label>
              <div class="col-xs-7">
               <select name="sv05codu" class="form-control" id="impu" name="sv05codu" required>
-                 <option value="1">Administrador</option>
                  <option value="2">Usuario</option>
+                 <option value="1">Administrador</option>
                  </select>
              </div>
              </div>
@@ -328,7 +329,7 @@ return ((key >= 48 && key <= 57) || (key==8))
            
             </div>
                 <a href="" class="btn btn-danger" data-dismiss="modal">Cancelar</a>
-              <button id="enviar" name="enviar" type="submit" class="btn btn-success">Eliminar</button>
+              <button id="enviar" name="enviar" type="submit" class="btn btn-success">Desactivar</button>
       </div>
       </form>
       </div>
