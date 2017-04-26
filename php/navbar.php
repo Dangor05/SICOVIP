@@ -22,10 +22,10 @@
     <ul class="nav navbar-nav">
     <li class="dropdown" class="active"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Visados<span class="caret"></span></a>
     <ul class="dropdown-menu">
-      <li><a href="./VisadoMostrar.php">Visado</a></li>
-      <li><a href="./verlista.php">Reinspeccion</a></li>
+      <li><a href="./VisadoMostrar.php"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;Visado</a></li>
+      <li><a href="./verlista.php"> <span class="glyphicon  glyphicon-copy"></span>&nbsp;Reinspeccion</a></li>
     </ul>
-      
+     
     </ul>
     <ul class="nav navbar-nav">
     <li class="dropdown" class="active"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Tramite<span class="caret"></span> </a> 
@@ -47,16 +47,16 @@
 <ul class="dropdown-menu">
 <li><a href="./verReportVis.php"><span class="glyphicon glyphicon-calendar"></span> Fecha Visado</a></li>
 <li><a href="./verReportFS.php"><span class="glyphicon glyphicon-calendar"></span> Fecha Solicitud</a></li>
-<li><a href="./verReportCIT.php"><span class="glyphicons glyphicons-credit-card"></span>Codigo IT</a></li>
+<li><a href="./verReportCIT.php"><span class="glyphicon glyphicons-nameplate-alt"></span> Carnet IT</a></li>
 </ul>
 </ul>
 <ul class="nav navbar-nav navbar-right">
 <li class="dropdown" class="active"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="glyphicon glyphicon-cog" style="color:skyblue"></i><span class="caret"></span></a> 
 <ul class="dropdown-menu">
-<li><a href="./config.php">Perfil</a></li>
+<li><a href="./config.php"> <span class="glyphicon glyphicon-user"></span> &nbsp;Perfil</a></li>
 <!--<li><a href="./vert.php">Topografos</a></li>-->
 <li><a href="./UsuariosMostrar.php">Topografos</a></li>
-<li ><a href="php/logout.php" class="btn btn-defult"> Cerrar sesion</a></li>
+<li ><a href="php/logout.php" class="btn btn-defult"><span class="glyphicon glyphicon-log-out"></span> &nbsp;Cerrar sesion</a></li>
 </ul>
 </ul> 
  </div><!-- /.navbar-collapse -->

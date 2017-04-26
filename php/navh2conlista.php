@@ -51,9 +51,10 @@
 <li class="dropdown" class="active"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="glyphicon glyphicon-cog"></i><span class="caret"></span></a> 
 <ul class="dropdown-menu">
 <li><a href="./config.php">Perfil</a></li>
-<li> <a href="php/logout.php" class="btn btn-defult"> Cerrar sesion</a></li>
+<li> <a href="php/logout.php" class="btn btn-defult"><span class="glyphicon glyphicon-log-out"></span> Cerrar sesion</a></li>
 </ul>
-</ul> 
+</ul> glyphicon glyphicon-log-out
+
 
 <form class="navbar-form navbar-left" role="search" action="./buscarLista.php">
       <div class="form-group">
