@@ -8,7 +8,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="./inicio.php"><b>SICOVIP</b></a>
+    <a class="navbar-brand" href="./inicio.php"><span class="glyphicon glyphicon-home"></span>&nbsp;<b>SICOVIP</b></a>
 	   <ul class="nav navbar-nav">
       
     </ul>
@@ -23,7 +23,7 @@
     <ul class="nav navbar-nav">
     <li class="dropdown" class="active"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Reportes<span class="caret"></span></a> 
 <ul class="dropdown-menu">
-<li><a href="./verReportClient.php">Codigo IT</a></li>
+<li><a href="./verReportClient.php"><span class="glyphicons glyphicons-credit-card"></span>Codigo IT</a></li>
 </ul>
 </ul>
   </div>
@@ -31,7 +31,7 @@
  <ul class="nav navbar-nav navbar-right">
 <li class="dropdown" class="active"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="glyphicon glyphicon-cog"></i><span class="caret"></span></a> 
 <ul class="dropdown-menu">
-<li><a href="./configurar.php">Actualizar datos</a></li>
+<li><a href="./configurar.php">Perfil</a></li>
 <li> <a href="php/logout.php" class="btn btn-defult"> Cerrar sesión</a></li>
 </ul>
 </ul> 
