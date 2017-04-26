@@ -18,7 +18,7 @@ $codu=$_POST['codu'];
 $code=$_POST['std'];
 $sv04apln=$_FILES['pln'];
 
-$dir ='C:\xampp\htdocs\SICOVIP\archivos/'.$cedp.'/';
+$dir ="../archivos/".$cedp."\ ";
 
 
 			$sql = "INSERT INTO sv09vsdo (sv09npln,sv09nfol,sv09npre,sv09mnt,sv09fvdp,sv09fumv,sv08conse,sv01cedc,sv03cedp,sv04nfin,sv02code,sv07cdtp,sv05codu) 

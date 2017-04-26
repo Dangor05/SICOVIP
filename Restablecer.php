@@ -15,7 +15,9 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta name="author" content="denker">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="author" content="DRA">
     <title> Restablecer contraseña </title>
 <link href="public\bootstrap\bootstrap\css\bootstrap.min.css" rel="stylesheet" media="screen">
 <link href="public\bootstrap\bootstrap\css\bootstrap-theme.min.css" rel="stylesheet" media="screen">

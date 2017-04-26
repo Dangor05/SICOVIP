@@ -7,7 +7,7 @@ if (!empty($_FILES) && !empty($_POST)) {
 	  		if (isset($_FILES['aact'])) {
 	  			if (isset($_FILES['acta'])) {
 	  				if (isset($_POST['opcion'])) {
-	  							$path='C:\xampp\htdocs\SICOVIP\archivos/'.$_POST['cedp'].'\ ';
+	  							$path="../archivos/".$_POST['cedp']."\ ";
 		$opcion=$_POST['opcion'];
 		//$sv08conse=$_POST['conse'];
 		$sv03cedp=$_POST['cedp'];

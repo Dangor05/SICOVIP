@@ -6,6 +6,7 @@ if(isset ($_SESSION['sv07cdtp'])) {
 <html lang="es">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 <TITLE>SICOVIP</TITLE>
 <link href="public\bootstrap\bootstrap\css\bootstrap.min.css" rel="stylesheet" media="screen">
 <link href="public\bootstrap\bootstrap\css\bootstrap-theme.min.css" rel="stylesheet" media="screen">
@@ -13,8 +14,6 @@ if(isset ($_SESSION['sv07cdtp'])) {
 <link href="assets/datatables.min.css" rel="stylesheet" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script type="text/javascript" src="public\JS\jquery-3.1.0.min.js"></script>
-<script type="text/javascript" src="assets/jquery-1.11.3-jquery.min.js"></script>
-<script type="text/javascript" src="public/JS/validaciones.js"></script>
 </head>
 <body>
 <?php       if ($_SESSION['sv05codu'] == 1) {
@@ -31,13 +30,15 @@ if(isset ($_SESSION['sv07cdtp'])) {
 <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span> &nbsp;Nuevo Tramite</button>
 
 </form>
+
+
 <br>
 <div class="table-responsive">   
     <div style="width: 98%" class="well well-sm text-left">
     
    <div class="content-loader">
         
-        <table align="CENTER" cellspacing="0" style="width: 90%" id="example" class="table table-striped table-hover">
+        <table align="CENTER" cellspacing="0" style="width: 80%" id="example" class="table table-striped table-hover">
         <thead>
         <tr>
           <th>Propietario</th>
@@ -59,7 +60,7 @@ if(isset ($_SESSION['sv07cdtp'])) {
 			<tr>
       <td style="width: 5%"><?php echo $elementos["sv03cedp"]; ?></td>
       <td style="width: 5%"><?php echo $elementos["sv08conse"]; ?></td>
-      <td style="width: 5%"><?php echo $elementos["sv04nfin"]; ?></td>
+      <td style="width: 8%"><?php echo $elementos["sv04nfin"]; ?></td>
       <td style="width: 5%"><?php echo $elementos["sv08fchs"]; ?></td>
       
       
@@ -69,7 +70,7 @@ if(isset ($_SESSION['sv07cdtp'])) {
       <td style="width: 10%"><?php if($elementos["sv02code"] == 7){echo 'En Proceso';}?></td>
       <!--variable de sesion-->
       
-      <td align="center" style="width: 5%">
+      <td align="center" style="width: 3%">
       <a href="Visado.php?conse=<?php echo $elementos["sv08conse"];?>" class="btn btn-info"><span class="glyphicon glyphicon-edit"></span> &nbsp;Procesar</a>
       <td align="center"><button class="btn btn-sm btn-warning" id="btnModi" type="button" onclick="seleccionarTabla()" data-toggle="modal" data-target="#modal-4"> <span class="glyphicon glyphicon-trash-align-center"></span>Editar</button></td>
 			</tr>
@@ -215,8 +216,8 @@ if(isset ($_SESSION['sv07cdtp'])) {
               <select name="opcion" class="form-control" id="opci" name="opcion" required>
               <option value="1">Todos</option>
               <option value="2">Plano</option>
-              <option value="4">Cartas de Agua</option>
-              <option value="3">AutoCad</option>
+              <option value="3">Cartas de Agua</option>
+              <option value="4">AutoCad</option>
               </select>
              </div>
              </div>
@@ -246,13 +247,13 @@ if(isset ($_SESSION['sv07cdtp'])) {
            <div class="form-group row">
         <label for="example-text-input" class="col-xs-3 col-form-label">Carta de Agua:</label>
           <div class="col-xs-3">
-            <input  type="file" id="aact" name="aact" value="">
+            <input  type="file" id="acta" name="acta" value="">
           </div>
           </div>
           <div class="form-group row">
               <label for="example-text-input" class="col-xs-3 col-form-label">AUTOCAD:</label>
              <div class="col-xs-7">
-                <input  type="file" id="acta" name="acta" value="">
+                <input  type="file" id="aact" name="aact" value="">
              </div>
            </div>  
            <input type="hidden" name="cedp" value="">        
@@ -280,7 +281,8 @@ if(isset ($_SESSION['sv07cdtp'])) {
 
     
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="public\bootstrap\bootstrap\js\bootstrap.js"></script>
+<script type="text/javascript" src="assets/jquery-1.11.3-jquery.min.js"></script>
+<script type="text/javascript" src="public/bootstrap/bootstrap/js/bootstrap.js"></script>
 <script type="text/javascript" src="assets/datatables.min.js"></script>
 
 

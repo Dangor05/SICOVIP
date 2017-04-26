@@ -17,7 +17,7 @@ if(!empty($_POST) && !empty($_FILES)){
 		$sv07cdtp=$_POST['sv07cdtp'];
 		$sv02std=$_POST['sv02std'];
 		$sv04plan=$_FILES['sv04plan'];
-		$path='C:\xampp\htdocs\SICOVIP\archivos/'.$sv03cedp.'/';
+		$path="../archivos/".$sv03cedp."\ ";
 
 		include("conexion.php");
 

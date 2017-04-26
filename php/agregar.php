@@ -18,8 +18,8 @@ $sv05codu=$_POST['svcodu'];
 $sv04apln=$_FILES['svplan'];
 $sv02std=$_POST['svstd'];
 
-//$dir ='C:\xampp\htdocs\pruebas\Sicovip\archivos/'.$sv03cedp.'/';
-$dir ='C:\apache\htdocs\SICOVIP\archivos/'.$sv03cedp.'/';
+
+$dir ="../archivos/".$sv03cedp."/";
 
 include "conexion.php";
 

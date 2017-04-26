@@ -2,7 +2,7 @@
 include "conexion.php";
 $id=$_GET["sv09npln"];
 $user_id=null;
-$sql1= "select *from sv09vsdo where sv09npln ='$id'";
+$sql1= "SELECT  sv09npln,sv09nfol,sv09npre,sv09mnt,sv09fvdp,sv09fumv,sv08conse,sv01cedc,sv03cedp,sv04nfin,sv02code,sv07cdtp,sv05codu FROM sv09vsdo where sv08conse ='$id'";
 $query = $con->query($sql1);
 $person = null;
 if($query->num_rows>0){

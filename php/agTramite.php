@@ -14,7 +14,7 @@ if(!empty($_POST))
 		$autC=$_FILES['dib'];
 		
 //$rut ='C:\xampp\htdocs\pruebas\Sicovip\archivos/'.$cedpr.'/';
-$dir ='C:\xampp\htdocs\SICOVIP\archivos/'.$cedpr.'/';
+$dir ="../archivos/".$cedpr."\ ";
 
 
 $sql1 = "INSERT INTO sv04reqtos(sv04nfin,sv04apln,sv04aact,sv04acta) 
@@ -36,7 +36,7 @@ VALUES ('$conse',NOW(),NOW(),'$cedcli','$cedpr','$nfin','7')";
 
 
 		header("Location:../Home.php");
-		//header("Location:../reset.php");
+		
 			} else{
 
 		mkdir($dir,7055);

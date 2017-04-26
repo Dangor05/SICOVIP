@@ -6,6 +6,7 @@ if(isset ($_SESSION['sv07cdtp'])) {
  <html lang="es">
  <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 <TITLE>Visados</TITLE>
 <link href="public\bootstrap\bootstrap\css\bootstrap.min.css" rel="stylesheet" media="screen">
 <link href="public\bootstrap\bootstrap\css\bootstrap-theme.min.css" rel="stylesheet" media="screen">
@@ -306,7 +307,7 @@ return ((key >= 48 && key <= 57) || (key==8))
 
           <label for="example-text-input" class="col-xs-2 col-form-label">Cliente:</label>
           <div class="col-xs-4">
-            <input class="form-control" type="text" id="sv01cedc" readonly="" name="sv01cedc" required="">
+            <input class="form-control" type="text" id="sv01cedc" readonly="" name="sv01cedc">
           </div>
 
 
@@ -455,11 +456,7 @@ $(document).ready(function() {
         var _mnt = $(_trEdit).find('td:eq(10)').text();
         var _top = $(_trEdit).find('td:eq(11)').text();
 
-       
-        
-        
-         
-        
+            
 
         
         
