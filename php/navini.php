@@ -32,7 +32,7 @@
 <li class="dropdown" class="active"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="glyphicon glyphicon-cog"></i><span class="caret"></span></a> 
 <ul class="dropdown-menu">
 <li><a href="./configurar.php">Perfil</a></li>
-<li> <a href="php/logout.php" class="btn btn-defult"> Cerrar sesión</a></li>
+<li> <a href="php/logout.php" class="btn btn-defult"> <span class="glyphicon glyphicon-log-out"></span> Cerrar sesión</a></li>
 </ul>
 </ul> 
       </div><!-- /.navbar-collapse -->
