@@ -20,8 +20,7 @@ if(isset ($_SESSION['sv07cdtp'])) {
       include('php/navbar.php');  
       }else if ($_SESSION['sv05codu'] == 2) {
         include('php/navh2.php');
-      }      include("php/getnewTramite.php");
-      if($query->num_rows>0): ?>
+      }    ?>  
       <div class="col-md-10 col-md-offset-1">
 	<div class="container-fluid">
 			<h2>Tramites en espera de inspección</h2>
@@ -30,8 +29,10 @@ if(isset ($_SESSION['sv07cdtp'])) {
 <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span> &nbsp;Nuevo Tramite</button>
 
 </form>
-
-
+<br>
+<?php
+include("php/getnewTramite.php");
+      if($query->num_rows>0): ?>
 <br>
 <div class="table-responsive">   
     <div style="width: 98%" class="well well-sm text-left">
@@ -82,7 +83,9 @@ if(isset ($_SESSION['sv07cdtp'])) {
  </div>
  </div> </div>
  <?php else:?>
+  <div class="col-md-5">
     <p class="alert alert-warning">No hay resultados</p>
+    </div>
 <?php endif;?>
 </div>
         <div class="container">
