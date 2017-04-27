@@ -1,6 +1,6 @@
 <?php 
-	require_once("dompdf/dompdf_config.inc.php");
-	$conexion = mysql_connect("localhost","root","dangor");
+  require_once("dompdf/dompdf_config.inc.php");
+  $conexion = mysql_connect("localhost","root","12345");
   mysql_select_db("sicovip",$conexion);
 
 $codigoHTML='
@@ -12,14 +12,12 @@ $codigoHTML='
 </head>
 <body>
 <div align="left">
-  <p><img  src="img/sc.jpg" width="100px" height="100px">
-  Municipalidad Santa Cruz<br>
-  Departamento Catastro y Topografia
-  </p>
- 
+  <img src="img/sc.jpg" width="100px" height="100px">
+   <p><h5>Municipalidad Santa Cruz</h5></p>
+  <p><h5>Departamento Catastro y Topografia</h5></p>
 </div>
 <div align="center">
-	
+  
     <h3>Reporte Carnet IT</h3>
 
   <br>
@@ -61,14 +59,10 @@ $codigoHTML.='
       } 
 $codigoHTML.='
     </table>
-	
+  
 </div>
 </body>
 </html>';
-
-
-echo "Recuperado" . date("Y.m.d") . "<br>";
-
 
 $codigoHTML=utf8_decode($codigoHTML);
 $dompdf=new DOMPDF();

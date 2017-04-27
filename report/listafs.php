@@ -1,6 +1,6 @@
 <?php 
   require_once("dompdf/dompdf_config.inc.php");
-  $conexion = mysql_connect("localhost","root","dangor");
+  $conexion = mysql_connect("localhost","root","12345");
   mysql_select_db("sicovip",$conexion);
 $s=$_GET['S'];
 $fs=$_GET['FS'];
@@ -13,8 +13,11 @@ $codigoHTML='
 </head>
 
 <body>
-<div align="center">
+<div align="left">
   <img src="img/sc.jpg" width="100px" height="100px">
+   <p><h5>Municipalidad Santa Cruz</h5></p>
+  <p><h5>Departamento Catastro y Topografia</h5></p>
+</div>
   <br>
   <br>
     <table align="center" width="98%" border="1">
