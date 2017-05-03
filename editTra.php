@@ -49,6 +49,7 @@ include ('php/obtreq.php');
     <label class="col-xs-3 col-form-label" for="sv08conse">Consecutivo</label>
     <div class="col-xs-7">
     <p><?php echo $cn;?></p>
+    <input type="hidden" id="conse" class="form-control" value="<?php echo $cn;?> " name="conse">
     <input type="hidden" id="ced" readonly="" class="form-control" value="<?php echo $person->sv03cedp;?> " name="cedp">
     </div>
      </div>

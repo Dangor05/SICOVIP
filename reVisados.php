@@ -56,7 +56,7 @@ return ((key >= 48 && key <= 57) || (key==8))
     <h2>Visado</h2>
 <?php if($person!=null):?>
 
-<form role="form" method="post" action="php/actualizar.php" enctype="multipart/form-data">
+<form role="form" method="post" action="php/actualizarvis.php" enctype="multipart/form-data">
   <div class="form-group">
   <label for="">Consecutivo</label>
    <input type="text" class="form-control" readonly="" onkeypress="return Letras(event)" value="<?php echo $person->sv08conse; ?>" name="sv08conse" required>

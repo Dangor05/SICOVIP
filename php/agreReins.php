@@ -9,7 +9,7 @@ if (!empty($_FILES) && !empty($_POST)) {
 	  				if (isset($_POST['opcion'])) {
 	  							$path="../archivos/".$_POST['cedp']."\ ";
 		$opcion=$_POST['opcion'];
-		//$sv08conse=$_POST['conse'];
+		$sv08conse=$_POST['conse'];
 		$sv03cedp=$_POST['cedp'];
 		$sv04nfin=$_POST['nfin'];
 		$sv04apl=$_FILES['pln'];
@@ -37,6 +37,7 @@ if (!empty($_FILES) && !empty($_POST)) {
 			if ($stm->error) {
 			print "<script>alert(\"Jodase!!\");window.location='../verlista.php';</script>";
 		}else{
+			include("estd.php");
 		move_uploaded_file($sv04apl['tmp_name'],$path.$apl);
 		move_uploaded_file($sv04acta['tmp_name'],$path.$acta);
 		move_uploaded_file($sv04aact['tmp_name'],$path.$aact);
@@ -46,10 +47,10 @@ if (!empty($_FILES) && !empty($_POST)) {
 		}
 		}
 		elseif ($opcion==2) {
-			echo $apl;
-					$sql ="UPDATE sv04reqtos SET sv04apln='$apl', sv04aact='$dib', sv04acta='$cart' WHERE sv04nfin='$sv04nfin'";
+				$sql ="UPDATE sv04reqtos SET sv04apln='$apl', sv04aact='$dib', sv04acta='$cart' WHERE sv04nfin='$sv04nfin'";
 					$query=$con->query($sql);
 					if($query!=null){
+						include("estd.php");
 						move_uploaded_file($sv04apl['tmp_name'],$path.$apl);
 						mysqli_close($con);
 						print "<script>alert(\"Exito!!.\");window.location='../verlista.php';</script>";
@@ -64,6 +65,7 @@ if (!empty($_FILES) && !empty($_POST)) {
 					$sql1 = "UPDATE sv04reqtos SET sv04apln='$pln', sv04aact='$aact', sv04acta='$cart' WHERE sv04nfin='$sv04nfin'";
 			$query1=$con->query($sql1);
 				if($query1!=null){
+					include("estd.php");
 		move_uploaded_file($sv04aact['tmp_name'],$path.$aact);
 		mysqli_close($con);
 
@@ -79,11 +81,12 @@ if (!empty($_FILES) && !empty($_POST)) {
 			$sql1 = "UPDATE sv04reqtos SET sv04apln='$pln', sv04aact='$dib', sv04acta='$acta' WHERE sv04nfin='$sv04nfin'";
 			$query1=$con->query($sql1);
 			if($query1!=null){
+				include("estd.php");
 				move_uploaded_file($sv04acta['tmp_name'],$path.$acta);
 				mysqli_close($con);
 
 				print "<script>alert(\"Agregado exitosamente.\");window.location='../verlista.php';</script>";
-				echo "yes";
+				
 			}else{
 				mysqli_close($con);
 				print "<script>alert(\"Verga.\");window.location='../verlista.php';</script>";

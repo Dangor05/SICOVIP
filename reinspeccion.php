@@ -42,6 +42,7 @@ if (isset($_SESSION['cd'])) {
     <label class="col-xs-1 col-form-label" for="sv08conse">Consecutivo</label>
     <div class="col-xs-2">
     <p><?php echo $cn;?></p>
+    <input type="hidden" id="conse" class="form-control" value="<?php echo $cn;?> " name="conse">
     <input type="hidden" id="ced" class="form-control" value="<?php echo $person->sv03cedp;?> " name="cedp">
     </div>
      </div>

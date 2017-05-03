@@ -7,7 +7,7 @@ $sql1= "SELECT c.sv03cedp, c.sv03nomp, c.sv03apdp, a.sv08conse, b.sv04nfin, DATE
    FROM sv08trmte a, sv04reqtos b, sv03ptario c         
          WHERE a.sv04nfin=b.sv04nfin
          AND a.sv03cedp=c.sv03cedp
-         AND a.sv02code='6' ORDER BY a.sv08fchs ASC";
+         AND a.sv02code='3' ORDER BY a.sv08fchs ASC";
 $query = $con->query($sql1);
 ?>
 <?php if($query->num_rows>0):?>
