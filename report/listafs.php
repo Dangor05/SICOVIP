@@ -24,7 +24,7 @@ $codigoHTML='
       <tr>
         <td bgcolor="#0099FF"><strong>Cedula</strong></td>
         <td bgcolor="#0099FF"><strong>Nombre Apellidos</strong></td>
-        <td bgcolor="#0099FF"><strong>N°Finca</strong></td>
+        <td bgcolor="#0099FF"><strong>Numero Finca</strong></td>
         <td bgcolor="#0099FF"><strong>Solicitud</strong></td>
         <td bgcolor="#0099FF"><strong>Estado</strong></td>
       </tr>';

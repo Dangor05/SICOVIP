@@ -162,13 +162,13 @@ return ((key >= 48 && key <= 57) || (key==8))
               <div class="form-group row">
             <label for="example-text-input" class="col-xs-3 col-form-label">Contraseña:</label>
              <div class="col-xs-7">
-                <input class="form-control" type="password" id="pass" name="svpass" required>
+                <input class="form-control" type="password" minlength="8" maxlength="16" id="pass" name="svpass" required>
              </div>
         </div>
               <div class="form-group row">
             <label for="example-text-input" class="col-xs-3 col-form-label">Repetir contraseña:</label>
              <div class="col-xs-7">
-                <input class="form-control" type="password" id="vpass" name="valpass" required>
+                <input class="form-control" type="password" minlength="8" maxlength="16" id="vpass" name="valpass" required>
              </div>
         </div>
     <div class="form-group row"><br>

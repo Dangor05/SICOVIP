@@ -1,9 +1,18 @@
 <?php 
 //$root = 'C:\xampp\htdocs\pruebas\funciona16\Sicovip\archivos/'.$_GET['id'].'/';
 $root="../archivos/".$_GET['id']."/";
-$file =basename($_GET['mnt']);
+//$file=$_GET['mnt'];
 $path = $root.$file;
 
+$file =basename($_GET['mnt']);
+
+header("Content-type: application/octet-stream");
+header("Content-Disposition: attachment; filename=$file");
+readfile($path);
+
+
+/*
+$file =basename($_GET['mnt']);
 if (is_file($path)) {
  $size = filesize($path);
  if (function_exists('mime_content_type')) {
@@ -26,9 +35,7 @@ if (is_file($path)) {
 } else {
  die("El archivo no existe.");
 }
+*/
 
-
-    /*    header("Content-type: application/octet-stream");
-    header("Content-Disposition: attachment; filename=$file");
-    readfile($path);*/
+    /* */
 ?>

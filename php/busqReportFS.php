@@ -55,5 +55,7 @@ $query = $con->query($sql1);
 </div>
 
 <?php else:?>
-	<p class="alert alert-warning">No hay resultados</p>
+	 <div class="col-md-5">
+    <p class="alert alert-warning">No hay resultados</p>
+    </div>
 <?php endif;?>

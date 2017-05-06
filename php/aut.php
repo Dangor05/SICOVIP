@@ -3,8 +3,13 @@
 $root="../archivos/".$_GET['id']."/";
 $file =basename($_GET['aut']);
 $path = $root.$file;
+
+    header("Content-type: application/octet-stream");
+    header("Content-Disposition: attachment; filename=$file");
+    readfile($path);
     
-    if (is_file($path)) {
+
+    /*if (is_file($path)) {
  $size = filesize($path);
  if (function_exists('mime_content_type')) {
  $type = mime_content_type($path);
@@ -25,10 +30,6 @@ $path = $root.$file;
  readfile($path);
 } else {
  die("El archivo no existe.");
-}
-
-    /*header("Content-type: application/octet-stream");
-    header("Content-Disposition: attachment; filename=$file");
-    readfile($path);*/
+}*/
 
 ?>

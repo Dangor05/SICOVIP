@@ -61,7 +61,8 @@ $query = $con->query($sql1);
 </div>
 <?php if ($std==6) {
 	fecha($fchv, $id, $dc);
-} ?>
+}
+?>
 
 <?php else:?>
 	<p class="alert alert-warning">No hay resultados</p>

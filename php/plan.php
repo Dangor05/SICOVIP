@@ -1,9 +1,19 @@
 <?php 
   if (isset($_GET['id']) && isset($_GET['plan'])) {
+  	//$root = 'C:\apache\htdocs\SICOVIP\archivos/'.$_GET['id'].'/';
+  	//$file=$_GET['plan'];
+
   	$root="../archivos/".$_GET['id']."/";
   	$file = basename($_GET['plan']);
   	$path = $root.$file;
- if (is_file($path)) {
+
+    header("Content-type: application/octet-stream");
+    header("Content-Disposition: attachment; filename=$file");
+    readfile($path);
+ 
+  	}
+
+ /*if (is_file($path)) {
  $size = filesize($path);
  if (function_exists('mime_content_type')) {
  $type = mime_content_type($path);
@@ -24,10 +34,7 @@
  readfile($path);
 } else {
  die("El archivo no existe.");
-}
-  	}
-
- 
+}*/
 /*  	header("Content-type: application/octet-stream");
     header("Content-Disposition: attachment; filename=$file");
     readfile($path);*/
