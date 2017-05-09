@@ -1,33 +1,20 @@
-
-<!DOCTYPE html>   
+<!DOCTYPE html>
 <html lang="en">
- 
 <head>
-
-    <meta charset="UTF-8">
-	<title>Menu</title>
-    
-
-
-</script>
-
-	<link href="public/bootstrap/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="public/bootstrap/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="public\bootstrap\bootstrap\css\bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="public\bootstrap\bootstrap\css\bootstrap-theme.min.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" href="public\css\stylesheet.css" type="text/css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href="assets/datatables.min.css" rel="stylesheet" type="text/css">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script type="text/javascript" src="public\JS\jquery-3.1.0.min.js"></script>
-   	<script src="assets/jquery-1.11.3-jquery.min.js"></script>
-
-	
 </head>
-
-
-<body>        
-     <header>
-     <?php include("php/cabeza.php"); ?>
-<div id="navbar">    
+</head>
+<body>
+<header>
+	<div id="navbar">    
   <nav class="navbar navbar-default navbar-static-top" role="navigation">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
@@ -123,37 +110,12 @@
             </div><!-- /.navbar-collapse -->
         </nav>
 </div>
-     </header>
+</header>
 
-     
 
- 
-   
-    <center>
-    <br>
-	<br>
-	<br>
 
-    <img   src="/Android/Menu/Imagenes\cerveza.jpg" width="300" height="300" />
-   
 
-    <br>
-    <br>
-    
-    
-    </center>
 	
-	<br>
-
-
-
-    <div class="container">
-      
-        <div class="alert alert-info">
-       
-        </div>
-
-    </div>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="assets/jquery-1.11.3-jquery.min.js"></script>
 <script type="text/javascript" src="public/bootstrap/bootstrap/js/bootstrap.js"></script>

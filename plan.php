@@ -2,13 +2,26 @@
   if (isset($_GET['id']) && isset($_GET['plan'])) {
   	$root="archivos/".$_GET['id']."/";
   	$file = $_GET['plan'];
-  	$path = $root.$file;
+  	$path = $root." ".$file;
+    //$path = "archivos/".$_GET['id']."/".$_GET['plan'];
 
-  	header("Content-type: application/pdf");
-    header("Content-Disposition: inline; filename=$file");
-    header("Content-Transfer-Encoding: binary");
-    header("Acept-Ranges: bytes");
-    readfile($path);
+    if (file_exists($path)) {
+      header('Content-Description: File Transfer');
+      header("Content-type: application/pdf");
+      header("Content-Disposition: inline; filename=$file");
+      header("Content-Transfer-Encoding: binary");
+      header("Acept-Ranges: bytes");
+      header('Expires: 0');
+      header('Cache-Control: must-revalidate');
+      header('Pragma: public');
+      readfile($path);
+    }else{
+     // print "<script>alert(\"Archivo no encontrado.\");window.location='Home.php';</script>";
+     // print "<script>console.log(".$path.")</script>";
+      print "<script>alert(\"$path\");</script>";
+    }
+
+  	
     
 
   	}

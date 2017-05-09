@@ -40,7 +40,7 @@ $query = $con->query($sql1);
 	<td style="width: 5%"><?php echo $r["sv03nomp"]; ?></td>
 	<td style="width: 5%"><?php echo $r["sv03apdp"]; ?></td>
 	<td style="width: 5%"><?php echo $r["sv04nfin"]; ?></td>
-	<td style="width: 5%"><a href="php/plan.php?id=<?php echo $r['sv03cedp']?>&plan=<?php echo $r['sv04apln']?>"><?php echo $r["sv04apln"];?></a></td>
+	<td style="width: 5%"><a href="plan.php?id=<?php echo $r['sv03cedp']?>&plan=<?php echo $r['sv04apln']?>"><?php echo $r["sv04apln"];?></a></td>
 	<td style="width: 6%"><a href="php/aut.php?id=<?php echo $r['sv03cedp']?>&aut=<?php echo $r['sv04aact']?>"><?php echo $r["sv04aact"];?></a></td>
 	<td style="width: 6%"><a href="php/cta.php?id=<?php echo $r['sv03cedp']?>&cta=<?php echo $r['sv04acta']?>"><?php echo $r["sv04acta"];?></a></td>
 		<td style="width: 6%"><?php if($r["sv02code"]==5){echo 'Aprobado';}elseif($r["sv02code"]==6){echo 'Rechazado';}elseif($r["sv02code"]==8){echo 'Oficio';}else{echo 'En proceso';} ?></td>

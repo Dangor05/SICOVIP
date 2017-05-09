@@ -2,11 +2,17 @@
 //$root = 'C:\xampp\htdocs\pruebas\funciona16\Sicovip\archivos/'.$_GET['id'].'/';
 $root="../archivos/".$_GET['id']."/";
 $file =basename($_GET['aut']);
-$path = $root.$file;
+$path = $root." ".$file;
 
-    header("Content-type: application/octet-stream");
-    header("Content-Disposition: attachment; filename=$file");
-    readfile($path);
+      header('Content-Description: File Transfer');
+      header("Content-type: application/pdf");
+      header("Content-Disposition: inline; filename=$file");
+      header("Content-Transfer-Encoding: binary");
+      header("Acept-Ranges: bytes");
+      header('Expires: 0');
+      header('Cache-Control: must-revalidate');
+      header('Pragma: public');
+      readfile($path);
     
 
     /*if (is_file($path)) {
