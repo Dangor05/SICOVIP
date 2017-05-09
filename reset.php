@@ -15,7 +15,8 @@
 <body>
 <header>
 	<div id="navbar">    
-  <nav class="navbar navbar-default navbar-static-top" role="navigation">
+  <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+  <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -23,91 +24,64 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-              <a class="navbar-brand" href="#">Brand</a>
+               <a class="navbar-brand" href="./Home.php"><b>SICOVIP</b></a>
             </div>
             
             <div class="collapse navbar-collapse" id="navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Active Link</a></li>
-                    <li><a href="#">Link</a></li>
+                    <li><a href="./ClienteMostrar.php">Cliente-Top</a></li>
+                    <li><a href="./PropietarioMostrar.php">Propietario</a></li>
                   
                     <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a> 
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Visados <b class="caret"></b></a> 
                       
                         <ul class="dropdown-menu">
-                          <li class="kopie"><a href="#">Dropdown</a></li>
-                            <li><a href="#">Dropdown Link 1</a></li>
-                            <li class="active"><a href="#">Dropdown Link 2</a></li>
-                            <li><a href="#">Dropdown Link 3</a></li>
-                          
-                            <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown Link 4</a>
-								<ul class="dropdown-menu">
-                                    <li class="kopie"><a href="#">Dropdown Link 4</a></li>
-									<li><a href="#">Dropdown Submenu Link 4.1</a></li>
-									<li><a href="#">Dropdown Submenu Link 4.2</a></li>
-									<li><a href="#">Dropdown Submenu Link 4.3</a></li>
-									<li><a href="#">Dropdown Submenu Link 4.4</a></li>
-                                                                      
-								</ul>
-							</li>
-                          
-                            <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown Link 5</a>
-								<ul class="dropdown-menu">
-                                    <li class="kopie"><a href="#">Dropdown Link 5</a></li>
-									<li><a href="#">Dropdown Submenu Link 5.1</a></li>
-									<li><a href="#">Dropdown Submenu Link 5.2</a></li>
-									<li><a href="#">Dropdown Submenu Link 5.3</a></li>
-									
-									<li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown Submenu Link 5.4</a>
-										<ul class="dropdown-menu">
-                                            <li class="kopie"><a href="#">Dropdown Submenu Link 5.4</a></li>
-											<li><a href="#">Dropdown Submenu Link 5.4.1</a></li>
-											<li><a href="#">Dropdown Submenu Link 5.4.2</a></li>
-											
-											
-										</ul>
-									</li>                           
-								</ul>
-							</li>                                   
+                          <li><a href="./VisadoMostrar.php">Visado</a></li>
+                            <li><a href="./verlista.php">Reinspeccion</a></li>   
                         </ul>
                     </li>
-                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown2 <b class="caret"></b></a>
+
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tramite<b class="caret"></b></a> 
+                      
                         <ul class="dropdown-menu">
-                            <li class="kopie"><a href="#">Dropdown2</a></li>
-                            <li><a href="#">Dropdown2 Link 1</a></li>
-                            <li><a href="#">Dropdown2 Link 2</a></li>
-                            <li><a href="#">Dropdown2 Link 3</a></li>
-                            
-                            <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown2 Link 4</a>
-								<ul class="dropdown-menu">
-                                    <li class="kopie"><a href="#">Dropdown2 Link 4</a></li>
-									<li><a href="#">Dropdown2 Submenu Link 4.1</a></li>
-									<li><a href="#">Dropdown2 Submenu Link 4.2</a></li>
-									<li><a href="#">Dropdown2 Submenu Link 4.3</a></li>
-									<li><a href="#">Dropdown2 Submenu Link 4.4</a></li>
-                                   
-								</ul>
-							</li>
-                            <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown2 Link 5</a>
-								<ul class="dropdown-menu">
-                                    <li class="kopie"><a href="#">Dropdown Link 5</a></li>
-									<li><a href="#">Dropdown2 Submenu Link 5.1</a></li>
-									<li><a href="#">Dropdown2 Submenu Link 5.2</a></li>
-									<li><a href="#">Dropdown2 Submenu Link 5.3</a></li>
-									<li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown Submenu Link 5.4</a>
-										<ul class="dropdown-menu">
-                                            <li class="kopie"><a href="#">Dropdown2 Submenu Link 5.4</a></li>
-											<li><a href="#">Dropdown2 Submenu Link 5.4.1</a></li>
-											<li><a href="#">Dropdown2 Submenu Link 5.4.2</a></li>
-											
-										</ul>
-									</li>                                  
-								</ul>
-							</li>                                  
+                          <li><a href="./Cliente.php"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;Nuevo Tramite</a></li>
+                          </ul>
+                    </li>
+
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Consultas <b class="caret"></b></a> 
+                      
+                        <ul class="dropdown-menu">
+                          <li><a href="./verClient.php"><span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;Archivos Visados</a></li>
+                          
+                            <li><a href="./verVisado.php"><span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;Visados Oficio </a></li>   
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reportes <b class="caret"></b></a> 
+                      
+                        <ul class="dropdown-menu">
+                         <li><a href="./verReportVis.php"><span class="glyphicon glyphicon-calendar"></span> Fecha Visado</a></li>
+                          
+                         <li><a href="./verReportFS.php"><span class="glyphicon glyphicon-calendar"></span> Fecha Solicitud</a></li>
+
+                          <li><a href="./verReportCIT.php"><span class=""></span>Codigo IT</a></li>  
                         </ul>
                     </li>
                 </ul>
+                <ul class="nav navbar-nav navbar-right">
+<li class="dropdown" class="active"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="glyphicon glyphicon-cog" style="color:skyblue"></i><span class="caret"></span></a> 
+<ul class="dropdown-menu">
+<li><a href="./config.php">Configuraciones</a></li>
+<!--<li><a href="./vert.php">Topografos</a></li>-->
+<li><a href="./UsuariosMostrar.php">Topografos</a></li>
+<li ><a href="php/logout.php" class="btn btn-defult"> Cerrar sesion</a></li>
+</ul>
+</ul> 
             </div><!-- /.navbar-collapse -->
+            </div>
         </nav>
 </div>
 </header>

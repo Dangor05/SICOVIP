@@ -29,7 +29,6 @@
     <li class="dropdown" class="active"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Tramite<span class="caret"></span> </a> 
 <ul class="dropdown-menu">
 <li><a href="./Cliente.php"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;Nuevo Tramite</a></li>
-<!--<li><a href="./Tramites.php">Tramites</a></li>-->
 </ul>
 </ul> 
 <ul class="nav navbar-nav">
