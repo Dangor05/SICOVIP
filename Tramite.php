@@ -19,6 +19,7 @@ if(isset ($_SESSION['sv07cdtp'])) {
 <link href="public\bootstrap\bootstrap\css\bootstrap-theme.min.css" rel="stylesheet" media="screen">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href="assets/datatables.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="public\css\stylesheet.css" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script type="text/javascript" src="public\JS\jquery-3.1.0.min.js"></script>
   </head>

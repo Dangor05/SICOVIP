@@ -22,6 +22,7 @@ if( $password1 != "" && $password2 != "" && $idusuario != "" && $token != "" ){
 		<link rel="stylesheet" href="assets/js/jquery-ui/jquery-ui.min.css" />
 		<link rel="stylesheet" href="assets/js/jquery-ui/jquery-ui.theme.min.css" />
 		<link rel="stylesheet" href="assets/css/style.css" />
+		<link rel="stylesheet" href="public\css\stylesheet.css" type="text/css">
   </head>
 
   <body>

@@ -7,6 +7,7 @@
 	<link href="public\Bootstrap\bootstrap\css\bootstrap.min.css" rel="stylesheet" media="screen">
 	<link href="public\Bootstrap\css\bootstrap\bootstrap-theme.min.css" rel="stylesheet" media="screen">
 	<link href="assets/datatables.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="public\css\stylesheet.css" type="text/css">
 	<script type="text/javascript" src="assets/jquery-1.11.3-jquery.min.js"></script>
 	<script type="text/javascript" src="public\JS\jquery-3.1.0.min.js"></script> 
 </head>
