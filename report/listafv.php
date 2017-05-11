@@ -1,7 +1,6 @@
 <?php 
   require_once("dompdf/dompdf_config.inc.php");
-  $conexion = mysql_connect("localhost","root","12345");
-  mysql_select_db("sicovip",$conexion);
+  include("../php/conexion.php");
 
 $codigoHTML='
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -30,7 +29,7 @@ $codigoHTML='
         <td bgcolor="#0099FF"><strong>CIT</strong></td>
       </tr>';
 
-        $consulta=mysql_query("SELECT DISTINCT   a.sv03cedp, a.sv03nomp, a.sv03apdp, b.sv04nfin,b.sv04apln,b.sv04aact,b.sv04acta,
+        $consulta="SELECT DISTINCT   a.sv03cedp, a.sv03nomp, a.sv03apdp, b.sv04nfin,b.sv04apln,b.sv04aact,b.sv04acta,
           DATE_FORMAT(d.sv08fchs,'%d-%m-%Y') AS sv08fchs,
                 e.sv08conse,e.sv09npln,e.sv09nfol,e.sv09npre,DATE_FORMAT(e.sv09fvdp,'%d-%m-%Y') AS sv09fvdp,e.sv09mnt,e.sv07cdtp,s.sv02dete
  
@@ -41,8 +40,10 @@ $codigoHTML='
          AND  u.sv05codu= e.sv05codu
          AND b.sv04nfin = e.sv04nfin
          AND s.sv02code = d.sv02code
-         AND e.sv09fvdp  BETWEEN '$_GET[V]' AND '$_GET[VS]'");
-        while($dato=mysql_fetch_array($consulta)){
+         AND e.sv09fvdp  BETWEEN '$_GET[V]' AND '$_GET[VS]'";
+         $query=$con->query($consulta);
+         if ($query->num_rows>0) {
+          while ($dato=$query->fetch_array()){
 $codigoHTML.='
       <tr>
         <td>'.$dato['sv03cedp'].'</td>
@@ -67,6 +68,9 @@ $dompdf->load_html($codigoHTML);
 ini_set("memory_limit","128M");
 $dompdf->render();
 $dompdf->stream("ReporteFVisado.pdf");
+}else{
+  print "<script>alert(\"No se pudo consultar.\");</script>";
+ }
 // <td>'. if($dato["sv02code"]==5){echo 'Aprobado';}elseif($dato["sv02code"]==6){echo 'Rechazado';}else{echo 'En proceso';}.'</td>
 ?>
 
