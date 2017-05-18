@@ -15,7 +15,7 @@
         <ul class="nav navbar-nav">
     <li class="dropdown" class="active"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Tramites<span class="caret"></span></a> 
 <ul class="dropdown-menu">
-<li><a href="./Propiet.php">Nuevo Tramite</a></li>
+<li><a href="./Propiet.php"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;Nuevo Tramite</a></li>
 <li><a href="./buscarpro.php">Propietarios registrados</a></li>
 
 </ul>
@@ -23,7 +23,7 @@
     <ul class="nav navbar-nav">
     <li class="dropdown" class="active"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Reportes<span class="caret"></span></a> 
 <ul class="dropdown-menu">
-<li><a href="./verReportClient.php">Codigo IT</a></li>
+<li><a href="./verReportClient.php"><span class="glyphicon glyphicon-credit-card"></span>&nbsp;&nbsp;Codigo IT</a></li>
 </ul>
 </ul>
   </div>
@@ -31,8 +31,8 @@
  <ul class="nav navbar-nav navbar-right">
 <li class="dropdown" class="active"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="glyphicon glyphicon-cog"></i><span class="caret"></span></a> 
 <ul class="dropdown-menu">
-<li><a href="./configurar.php">Actualizar datos</a></li>
-<li> <a href="php/logout.php" class="btn btn-defult"> Cerrar sesión</a></li>
+<li><a href="./configurar.php"><span class="glyphicon glyphicon-user"></span> &nbsp;Perfil</a></li>
+<li> <a href="php/logout.php" class="btn btn-defult"><span class="glyphicon glyphicon-log-out"></span> &nbsp; Cerrar sesión</a></li>
 </ul>
 </ul> 
       </div><!-- /.navbar-collapse -->

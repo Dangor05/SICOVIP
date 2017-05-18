@@ -20,7 +20,7 @@
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">Visados <b class="caret"></b></a> 
                       
                         <ul class="dropdown-menu">
-                          <li><a href="./VisadoMostrar.php">Visado</a></li>
+                          <li><a href="./VisadoMostrar.php"><i class="glyphicon glyphicon-ok-sign"></i> &nbsp;Visado</a></li>
                             <li><a href="./verlista.php"><span class="glyphicon  glyphicon-copy"></span>&nbsp;Reinspeccion</a></li>   
                         </ul>
                     </li>
@@ -51,7 +51,7 @@
                           
                          <li><a href="./verReportFS.php"><span class="glyphicon glyphicon-calendar"></span> Fecha Solicitud</a></li>
 
-                          <li><a href="./verReportCIT.php"><span class=""></span>Codigo IT</a></li>  
+                          <li><a href="./verReportCIT.php"><span class="glyphicon glyphicon-credit-card"></span>&nbsp;&nbsp;Codigo IT</a></li>  
                         </ul>
                     </li>
                 </ul>

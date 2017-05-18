@@ -38,11 +38,14 @@ while ($r=$query->fetch_object()){
   </div>
   <div class="form-group">
     <label for="sv07pass">Contraseña :</label>
-    <input type="password" class="form-control"  name="sv07pass" >
+    <input type="password" id="clave" class="form-control"  name="sv07pass" >
+    <span id="mjscl" class="help-block"></span>
   </div>
     <div class="form-group">
     <label for="sv07pass">Repita contraseña</label>
-    <input type="password" class="form-control" name="valpass" >
+    <input type="password" id="contra" class="form-control" name="valpass" >
+    <span id="mjsct" class="help-block"></span>
+    <span id="mjs" class="help-block"></span>
   </div>
 
 <input type="hidden" name="id" value="<?php echo $person->sv07cdtp; ?>">
