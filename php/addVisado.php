@@ -3,20 +3,20 @@ include('conexion.php');
 if(!empty($_POST)){
 	if(isset($_POST['npln']) && isset($_POST['nfol']) && isset($_POST['npred']) && isset($_POST['fch']) && isset($_POST['conse']) && isset($_POST['cedc']) && isset($_POST['cedp']) && isset($_POST['nfin']) && isset($_POST['impu'])&& isset($_POST['cit']) && isset($_POST['codu']) && isset($_POST['std']))
 	{
-$npln=$_POST['npln'];   
-$nfol=$_POST['nfol'];   
-$npre=$_POST['npred'];   
-$mnt=$_FILES['mnt'];    
-$fvdp=$_POST['fch'];   
-$conse=$_POST['conse'];   
-$cedc=$_POST['cedc'];  
-$cedp=$_POST['cedp'];	
-$nfin=$_POST['nfin']; 
-$impu=$_POST['impu']; 		
-$cdtp=$_POST['cit']; 
-$codu=$_POST['codu'];
-$code=$_POST['std'];
-$sv04apln=$_FILES['pln'];
+$npln=mysqli_real_escape_string($con,$_POST['npln']);   
+$nfol=mysqli_real_escape_string($con,$_POST['nfol']);   
+$npre=mysqli_real_escape_string($con,$_POST['npred']);   
+$mnt=mysqli_real_escape_string($con,$_FILES['mnt']);    
+$fvdp=mysqli_real_escape_string($con,$_POST['fch']);   
+$conse=mysqli_real_escape_string($con,$_POST['conse']);   
+$cedc=mysqli_real_escape_string($con,$_POST['cedc']);  
+$cedp=mysqli_real_escape_string($con,$_POST['cedp']);
+$nfin=mysqli_real_escape_string($con,$_POST['nfin']); 
+$impu=mysqli_real_escape_string($con,$_POST['impu']); 		
+$cdtp=mysqli_real_escape_string($con,$_POST['cit']); 
+$codu=mysqli_real_escape_string($con,$_POST['codu']);
+$code=mysqli_real_escape_string($con,$_POST['std']);
+$sv04apln=mysqli_real_escape_string($con,$_FILES['pln']);
 
 $dir ="../archivos/".$cedp."\ ";
 

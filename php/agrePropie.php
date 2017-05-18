@@ -4,12 +4,12 @@ if (!empty($_POST['cedp']) && !empty($_POST['nomp']) && !empty($_POST['emap']) &
 
 	if (isset($_POST['cedp']) && isset($_POST['nomp']) && isset($_POST['apelp']) && isset($_POST['emap']) && isset($_POST['telp']) && isset($_POST['tipro']) ) {
 	
-	$cedp=$_POST['cedp'];
-	$nomp=$_POST['nomp'];
-	$apelp=$_POST['apelp'];
-	$emlp=$_POST['emap'];
-	$telp=$_POST['telp'];
-	$tipro=$_POST['tipro'];
+	$cedp=mysqli_real_escape_string($con,$_POST['cedp']);
+	$nomp=mysqli_real_escape_string($con,$_POST['nomp']);
+	$apelp=mysqli_real_escape_string($con,$_POST['apelp']);
+	$emlp=mysqli_real_escape_string($con,$_POST['emap']);
+	$telp=mysqli_real_escape_string($con,$_POST['telp']);
+	$tipro=mysqli_real_escape_string($con,$_POST['tipro']);
 
 	$sch="SELECT sv03cedp FROM sv03ptario WHERE sv03cedp='$cedp'";
 	$stm=$con->query($sch);

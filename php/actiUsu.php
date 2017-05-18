@@ -16,7 +16,7 @@ if(!empty($_GET)){
 	if (isset($_POST['sv07cdtp'])) {
 			
 			include "conexion.php";
-			$id=$_POST["sv07cdtp"];
+			$id=mysqli_real_escape_string($con,$_POST["sv07cdtp"]);
 			
 			$sql = "UPDATE sv07tpgfo  SET sv07estd='1' WHERE sv07cdtp='$id'";
 			$query = $con->query($sql);

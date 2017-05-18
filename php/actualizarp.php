@@ -3,11 +3,11 @@
 if(!empty($_POST)){
 		if (isset($_POST['sv03cedp']) && isset($_POST['sv03nomp']) && isset($_POST['sv03apdp']) && isset($_POST['sv03emp']) && isset($_POST['sv03telp']) && isset($_POST['sv06codp'])) {
 
-		$sv03cedp=$_POST['sv03cedp'];
-		$sv03nomp=$_POST['sv03nomp'];
-		$sv03apdp=$_POST['sv03apdp'];
-		$sv03emp=$_POST['sv03emp'];
-		$sv03telp=$_POST['sv03telp'];
+		$sv03cedp=mysqli_real_escape_string($con,$_POST['sv03cedp']);
+		$sv03nomp=mysqli_real_escape_string($con,$_POST['sv03nomp']);
+		$sv03apdp=mysqli_real_escape_string($con,$_POST['sv03apdp']);
+		$sv03emp=mysqli_real_escape_string($con,$_POST['sv03emp']);
+		$sv03telp=mysqli_real_escape_string($con,$_POST['sv03telp']);
 		//$sv06codp=$_POST['sv06codp']; 
 		include "conexion.php";
 

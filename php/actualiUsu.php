@@ -8,8 +8,8 @@ if(!empty($_POST)){
      $sv07nomt=mysqli_real_escape_string($con,$_POST['sv07nomt']);
      $sv07apdt=mysqli_real_escape_string($con,$_POST['sv07apdt']);
      $pass=mysqli_real_escape_string($con,$_POST['sv07pass']);
-     $sv07emt=$_POST['sv07emt'];
-     $pass2=$_POST['valpass'];
+     $sv07emt=mysqli_real_escape_string($con,$_POST['sv07emt']);
+     $pass2=mysqli_real_escape_string($con,$_POST['valpass']);
 
      if ($pass2==$pass) {
           $sv07pass=sha1($pass);

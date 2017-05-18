@@ -85,3 +85,9 @@
     text-align: center;
   }
 }
+
+.ico{
+  background-image: url("../../imag/parque.jpg");
+  width: 100%;
+  height: 150px;
+}

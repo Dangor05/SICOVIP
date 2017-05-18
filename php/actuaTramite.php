@@ -4,10 +4,10 @@ if (!empty($_FILES) && !empty($_POST)) {
 	if(isset($_POST['conse']) && isset($_POST['nfin']) && isset($_POST['cedp']) && isset($_FILES['pln']) && isset($_FILES['aact']) && isset($_FILES['acta']) && isset($_POST['opcion']))
 	{
 		$path="../archivos/".$_POST['cedp']."\ ";
-		$opcion=$_POST['opcion'];
-		$sv08conse=$_POST['conse'];
-		$sv03cedp=$_POST['cedp'];
-		$sv04nfin=$_POST['nfin'];
+		$opcion=mysqli_real_escape_string($con,$_POST['opcion']);
+		$sv08conse=mysqli_real_escape_string($con,$_POST['conse']);
+		$sv03cedp=mysqli_real_escape_string($con,$_POST['cedp']);
+		$sv04nfin=mysqli_real_escape_string($con,$_POST['nfin']);
 		$sv04apl=$_FILES['pln'];
 		$apl=$_FILES['pln']['name'];
 		$sv04acta=$_FILES['acta'];

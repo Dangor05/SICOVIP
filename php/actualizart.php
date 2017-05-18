@@ -4,15 +4,15 @@ if(!empty($_POST)){
 
 	if (isset($_POST['sv07cdtp']) && isset($_POST['sv07cedt']) && isset($_POST['sv07nomt']) && isset($_POST['sv07apdt']) && isset($_POST['sv07estd']) && isset($_POST['sv07pass']) && isset($_POST['sv07emt']) && isset($_POST['sv05codu']) && isset($_POST['pass2']) ) {
 
-     $sv07cdtp=$_POST['sv07cdtp'];
-     $sv07cedt=$_POST['sv07cedt'];
-     $sv07nomt=$_POST['sv07nomt'];
-     $sv07apdt=$_POST['sv07apdt'];
-     $sv07estd=$_POST['sv07estd'];
-     $pass=$_POST['sv07pass'];
-     $sv05codu=$_POST['sv05codu'];
-     $sv07emt=$_POST['sv07emt'];
-     $pass2=$_POST['pass2'];
+     $sv07cdtp=mysqli_real_escape_string($con,$_POST['sv07cdtp']);
+     $sv07cedt=mysqli_real_escape_string($con,$_POST['sv07cedt']);
+     $sv07nomt=mysqli_real_escape_string($con,$_POST['sv07nomt']);
+     $sv07apdt=mysqli_real_escape_string($con,$_POST['sv07apdt']);
+     $sv07estd=mysqli_real_escape_string($con,$_POST['sv07estd']);
+     $pass=mysqli_real_escape_string($con,$_POST['sv07pass']);
+     $sv05codu=mysqli_real_escape_string($con,$_POST['sv05codu']);
+     $sv07emt=mysqli_real_escape_string($con,$_POST['sv07emt']);
+     $pass2=mysqli_real_escape_string($con,$_POST['pass2']);
 
      if ($pass==$pass2) {
 

@@ -3,19 +3,19 @@
 if(!empty($_POST) && !empty($_FILES)){
 	if (isset($_POST['sv09npln']) && isset($_POST['sv09nfol']) && isset($_POST['sv09npre']) && isset($_FILES['sv09mnt']) && isset($_POST['sv09fvdp']) && isset($_POST['sv08conse']) && isset($_POST['sv01cedc']) && isset($_POST['sv03cedp']) && isset($_POST['sv04nfin']) && isset($_POST['sv02code']) && isset($_POST['sv02std']) && isset($_POST['sv07cdtp'])) {
 		
-		$sv09npln=$_POST['sv09npln'];
-		$sv09nfol=$_POST['sv09nfol'];
-		$sv09npre=$_POST['sv09npre'];
-		$sv09mnt=$_FILES['sv09mnt']['name'];
+		$sv09npln=mysqli_real_escape_string($con,$_POST['sv09npln']);
+		$sv09nfol=mysqli_real_escape_string($con,$_POST['sv09nfol']);
+		$sv09npre=mysqli_real_escape_string($con,$_POST['sv09npre']);
+		$sv09mnt=mysqli_real_escape_string($con,$_FILES['sv09mnt']['name']);
 		$mnt=$_FILES['sv09mnt'];
-		$sv09fvdp=$_POST['sv09fvdp'];
-		$sv08conse=$_POST['sv08conse'];
-		$sv01cedc=$_POST['sv01cedc'];
-		$sv03cedp=$_POST['sv03cedp'];
-		$sv04nfin=$_POST['sv04nfin'];
-		$sv02code=$_POST['sv02code'];
-		$sv07cdtp=$_POST['sv07cdtp'];
-		$sv02std=$_POST['sv02std'];
+		$sv09fvdp=mysqli_real_escape_string($con,$_POST['sv09fvdp']);
+		$sv08conse=mysqli_real_escape_string($con,$_POST['sv08conse']);
+		$sv01cedc=mysqli_real_escape_string($con,$_POST['sv01cedc']);
+		$sv03cedp=mysqli_real_escape_string($con,$_POST['sv03cedp']);
+		$sv04nfin=mysqli_real_escape_string($con,$_POST['sv04nfin']);
+		$sv02code=mysqli_real_escape_string($con,$_POST['sv02code']);
+		$sv07cdtp=mysqli_real_escape_string($con,$_POST['sv07cdtp']);
+		$sv02std=mysqli_real_escape_string($con,$_POST['sv02std']);
 		$sv04plan=$_FILES['sv04plan'];
 		$path="../archivos/".$sv03cedp."\ ";
 
