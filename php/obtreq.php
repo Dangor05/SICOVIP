@@ -2,7 +2,7 @@
 include("conexion.php");
 $cn=$_GET['con'];
 $user=$_GET['nfin'];
-$sql1= "SELECT a.sv04nfin, a.sv04apln,a.sv04aact,a.sv04acta, c.sv03cedp FROM sv04reqtos a, sv08trmte b, sv03ptario c 
+$sql1= "SELECT a.sv04nfin, a.sv04doc, c.sv03cedp FROM sv04reqtos a, sv08trmte b, sv03ptario c 
 WHERE a.sv04nfin =b.sv04nfin 
 AND c.sv03cedp= b.sv03cedp 
 AND a.sv04nfin ='$user' ";

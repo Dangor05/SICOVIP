@@ -18,13 +18,18 @@ if(!empty($_POST)){
 
              include "conexion.php";
 
+     $sch="SELECT sv07cdtp, sv07cedt FROM sv07tpgfo WHERE sv07cdtp='$sv07cdtp' and sv07cedt='$sv07cedt'";
+    $stm=$con->query($sch);
+    if ($stm->num_rows>0) {
+
+        print "<script>alert(\"Este usuario ya esta registrado.\");window.location='../UsuariosMostrar.php';</script>";
+    }else{
+
         if ($pass==$contr) {
 
             $sv07pass=sha1($pass);
        $sql =  "INSERT INTO sv07tpgfo (sv07cdtp,sv07cedt,sv07nomt,sv07apdt,sv07estd,sv07pass,sv07emt,sv05codu) values 
         ('$sv07cdtp','$sv07cedt','$sv07nomt','$sv07apdt','$sv07estd','$sv07pass','$sv07emt','$sv05codu')";
-
-
 
             $query = $con->query($sql);
             if($query!=null){
@@ -40,6 +45,8 @@ if(!empty($_POST)){
      else{
          print "<script>alert(\"La contraseñas no son igual, por favor escriba bien sus contraseña.\");window.location='../UsuariosMostrar.php';</script>";
      }
+
+ }//fin  del select
 
      }// fin del isset
  
