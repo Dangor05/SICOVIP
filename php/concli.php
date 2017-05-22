@@ -5,7 +5,7 @@ include "conexion.php";
 $user_id=null;
 $sql1= "SELECT DISTINCT b.sv03cedp,b.sv03nomp,b.sv03apdp,
                 d.`sv08conse`, 
-                c.sv04nfin,c.sv04apln,c.sv04aact,c.sv04acta,
+                c.sv04nfin,c.sv04apln,c.sv04doc,
                 e.`sv02code`,d.sv09mnt
 
  FROM sv03ptario b, sv04reqtos c, sv09vsdo d, sv08trmte e
@@ -41,8 +41,8 @@ $query = $con->query($sql1);
 	<td style="width: 5%"><?php echo $r["sv03apdp"]; ?></td>
 	<td style="width: 5%"><?php echo $r["sv04nfin"]; ?></td>
 	<td style="width: 5%"><a href="plan.php?id=<?php echo $r['sv03cedp']?>&plan=<?php echo $r['sv04apln']?>"><?php echo $r["sv04apln"];?></a></td>
-	<td style="width: 6%"><a href="php/aut.php?id=<?php echo $r['sv03cedp']?>&aut=<?php echo $r['sv04aact']?>"><?php echo $r["sv04aact"];?></a></td>
-	<td style="width: 6%"><a href="php/cta.php?id=<?php echo $r['sv03cedp']?>&cta=<?php echo $r['sv04acta']?>"><?php echo $r["sv04acta"];?></a></td>
+	<td style="width: 6%"><a href="php/doc.php?id=<?php echo $r['sv03cedp']?>&doc=<?php echo $r['sv04doc']?>"><?php echo $r["sv04doc"];?></a></td>
+	
 		<td style="width: 6%"><?php if($r["sv02code"]==5){echo 'Aprobado';}elseif($r["sv02code"]==6){echo 'Rechazado';}elseif($r["sv02code"]==8){echo 'Oficio';}else{echo 'En proceso';} ?></td>
 	<td style="width: 6%"><a href="php/mnt.php?id=<?php echo $r['sv03cedp']?>&mnt=<?php echo $r['sv09mnt']?>"><?php echo $r["sv09mnt"]; ?></a></td>
 		

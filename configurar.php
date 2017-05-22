@@ -55,10 +55,13 @@
   <div class="form-group">
     <label for="sv01pass">Contraseña: </label>
     <input type="password" class="form-control" name="sv01pass" >
+    <span id="mjscl" class="help-block"></span>
   </div>
     <div class="form-group">
     <label for="sv01pass">Repita contraseña</label>
-    <input type="password" class="form-control" name="valpass" >
+    <input type="password" id="contra" class="form-control" name="valpass" >
+    <span id="mjsct" class="help-block"></span>
+    <span id="mjs" class="help-block"></span>
   </div>
 
  <button type="submit" class="btn btn-default">Actualizar</button>
@@ -76,5 +79,46 @@
 <script type="text/javascript" src="assets/jquery-1.11.3-jquery.min.js"></script>
 <script type="text/javascript" src="public/bootstrap/bootstrap/js/bootstrap.js"></script>
 <script type="text/javascript" src="assets/datatables.min.js"></script>
+<script>
+  $(document).on("ready",inicio);
+  function inicio()
+  {
+   $("#clave").keyup(valclave);
+    $("#contra").keyup(validar);
+  }
+
+  function validar()
+  {
+    if($("#contra").val() == $("#clave").val()){
+        $("#mjs").hide();
+      }else{
+        $("#mjs").show();
+        $("#mjs").text("Las contraseñas no coinciden");
+      }
+      if ($("#contra").val().length < 3 || $("#contra").val().length > 12) 
+      {
+        $("#mjsct").show();
+        $("#mjsct").text("Las contraseñas no puede ser menor que 3, ni mayor a 12");
+      }
+      else{
+        $("#mjsct").hide();
+      }
+  }
+
+  function valclave()
+  {
+      if ($("#clave").val().length < 3 || $("#clave").val().length > 12) 
+      {
+        $("#mjscl").show();
+        $("#mjscl").text("Las contraseñas no puede ser menor que 3, ni mayor a 12");
+      }
+      else{
+        $("#mjscl").hide();
+      }
+
+  }
+
+ 
+</script>
 </body>
 </html>

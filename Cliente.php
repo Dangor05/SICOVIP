@@ -109,7 +109,7 @@ return ((key >= 48 && key <= 57) || (key==8))
    <input type='text' class="form-control" id="ced" value="<?php echo $ced; ?>"  name='cedt' maxlength="10" onkeypress="return Numeros(event)" required></div>
   <div class="form-group"> 
  <label for="sv01cdtpc">Codigo IT</label>&nbsp
-   <input type='text' class="form-control" id="cit" value="<?php echo $cit; ?>" name='cit' maxlength="6" required></div>
+   <input type='text' class="form-control" id="cit" value="<?php echo $cit; ?>" name='cit' maxlength="10" required></div>
 
   <div class="form-group">
   <label for="sv01nomc">Nombre</label>&nbsp
@@ -125,7 +125,7 @@ return ((key >= 48 && key <= 57) || (key==8))
 
    <div class="form-group">
    <label for="sv01telc">Telefono</label>
-   <input type='text' class="form-control" id="tel" value="<?php echo $tel; ?>" name='telt' onkeypress="return Numeros(event)" required></div>
+   <input type='text' class="form-control" id="tel" value="<?php echo $tel; ?>" name='telt' onkeypress="return Numeros(event)"></div>
 
 <a class="btn btn-danger" href="Home.php"><span class="glyphicon glyphicon-circle-arrow-left"></span> &nbsp;Cancelar</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="submit" class="btn btn-default text-right">Continuar</button>
     

@@ -48,8 +48,7 @@ return ((key >= 48 && key <= 57) || (key==8))
       }else if ($_SESSION['sv05codu'] == 2) {
         include('php/navh2.php');
       } 
-      include ("php/getvisados.php");
-      if($query->num_rows>0):?>
+?>
       
 
 <div class="col-md-1 col-md-offset-1">
@@ -57,6 +56,8 @@ return ((key >= 48 && key <= 57) || (key==8))
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h2>Visados</h2>
            <button class="btn btn-success" id="btnAgregar" type="button"  data-toggle="modal" data-target="#modal-1"> <span class="glyphicon glyphicon-pencil"></span> &nbsp; Nuevo Visado</button>
      <br><br>
+     <?php       include ("php/getvisados.php");
+      if($query->num_rows>0):?>
    <div class="table-responsive">   
  <div style="width: 99%" class="well well-sm text-left">
     
@@ -137,12 +138,12 @@ return ((key >= 48 && key <= 57) || (key==8))
    
 
           <div class="form-group row">
-         <label for="sv09npln" class="col-xs-2 col-form-label">N° Minuta:</label>
+         <label for="sv09npln" class="col-xs-2 col-form-label">N° Minuta de Plano:</label>
              <div class="col-xs-4">
                 <input class="form-control" type="text" id="npln" name="svnpln" required>
              </div>
 
-          <label for="example-text-input" class="col-xs-2 col-form-label">N° Folio:</label>
+          <label for="example-text-input" class="col-xs-2 col-form-label">N° Folio Real:</label>
             <div class="col-xs-4">
             <input class="form-control" required="required" type="text" id="fol" name="svnfol">
             </div>
@@ -265,12 +266,12 @@ return ((key >= 48 && key <= 57) || (key==8))
         <form name="Diagnostico" method="post" action="php/actualizar.php" enctype="multipart/form-data">
               
           <div class="form-group row">
-         <label for="example-text-input" class="col-xs-2 col-form-label">N° Minuta:</label>
+         <label for="example-text-input" class="col-xs-2 col-form-label">N° Minuta de Plano:</label>
              <div class="col-xs-4">
                 <input class="form-control" type="text" id="sv09npln" readonly="" name="sv09npln" value="">
              </div>
 
-          <label for="example-text-input" class="col-xs-2 col-form-label">N° Folio:</label>
+          <label for="example-text-input" class="col-xs-2 col-form-label">N° Folio Real:</label>
             <div class="col-xs-4">
             <input class="form-control" required="required" type="text" id="sv09nfol" name="sv09nfol">
             </div>
@@ -327,9 +328,9 @@ return ((key >= 48 && key <= 57) || (key==8))
         <label for="example-text-input" class="col-xs-2 col-form-label">Estado:</label>
           <div class="col-xs-4">
             <select name="sv02std" class="form-control" name="sv02std" >
+            <option value="8">Oficio</option>
             <option value="5">Aprobado</option>
             <option value="6">Rechazado</option>
-            <option value="8">Oficio</option>
             </select>
         </div>
 
@@ -388,7 +389,7 @@ return ((key >= 48 && key <= 57) || (key==8))
           <input type="hidden" value="" name="book_id"/>
           <div class="form-body">
             <div class="form-group">
-              <label class="control-label col-md-3">N° Minuta</label>
+              <label class="control-label col-md-3">N° Minuta de Plano</label>
               <div class="col-md-9">
                 <input class="form-control" type="text" value="" id="sv09npln" name="sv09npln">
               </div>

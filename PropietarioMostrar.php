@@ -144,13 +144,13 @@ return ((key >= 48 && key <= 57) || (key==8))
         <div class="form-group row">
          <label for="example-text-input" class="col-xs-3 col-form-label">Correo:</label>
           <div class="col-xs-7">
-            <input class="form-control" type="text" id="eml" name="svemp" required>
+            <input class="form-control" type="text" id="eml" name="svemp" >
           </div>
           </div>
           <div class="form-group row">
               <label for="example-text-input" class="col-xs-3 col-form-label">Telefono:</label>
              <div class="col-xs-7">
-                <input class="form-control" type="text" onkeypress="return Numeros(event)" id="tel" name="svtelp" required>
+                <input class="form-control" type="text" onkeypress="return Numeros(event)" id="tel" name="svtelp">
              </div>
              </div>
              <div class="form-group row">

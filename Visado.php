@@ -23,7 +23,7 @@ include ('php/obtvisado.php');
 function Numeros(e)
 {
 var key = window.Event ? e.which : e.keyCode
-return ((key >= 48 && key <= 57) || (key==8))
+return ((key >= 48 && key <= 57) || (key==8) || key==189)
 }
 </script>
 
@@ -58,7 +58,7 @@ return ((key >= 48 && key <= 57) || (key==8))
    <input type="text" class="form-control" readonly="" value="<?php echo $person->sv04nfin; ?>" name="nfin" required>
   </div>
   <div class="form-group">
-    <label for="npln">Nº Minuta</label>
+    <label for="npln">Nº Minuta de Plano</label>
     <input type="text" id="npln" class="form-control" name="npln" required="">
   </div>
   <div class="form-group">
@@ -67,7 +67,7 @@ return ((key >= 48 && key <= 57) || (key==8))
   </div>
   <div class="form-group">
     <label for="">Localizacion Municipal</label>
-    <input type="text" id="pred" onkeypress="return Numeros(event)" class="form-control" name="npred">
+    <input type="text" id="pred" class="form-control" name="npred">
   </div>
     <div class="form-group">
     <label for="">Oficio</label>
@@ -94,6 +94,7 @@ return ((key >= 48 && key <= 57) || (key==8))
  <option value="8">Oficio</option>
   <option value="5">Aprobado</option>
  <option value="6">Rechazado</option>
+ <option value="7">En Proceso</option>
  </select>
   </div>
   <div class="form-group">

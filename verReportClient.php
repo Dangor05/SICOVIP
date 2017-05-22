@@ -33,14 +33,12 @@ if(isset ($_SESSION['cd'])) {
 <form class="form-inline" class="navbar-form navbar-left" role="search" action="buscarReportClient.php">
     
 
-	 <div class="Form-group" class="col-sm-10">
+	 <div class="Form-group" class="col-sm-7">
 	  <br><br>
 	  	   <h3>Carnet IT-Cliente</h3><br>
-
-	  	   <input type="text"  name="S" class="form-control" placeholder="CIT" required>   <div class="Form-group" >
-		 <div id="next_button" align="left">
-		 <button  type="submit" class="btn btn-default" >&nbsp;<i class="glyphicon glyphicon-search"></i>&nbsp;</button> 
-		 </div>
+				
+	  	   <input type="text"  name="S" class="form-control" placeholder="CIT" required>&nbsp; <button  type="submit" class="btn btn-default" >&nbsp;<i class="glyphicon glyphicon-search"></i>&nbsp;</button> 
+		
      
 	 </div>
 	 

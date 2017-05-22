@@ -27,7 +27,7 @@ while ($r=$query->fetch_object()){
 
 <form role="form" method="post" action="php/actualizarv.php" enctype="multipart/form-data" onsubmit="return validar();">
   <div class="form-group">
- <label for="sv09npln">N° Minuta</label>
+ <label for="sv09npln">N° Minuta de plano</label>
     <input type="text" class="form-control" readonly="" id="npln" value="<?php echo $person->sv09npln; ?>" name="sv09npln" >
   </div>
   <div class="form-group">

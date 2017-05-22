@@ -157,19 +157,22 @@ return ((key >= 48 && key <= 57) || (key==8))
              <div class="form-group row">
             <label for="example-text-input" class="col-xs-3 col-form-label">Telefono:</label>
              <div class="col-xs-7">
-                <input class="form-control" type="text" id="tel" name="svtelc" onkeypress="return Numeros(event)" required>
+                <input class="form-control" type="text" id="tel" name="svtelc" onkeypress="return Numeros(event)">
              </div>
         </div>
               <div class="form-group row">
             <label for="example-text-input" class="col-xs-3 col-form-label">Contraseña:</label>
              <div class="col-xs-7">
-                <input class="form-control" type="password" minlength="8" maxlength="16" id="pass" name="svpass" required>
+                <input class="form-control" id="clave" type="password" minlength="8" maxlength="16" value="abc123" name="svpass" required>
+                <span id="mjscl" class="help-block"></span>
              </div>
         </div>
               <div class="form-group row">
             <label for="example-text-input" class="col-xs-3 col-form-label">Repetir contraseña:</label>
              <div class="col-xs-7">
-                <input class="form-control" type="password" minlength="8" maxlength="16" id="vpass" name="valpass" required>
+                <input class="form-control" id="contra" type="password" minlength="8" maxlength="16" value="abc123" name="valpass" required>
+                <span id="mjsct" class="help-block"></span>
+            <span id="mjs" class="help-block"></span>
              </div>
         </div>
     <div class="form-group row"><br>
@@ -340,6 +343,47 @@ $(document).ready(function() {
         $('input[name="sv01telc"]').val(_tel);        
     }); 
 }
+</script>
+<script>
+  $(document).on("ready",inicio);
+  function inicio()
+  {
+    $("#clave").keyup(valclave);
+    $("#contra").keyup(validar);
+  }
+
+  function validar()
+  {
+    if($("#contra").val() == $("#clave").val()){
+        $("#mjs").hide();
+      }else{
+        $("#mjs").show();
+        $("#mjs").text("Las contraseñas no coinciden");
+        return false;
+      }
+      if ($("#contra").val().length < 7 || $("#contra").val().length > 12) 
+      {
+        $("#mjsct").show();
+        $("#mjsct").text("Las contraseñas no puede ser menor que 8, ni mayor a 12");
+      }
+      else{
+        $("#mjsct").hide();
+      }
+  }
+
+  function valclave()
+  {
+      if ($("#clave").val().length < 3 || $("#clave").val().length > 12) 
+      {
+        $("#mjscl").show();
+        $("#mjscl").text("Las contraseñas no puede ser menor que 3, ni mayor a 12");
+      }
+      else{
+        $("#mjscl").hide();
+      }
+
+  }
+
 </script>
 </body>
 

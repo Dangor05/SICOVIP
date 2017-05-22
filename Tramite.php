@@ -55,16 +55,9 @@ if(isset ($_SESSION['sv07cdtp'])) {
 <input type="text" class="form-control" name="fin" placeholder="Nº Finca" required onkeypress="return Numeros(event)"></div>
 
   <div class="form-group"> 
- <label for="sv03ptario">Plano:</label>&nbsp
-  <input type="file" class="form-control-file" name="pla" placeholder="Plano" required=""></div>
+ <label for="sv03ptario">Documentos:</label>&nbsp
+  <input type="file" class="form-control-file" name="doc" required=""></div>
 
-  <div class="form-group"> 
- <label for="sv03ptario">Cartas de Agua:</label>&nbsp
- <input type="file" class="form-control-file" name="car" placeholder="Cartas de Agua" required></div>
-
-  <div class="form-group"> 
- <label for="sv03ptario">AUTOCAD:</label>&nbsp
- <input type="file" class="form-control-file" name="dib" placeholder="AUTOCAD" required></div>
    <div class="form-group"> 
  <input type="hidden" class="form-control" value="<?php echo $GLOBALS['mail'];?>" name="mail"></div>
      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  

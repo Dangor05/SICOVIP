@@ -28,7 +28,7 @@ if(isset ($_SESSION['sv07cdtp'])) {
 <div class="container">
 <div class="row">
 <div class="col-md-6">
-		<h2>Actualizar</h2>
+		<h2>Datos Personales</h2>
 		<br>
 
 <?php include "php/configura.php";?>
@@ -41,6 +41,48 @@ if(isset ($_SESSION['sv07cdtp'])) {
 <script type="text/javascript" src="assets/jquery-1.11.3-jquery.min.js"></script>
 <script type="text/javascript" src="public/bootstrap/bootstrap/js/bootstrap.js"></script>
 <script type="text/javascript" src="assets/datatables.min.js"></script>
+<script>
+  $(document).on("ready",inicio);
+  function inicio()
+  {
+   $("#clave").keyup(valclave);
+    $("#contra").keyup(validar);
+  }
+
+  function validar()
+  {
+    if($("#contra").val() == $("#clave").val()){
+        $("#mjs").hide();
+      }else{
+        $("#mjs").show();
+        $("#mjs").text("Las contraseñas no coinciden");
+      }
+      if ($("#contra").val().length < 3 || $("#contra").val().length > 12) 
+      {
+        $("#mjsct").show();
+        $("#mjsct").text("Las contraseñas no puede ser menor que 3, ni mayor a 12");
+      }
+      else{
+        $("#mjsct").hide();
+      }
+  }
+
+  function valclave()
+  {
+      if ($("#clave").val().length < 3 || $("#clave").val().length > 12) 
+      {
+        $("#mjscl").show();
+        $("#mjscl").text("Las contraseñas no puede ser menor que 3, ni mayor a 12");
+      }
+      else{
+        $("#mjscl").hide();
+      }
+
+  }
+
+ 
+</script>
+
 	</body>
 </html>
 <?php

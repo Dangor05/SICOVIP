@@ -67,35 +67,38 @@ return ((key >= 48 && key <= 57) || (key==8))
      <div class="form-group">
    <center><h3>Registro</h3></center>  
   <div class="form-group" >
-  <label for="sv01cedc">Cedula</label>&nbsp
+  <label for="sv01cedc">Cedula :</label>
    <input type='text' class="form-control" id="ced" name='cedt' maxlength="10" onkeypress="return Numeros(event)" placeholder="514660302" required></div>
   <div class="form-group"> 
- <label for="sv01cdtpc">Carnet IT</label>&nbsp
+ <label for="sv01cdtpc">Carnet IT :</label>
    <input type='text' class="form-control" id="cit" name='cit' maxlength="9" onkeypress=""   placeholder="IT10643" required></div>
 
   <div class="form-group">
-  <label for="sv01nomc">Nombre</label>&nbsp
+  <label for="sv01nomc">Nombre :</label>
     <input type='text' class="form-control" id="nom" name='nomt' maxlength="12" onkeypress="return Letras(event)" required></div>
 
   <div class="form-group">
-  <label for="sv01apdc">Apellidos</label>&nbsp
+  <label for="sv01apdc">Apellidos :</label>
   <input type='text' class="form-control" id="ape" name='apelt' maxlength="30" onkeypress="return Letras(event)" required></div>
 
    <div class="form-group">
-   <label for="sv01emc">Correo :</label>&nbsp
+   <label for="sv01emc">Correo :</label>
    <input type='email' class="form-control" id="ema" name='emat' placeholder="ejmplo@ejemplo.com" required></div>
 
    <div class="form-group">
-   <label for="sv01telc">Telefono</label>
+   <label for="sv01telc">Telefono :</label>
    <input type='text' class="form-control" id="tel" name='telt' onkeypress="return Numeros(event)" placeholder="26808888" required></div>
 
       <div class="form-group">
-   <label for="pass">Contraseña</label>
-   <input type='password' class="form-control" minlength="8" maxlength="16" id="pass" name='pass' required></div>
+   <label for="pass">Contraseña :</label>
+   <input type='password' class="form-control" id="clave" minlength="8" maxlength="16" id="pass" name='pass' required>
+   <span id="mjscl" class="help-block"></span></div>
 
       <div class="form-group">
-   <label for="pass">Vuelva escribr la contraseña:</label>
-   <input type='password' class="form-control" id="con" minlength="8" maxlength="16" name='vpass' required></div>
+   <label for="pass">Confirmar la contraseña:</label>
+   <input type='password' class="form-control" id="contra" minlength="8" maxlength="16" name='vpass' required>
+   <span id="mjsct" class="help-block"></span>
+   <span id="mjs" class="help-block"></span></div>
 
 
    </div>
@@ -114,6 +117,47 @@ return ((key >= 48 && key <= 57) || (key==8))
       
       
       <script type="text/javascript" src="public\bootstrap\bootstrap\js/bootstrap.min.js"></script>
+      <script>
+  $(document).on("ready",inicio);
+  function inicio()
+  {
+    $("#clave").keyup(valclave);
+    $("#contra").keyup(validar);
+  }
+
+  function validar()
+  {
+    if($("#contra").val() == $("#clave").val()){
+        $("#mjs").hide();
+      }else{
+        $("#mjs").show();
+        $("#mjs").text("Las contraseñas no coinciden");
+        return false;
+      }
+      if ($("#contra").val().length < 7 || $("#contra").val().length > 12) 
+      {
+        $("#mjsct").show();
+        $("#mjsct").text("Las contraseñas no puede ser menor que 8, ni mayor a 12");
+      }
+      else{
+        $("#mjsct").hide();
+      }
+  }
+
+  function valclave()
+  {
+      if ($("#clave").val().length < 3 || $("#clave").val().length > 12) 
+      {
+        $("#mjscl").show();
+        $("#mjscl").text("Las contraseñas no puede ser menor que 3, ni mayor a 12");
+      }
+      else{
+        $("#mjscl").hide();
+      }
+
+  }
+
+</script>
        <script type="text/javascript">
         var v=true;
         $("span.help-block").hide();

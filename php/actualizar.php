@@ -26,7 +26,7 @@ if(!empty($_POST) && !empty($_FILES)){
 		$sql="UPDATE sv08trmte SET sv02code='$sv02std' WHERE sv08conse='$sv08conse'";
 
 		if ($sv04plan!=null) {
-			$st ="UPDATE sv04reqtos SET sv04apln='".$sv04plan['name']."' WHERE sv04nfin='$sv04nfin'";
+			$stm ="UPDATE sv04reqtos SET sv04apln='".$sv04plan['name']."' WHERE sv04nfin='$sv04nfin'";
 		$stmt=$con->query($stm);
 		$qry=$con->query($sql);
 		$exec=$con->query($st);

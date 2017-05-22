@@ -34,19 +34,8 @@ include ('php/obtreq.php');
 <?php if($person!=null):?>
 
 <form role="form" method="post" action="php/agreReins.php" enctype="multipart/form-data">
- 
-      <div class="form-group row">
-          <label for="selecc" class="col-xs-5 form-label">Seleccione el archivo que requiere actualizar:</label>
-           <div class="col-xs-5">
-              <select name="opcion" class="form-control" id="opci" name="opcion" required>
-              <option value="1">Todos</option>
-              <option value="2">Plano</option>
-              <option value="3">Cartas de Agua</option>
-              <option value="4">AutoCad</option>
-              </select>
-             </div>
-             </div>
-      <div class="form-group row">
+
+    <div class="form-group row">
     <label class="col-xs-3 col-form-label" for="sv08conse">Consecutivo</label>
     <div class="col-xs-7">
     <p><?php echo $cn;?></p>
@@ -66,18 +55,7 @@ include ('php/obtreq.php');
     <input type="file" class="form-control-file" value="<?php echo $person->sv04apln;?>" name="pln" >
     </div>
     </div>
-    <div class="form-group row">
-    <label for="sv08fumt" class="col-xs-3 col-form-label" >Carta de Agua</label>
-    <div class="col-xs-7">
-    <input type="file" class="form-control-file" value="<?php echo $person->sv04aact; ?>" name="acta">
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="sv01cedc" class="col-xs-3 col-form-label" >AUTOCAD</label>
-    <div class="col-xs-7">
-    <input type="file"  class="form-control-file" value="<?php echo $person->sv04acta; ?>" name="aact">
-  </div>
-  </div>
+
   <br>
   <div class="form-group row">
   <div class="col-xs-1"></div>

@@ -3,11 +3,11 @@
 include('conexion.php');
 
 $user_id=null;
-$sql1= "SELECT c.sv03cedp, c.sv03nomp, c.sv03apdp, a.sv08conse, b.sv04nfin, DATE_FORMAT(a.sv08fchs,'%d-%m-%Y') AS sv08fchs, a.sv02code,b.sv04apln, b.sv04aact, b.sv04acta
+$sql1= "SELECT c.sv03cedp, c.sv03nomp, c.sv03apdp, a.sv08conse, b.sv04nfin, DATE_FORMAT(a.sv08fumt,'%d-%m-%Y') AS sv08fumt, a.sv02code,b.sv04doc
    FROM sv08trmte a, sv04reqtos b, sv03ptario c         
          WHERE a.sv04nfin=b.sv04nfin
          AND a.sv03cedp=c.sv03cedp
-         AND a.sv02code='3' ORDER BY a.sv08fchs ASC";
+         AND a.sv02code='3' ORDER BY a.sv08fumt ASC";
 $query = $con->query($sql1);
 ?>
 <?php if($query->num_rows>0):?>
@@ -37,10 +37,8 @@ $query = $con->query($sql1);
 	<td><?php echo $r["sv03apdp"]; ?></td>
 	<td><?php echo $r["sv08conse"]; ?></td>	
 	<td><?php echo $r["sv04nfin"]; ?></td>
-	<td><?php echo $r["sv08fchs"]; ?></td>
-	<td><a href="php/plan.php?id=<?php echo $r['sv03cedp']?>&plan=<?php echo $r['sv04apln']?>"><?php echo $r["sv04apln"];?></a></td>
-	<td><a href="php/cta.php?id=<?php echo $r['sv03cedp']?>&cta=<?php echo $r['sv04acta']?>"><?php echo $r["sv04acta"]?></a></td>
-	<td><a href="php/aut.php?id=<?php echo $r['sv03cedp']?>&aut=<?php echo $r['sv04aact']?>"><?php echo $r["sv04aact"]?></a></td>
+	<td><?php echo $r["sv08fumt"]; ?></td>
+	<td><a href="php/doc.php?id=<?php echo $r['sv03cedp']?>&plan=<?php echo $r['sv04doc']?>"><?php echo $r["sv04doc"];?></a></td>
 	<td><?php if($r["sv02code"]==5){echo 'Aprobado';}elseif($r["sv02code"]==6){echo 'Rechazado';}elseif($r["sv02code"]==8){echo 'Oficio';}else{echo 'En proceso';} ?></td>
 
 	<td style="width:75px;">

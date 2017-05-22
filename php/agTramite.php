@@ -9,40 +9,36 @@ if(!empty($_POST))
 		$conse=mysqli_escape_string($con,$_POST['conse']);
 		$nfin=mysqli_escape_string($con,$_POST['fin']);
 		$email=mysqli_escape_string($con,$_POST['mail']);
-		$plano=$_FILES['pla'];
-		$carta=$_FILES['car'];
-		$autC=$_FILES['dib'];
+		$plano=$_FILES['doc'];
+		$pln=$_FILES['doc']['name'];
+
+
 		
-//$rut ='C:\xampp\htdocs\pruebas\Sicovip\archivos/'.$cedpr.'/';
 $dir ="../archivos/".$cedpr."\ ";
 
-
-$sql1 = "INSERT INTO sv04reqtos(sv04nfin,sv04apln,sv04aact,sv04acta) 
-VALUES ('$nfin','".$plano['name']."','".$autC['name']."','".$carta['name']."')";
-	$query1=$con->query($sql1);
-$sql2 = "INSERT INTO sv08trmte(sv08conse,sv08fchs,sv08fumt,sv01cedc,sv03cedp,sv04nfin,sv02code) 
-VALUES ('$conse',NOW(),NOW(),'$cedcli','$cedpr','$nfin','7')";
-	$query2=$con->query($sql2);
-	if($query2!=null){
+		$stm="INSERT INTO sv04reqtos(sv04nfin,sv04doc)VALUES ('$nfin','$pln')";
+		$stmt="INSERT INTO sv08trmte(sv08conse,sv08fchs,sv08fumt,sv01cedc,sv03cedp,sv04nfin,sv02code)VALUES ('$conse',NOW(),NOW(),'$cedcli','$cedpr','$nfin','7')";
+		$exec=$con->query($stm);
+		$exct=$con->query($stmt);
+		if ($stm!=NULL && $stmt!=NULL){
 
 		if(file_exists($dir)){
 
-		move_uploaded_file($plano['tmp_name'],$dir.$plano['name']);
-		move_uploaded_file($carta['tmp_name'],$dir.$carta['name']);
-		move_uploaded_file($autC['tmp_name'],$dir.$autC['name']);
+		move_uploaded_file($plano['tmp_name'],$dir.$pln);
 		mysqli_close($con);
 
 		include('phpmailer.php');
 
-
+		     session_start();
+     unset($_SESSION['Cedt']);
+     unset($_SESSION['Cedp']);
+     unset($_SESSION['mail']);
 		header("Location:../Home.php");
 		
 			} else{
 
 		mkdir($dir,7055);
-		move_uploaded_file($plano['tmp_name'],$dir.$plano['name']);
-		move_uploaded_file($carta['tmp_name'],$dir.$carta['name']);
-		move_uploaded_file($autC['tmp_name'],$dir.$autC['name']);
+		move_uploaded_file($plano['tmp_name'],$dir.$pln);
 		mysqli_close($con);
 
 

@@ -47,14 +47,8 @@ $eml=$_SESSION['em'];
 	  <label for="sv03ptario">Nº Finca:</label>&nbsp
 	  <input type="text" class="form-control" name="fin" placeholder="Nº Finca" required onkeypress="return Numeros(event)"></div>
 	  <div class="form-group">
-	  <label for="sv03ptario">Plano Agrimensura:</label>&nbsp
+	  <label for="sv03ptario">Documentos:</label>&nbsp
 	  <input type="file"  name="pln" placeholder="Plano" required="" ></div>
-	  <div class="form-group">
-	  <label for="sv03ptario">Carta de Agua:</label>&nbsp
-	  <input type="file" name="car" placeholder="Cartas de Agua" required="" ></div>
-	  <div class="form-group">
-	  <label for="sv03ptario">AUTOCAD:</label>&nbsp
-	  <input type="file" name="dib" placeholder="AUTOCAD" required="" ></div>
 	  <div class="form-group">
 	  <input type="hidden" class="form-control" value="<?php echo $eml;?>" name="mail"></div>
 	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp

@@ -39,13 +39,10 @@ if(isset ($_SESSION['sv07cdtp'])) {
     
 	 <div class="Form-group" class="col-sm-7">
 	  <br>
-	  	   <h4>Desde</h4><input type="date"  name="V" class="form-control" placeholder="AAAA/MM/DD" required>
+	  	   <h4>Desde</h4><input type="date"  name="V" class="form-control" placeholder="AAAA/MM/DD" required> &nbsp<button  type="submit" class="btn btn-default" >&nbsp;<i class="glyphicon glyphicon-search"></i>&nbsp;</button> 
 
-	  	 <div class="Form-group" 
-		 <div id="next_button" align="left">
-		 <button  type="submit" class="btn btn-default" >&nbsp;<i class="glyphicon glyphicon-search"></i>&nbsp;</button> 
-		 <br>
-		 </div> </div>
+
+	  	 </div>
 		    
 		   <h4>Hasta</h4><input type="date" name="VS" class="form-control" placeholder="AAAA/MM/DD" required>
 		 

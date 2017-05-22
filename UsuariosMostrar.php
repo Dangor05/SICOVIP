@@ -169,20 +169,23 @@ return ((key >= 48 && key <= 57) || (key==8))
              <div class="form-group row">
             <label for="example-text-input" class="col-xs-2 col-form-label">Contraseña:</label>
              <div class="col-xs-7">
-              <input class="form-control" type="password" minlength="8" maxlength="16" id="svpass" name="svpass" required>
+              <input class="form-control" type="password" minlength="8" maxlength="16" id="clave" name="svpass" required>
+               <span id="mjscl" class="help-block"></span></div>
               </div>
         </div> 
          <div class="form-group row">
             <label for="example-text-input" class="col-xs-2 col-form-label">Repetir contraseña:</label>
              <div class="col-xs-7">
-              <input class="form-control" type="password" minlength="8" maxlength="16" id="pass2" name="pass2" required>
+              <input class="form-control" type="password" minlength="8" maxlength="16" id="contra" name="pass2" required>
+                 <span id="mjsct" class="help-block"></span>
+   <span id="mjs" class="help-block"></span>
               </div>
         </div> 
           <div class="form-group row">
               <label for="example-text-input" class="col-xs-2 col-form-label">Tipo:</label>
              <div class="col-xs-7">
               <select name="svcodu" class="form-control" id="impu" name="svcodu" required>
-                 <option value="2">Usuario</option>
+                 <option value="2">Topografo</option>
                  <option value="1">Administrador</option>
                 </select>
              </div>
@@ -264,13 +267,16 @@ return ((key >= 48 && key <= 57) || (key==8))
              <div class="form-group row">
             <label for="example-text-input" class="col-xs-2 col-form-label">Contraseña:</label>
              <div class="col-xs-7">
-              <input class="form-control" type="password" id="sv07pass" name="sv07pass" required>
+              <input class="form-control" type="password" id="clave" name="sv07pass" required>
+              <span id="mjscl" class="help-block"></span>
               </div>
         </div> 
          <div class="form-group row">
             <label for="example-text-input" class="col-xs-2 col-form-label">Repetir Contraseña:</label>
              <div class="col-xs-7">
-              <input class="form-control" type="password" id="pass2" name="pass2" required>
+              <input class="form-control" type="password" id="contra" name="pass2" required>
+              <span id="mjsct" class="help-block"></span>
+              <span id="mjs" class="help-block"></span>
               </div>
         </div> 
           <div class="form-group row">
@@ -425,6 +431,48 @@ $(document).ready(function() {
         $('input[name="sv07emt"]').val(_emt);        
     }); 
 }
+</script>
+
+<script>
+  $(document).on("ready",inicio);
+  function inicio()
+  {
+   $("#clave").keyup(valclave);
+    $("#contra").keyup(validar);
+  }
+
+  function validar()
+  {
+    if($("#contra").val() == $("#clave").val()){
+        $("#mjs").hide();
+      }else{
+        $("#mjs").show();
+        $("#mjs").text("Las contraseñas no coinciden");
+      }
+      if ($("#contra").val().length < 3 || $("#contra").val().length > 12) 
+      {
+        $("#mjsct").show();
+        $("#mjsct").text("Las contraseñas no puede ser menor que 3, ni mayor a 12");
+      }
+      else{
+        $("#mjsct").hide();
+      }
+  }
+
+  function valclave()
+  {
+      if ($("#clave").val().length < 3 || $("#clave").val().length > 12) 
+      {
+        $("#mjscl").show();
+        $("#mjscl").text("Las contraseñas no puede ser menor que 3, ni mayor a 12");
+      }
+      else{
+        $("#mjscl").hide();
+      }
+
+  }
+
+ 
 </script>
 
 </body>

@@ -102,10 +102,10 @@ return ((key >= 48 && key <= 57) || (key==8))
     <input type='text' class="form-control" id="apl" name='apelp' value="<?php echo $apl; ?>" maxlength="25" required onkeypress="return Letras(event)"></div>
 <div class="form-group">
     <label for="eml">Email</label>&nbsp
-   <input type='email' class="form-control" id="eml" name='emap' value="<?php echo $eml; ?>" maxlength="50" required ></div>
+   <input type='email' class="form-control" id="eml" name='emap' value="<?php echo $eml; ?>" maxlength="50"  ></div>
 <div class="form-group">
     <label for="tel">Telefono</label>&nbsp
-   <input type='tel' class="form-control" id="tel" name='telp' value="<?php echo $tel; ?>" maxlength="10" onkeypress="return Numeros(event)" required=""></div>
+   <input type='tel' class="form-control" id="tel" name='telp' value="<?php echo $tel; ?>" maxlength="10" onkeypress="return Numeros(event)" ></div>
    <div class="form-group">
 
     <label for="tip">Tipo Usuario</label>

@@ -4,7 +4,7 @@ include ("conexion.php");
 if (isset($_GET['ced'])) {
 
 		$cedp=$_GET['ced'];
-		$sch="SELECT sv01cedc, sv01cdtpc, sv01nomc, sv01apdc, sv01emc, sv01telc FROM sv01clnte WHERE sv01cedc='$cedp'";
+		$sch="SELECT sv01cedc, sv01cdtpc, sv01nomc, sv01apdc, sv01emc, sv01telc FROM sv01clnte WHERE sv01cedc='$cedp' OR sv01cdtpc='$cedp'";
 	$query=$con->query($sch);
 	if ($query->num_rows>0) {
 		while ($r=$query->fetch_array()) {
