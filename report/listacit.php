@@ -35,8 +35,8 @@ $codigoHTML='
       </tr>';
 
         $consulta="SELECT DISTINCT  a.sv03cedp, a.sv03nomp, a.sv03apdp,
-                         b.sv04nfin,b.sv04apln,b.sv04aact,b.sv04acta, DATE_FORMAT(d.sv08fchs,'%d-%m-%Y') AS sv08fchs,
-                         e.sv08conse,e.sv09npln,e.sv09nfol,e.sv09npre,DATE_FORMAT(e.sv09fvdp,'%d-%m-%Y') AS sv09fvdp,e.sv09mnt,s.sv02dete,e.sv07cdtp
+                          DATE_FORMAT(d.sv08fchs,'%d-%m-%Y') AS sv08fchs,
+                         e.sv08conse,DATE_FORMAT(e.sv09fvdp,'%d-%m-%Y') AS sv09fvdp,s.sv02dete,e.sv07cdtp
  
  FROM sv03ptario a, sv04reqtos b, sv06tipprop c, sv08trmte d,sv09vsdo e, sv05tipusu u, sv02estdo s
   

@@ -2,7 +2,7 @@
 
 if(!empty($_POST) && !empty($_FILES)){
 	if (isset($_POST['sv09npln']) && isset($_POST['sv09nfol']) && isset($_POST['sv09npre']) && isset($_FILES['sv09mnt']) && isset($_POST['sv09fvdp']) && isset($_POST['sv08conse']) && isset($_POST['sv01cedc']) && isset($_POST['sv03cedp']) && isset($_POST['sv04nfin']) && isset($_POST['sv02code']) && isset($_POST['sv02std']) && isset($_POST['sv07cdtp'])) {
-		
+		include("conexion.php");
 		$sv09npln=mysqli_real_escape_string($con,$_POST['sv09npln']);
 		$sv09nfol=mysqli_real_escape_string($con,$_POST['sv09nfol']);
 		$sv09npre=mysqli_real_escape_string($con,$_POST['sv09npre']);
@@ -19,7 +19,7 @@ if(!empty($_POST) && !empty($_FILES)){
 		$sv04plan=$_FILES['sv04plan'];
 		$path="../archivos/".$sv03cedp."\ ";
 
-		include("conexion.php");
+		
 
 		$stm="UPDATE sv09vsdo set sv09nfol='$sv09nfol', sv09npre='$sv09npre', sv09mnt='$sv09mnt', sv09fvdp='$sv09fvdp', sv09fumv=NOW(), sv08conse='$sv08conse', sv03cedp='$sv03cedp', sv04nfin='$sv04nfin', sv02code='$sv02code', sv07cdtp='$sv07cdtp' WHERE sv09npln='$sv09npln'";
 		

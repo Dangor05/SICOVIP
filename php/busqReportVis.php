@@ -4,8 +4,8 @@ include "conexion.php";
  
 $v=$_GET['V'];
 $vs=$_GET['VS'];
-$sql1= "SELECT DISTINCT   a.sv03cedp, a.sv03nomp, a.sv03apdp, b.sv04nfin,b.sv04apln,b.sv04aact,b.sv04acta,DATE_FORMAT(d.sv08fchs,'%d-%m-%Y') AS sv08fchs,
-                e.sv08conse,e.sv09npln,e.sv09nfol,e.sv09npre,DATE_FORMAT(e.sv09fvdp,'%d-%m-%Y') AS sv09fvdp,e.sv09mnt,e.sv07cdtp,d.sv02code
+$sql1= "SELECT DISTINCT   a.sv03cedp, a.sv03nomp, a.sv03apdp, DATE_FORMAT(d.sv08fchs,'%d-%m-%Y') AS sv08fchs,
+                e.sv08conse,DATE_FORMAT(e.sv09fvdp,'%d-%m-%Y') AS sv09fvdp,e.sv07cdtp,d.sv02code
  
 				 FROM sv03ptario a, sv04reqtos b, sv08trmte d,sv09vsdo e, `sv05tipusu` u
 				  	  
@@ -13,7 +13,7 @@ $sql1= "SELECT DISTINCT   a.sv03cedp, a.sv03nomp, a.sv03apdp, b.sv04nfin,b.sv04a
 				 AND e.`sv08conse`= d.`sv08conse`
 				 AND  u.`sv05codu`= e.`sv05codu`
 				 AND b.`sv04nfin` = e.`sv04nfin`
-			   AND e.sv09fvdp  BETWEEN '$v'  AND  '$vs'";
+			     AND e.sv09fvdp  BETWEEN '$v'  AND  '$vs'";
 
 $query = $con->query($sql1);
 ?>
@@ -60,5 +60,7 @@ $query = $con->query($sql1);
 </div>
 
 <?php else:?>
+	<div class="col-md-6">
 	<p class="alert alert-warning">No hay resultados</p>
+	</div>
 <?php endif;?>

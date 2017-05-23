@@ -50,7 +50,7 @@ include ('php/obtreq.php');
       </div>
   </div>
   <div class="form-group row">
-    <label for="sv08fumt" class="col-xs-3 col-form-label" >Documentacion:</label>
+    <label for="sv08fumt" class="col-xs-4 col-form-label" >Documentacion:</label>
     <div class="col-xs-7">
     <input type="file" class="form-control-file" value="<?php echo $person->sv04doc;?>" name="pln" >
     </div>

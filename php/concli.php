@@ -28,8 +28,7 @@ $query = $con->query($sql1);
 	<th>Apellidos</th>
 	<th>N°Finca</th>
 	<th>Plano</th>
-	<th>AUTOCAD</th>
-	<th>CartaAgua</th>
+	<th>Documentos</th>
 	<th>Estado</th>
 	<th>Minuta</th>
 	

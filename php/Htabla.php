@@ -23,9 +23,7 @@ $query = $con->query($sql1);
 	<th>Consecutivo</th>
 	<th>N°Finca</th>
 	<th>Visado</th>
-	<th>Plano</th>
-	<th>Carta de Agua</th>
-	<th>AUTOCAD</th>
+	<th>Documentos</th>
 	<th>Estado</th>
 	<th></th>
 	<th></th>
@@ -35,7 +33,7 @@ $query = $con->query($sql1);
 	<td><?php echo $r["sv03cedp"]; ?></td>
 	<td><?php echo $r["sv03nomp"]; ?></td>
 	<td><?php echo $r["sv03apdp"]; ?></td>
-	<td><?php echo $r["sv08conse"]; ?></td>	
+	<td><?php echo $r["sv08conse"]; ?></td>
 	<td><?php echo $r["sv04nfin"]; ?></td>
 	<td><?php echo $r["sv08fumt"]; ?></td>
 	<td><a href="php/doc.php?id=<?php echo $r['sv03cedp']?>&plan=<?php echo $r['sv04doc']?>"><?php echo $r["sv04doc"];?></a></td>
@@ -44,6 +42,8 @@ $query = $con->query($sql1);
 	<td style="width:75px;">
 	<a href="reVisados.php?conse=<?php echo $r["sv08conse"];?>" class="btn btn-sm btn-info">Procesar</a>
 	</td>
+
+	<!--<td align="center"><button class="btn btn-sm btn-warning" id="btnModi" type="button" onclick="seleccionarTabla()" data-toggle="modal" data-target="#modal-4"> <span class="glyphicon glyphicon-trash-align-center"></span>Editar</button></td>-->
 
 	<td style="width:75px;">
 	<a href="editTra.php?nfin=<?php echo $r["sv04nfin"];?>&con=<?php echo $r['sv08conse']?>&pr=<?php echo $r['sv03cedp']?>" class="btn btn-sm btn-warning">Editar</a>
@@ -59,6 +59,62 @@ $query = $con->query($sql1);
 	<p class="alert alert-warning">No hay resultados</p>
 <?php endif; mysqli_close($con);?>
 
+    <div class="container">
+        <div class="modal fade" id="modal-4" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                     <div class="modal-header">
+                        <button type 1="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title">Modificar Tramite</h3>
+                     </div>
+                     <div class="modal-body ">
+        <form name="Modificar" method="POST" action="php/agreReins.php" enctype="multipart/form-data">
+    
+          <div class="form-group row">
+          
+  </div>
+  <div class="form-group row">
+         <label for="example-text-input" class="col-xs-3 col-form-label">Consecutivo:</label>
+             <div class="col-xs-7">
+                <input class="form-control" type="text" id="conse" readonly="" name="conse" value="">
+             </div>
+             </div>
+           <div class="form-group row">
+          <label for="example-text-input" class="col-xs-3 col-form-label">N° Finca:</label>
+            <div class="col-xs-7">
+            <input class="form-control" required="required" readonly="" type="text" id="nfin" name="nfin" value="">
+            </div>
+            </div>
+            <div class="form-group row">
+            <label for="example-text-input" class="col-xs-3 col-form-label">Documentos:</label>
+          <div class="col-xs-7">
+            <input type="file" id="pln" name="pln" value="">
+          </div>
+          </div>
+          <input type="hidden" name="cedp" value="">        
+       <div class="form-group row"><br></div>
+
+        <div class="form-group row">
+         <div class="col-xs-9">
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           <button type="submit" class="btn btn-success ">Modificar</button>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="" class="btn btn-danger" data-dismiss="modal">Cancelar</a>
+          </div>
+          </div>
+
+        </div>
+        
+        </form>
+
+        </div>
+        </div>
+        </div>
+    </div>
+    </div><!--fin modal -->
+
+
 <script src="public/Bootstrap/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="assets/datatables.min.js"></script>
 <script type="text/javascript" src="assets/crud.js"></script>
@@ -72,3 +128,5 @@ $(document).ready(function() {
 	.addClass('table table-bordered');
 });
 </script>
+
+

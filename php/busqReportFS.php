@@ -5,7 +5,7 @@ include "conexion.php";
 $user=$_GET['S'];
 $fs=$_GET['FS'];
 $sql1= "SELECT DISTINCT  a.sv03cedp, a.sv03nomp, a.sv03apdp,
-                		 b.sv04nfin,b.sv04apln,b.sv04aact,b.sv04acta,
+                		 b.sv04nfin,
                  		 DATE_FORMAT(d.sv08fchs,'%d-%m-%Y') AS sv08fchs,
                   		 d.sv02code
   
@@ -55,6 +55,7 @@ $query = $con->query($sql1);
 </div>
 
 <?php else:?>
+	<br>
 	 <div class="col-md-5">
     <p class="alert alert-warning">No hay resultados</p>
     </div>

@@ -29,8 +29,7 @@ $codigoHTML='
         <td bgcolor="#0099FF"><strong>CIT</strong></td>
       </tr>';
 
-        $consulta="SELECT DISTINCT   a.sv03cedp, a.sv03nomp, a.sv03apdp, b.sv04nfin,b.sv04apln,b.sv04aact,b.sv04acta,
-          DATE_FORMAT(d.sv08fchs,'%d-%m-%Y') AS sv08fchs,
+        $consulta="SELECT DISTINCT   a.sv03cedp, a.sv03nomp, a.sv03apdp, b.sv04nfin, DATE_FORMAT(d.sv08fchs,'%d-%m-%Y') AS sv08fchs,
                 e.sv08conse,e.sv09npln,e.sv09nfol,e.sv09npre,DATE_FORMAT(e.sv09fvdp,'%d-%m-%Y') AS sv09fvdp,e.sv09mnt,e.sv07cdtp,s.sv02dete
  
          FROM sv03ptario a, sv04reqtos b, sv08trmte d,sv09vsdo e, `sv05tipusu` u, sv02estdo s

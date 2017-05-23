@@ -38,7 +38,7 @@ if(isset ($_SESSION['sv07cdtp'])) {
 </div>
 </div>
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
 <script type="text/javascript" src="assets/jquery-1.11.3-jquery.min.js"></script>
 <script type="text/javascript" src="public/bootstrap/bootstrap/js/bootstrap.js"></script>
 <script type="text/javascript" src="assets/datatables.min.js"></script>
@@ -52,26 +52,32 @@ $(document).ready(function() {
 });
 </script>
 <script type="text/javascript">
-$(document).ready(function(){
-
-    $(".edit-link").click(function Carga() 
-    {
-        $("#example tbody tr").each(function (index) 
-        {
-            var campo1, campo2, campo3 campo4, campo5, campo6;
-            $(this).children("td").each(function (index2) 
-            {
-                switch (index2) 
-                {
-                    case 0: campo1 = $(this).text();
-                            break;            
-                }
-                $(this).css("background-color", "#ECF8E0");
-            });
-        });
-        alert(campo1);
-    });
- });  
+    function seleccionarTabla() {
+    var _trEdit = null;
+    $(document).on('click', '#btnModi',function(){
+        _trEdit = $(this).closest('tr');
+        var _cedp = $(_trEdit).find('td:eq(0)').text();
+        var _nom = $(_trEdit).find('td:eq(1)').text();
+        var _apd = $(_trEdit).find('td:eq(2)').text();
+        var _con = $(_trEdit).find('td:eq(3)').text();
+        var _nfin = $(_trEdit).find('td:eq(4)').text();
+        var _visa = $(_trEdit).find('td:eq(5)').text();
+        var _pln = $(_trEdit).find('td:eq(6)').text();
+        var _std = $(_trEdit).find('td:eq(7)').text();
+        
+        
+        
+         $('input[name="conse"]').val(_con);
+        $('input[name=""]').val(_fch);
+        $('input[name="cedc"]').val(_cedc);
+        $('input[name="cedp"]').val(_cedp);
+        $('input[name="nfin"]').val(_nfin);
+        $('input[name="pln"]').val(_pln);
+        $('input[name="aact"]').val(_cta);
+        $('input[name="acta"]').val(_aut);
+        $('input[name=""]').val(_std);
+    }); 
+}
 </script>
 	</body>
 </html>

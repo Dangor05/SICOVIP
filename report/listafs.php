@@ -29,7 +29,7 @@ $codigoHTML='
       </tr>';
 
         $consulta="SELECT DISTINCT  a.sv03cedp, a.sv03nomp, a.sv03apdp,
-                     b.sv04nfin,b.sv04apln,b.sv04aact,b.sv04acta,
+                     b.sv04nfin,
                      DATE_FORMAT(d.sv08fchs,'%d-%m-%Y') AS sv08fchs,
                        e.sv02dete
   
@@ -39,7 +39,7 @@ $codigoHTML='
      AND b.`sv04nfin`=d.`sv04nfin`
      AND e.sv02code = d.`sv02code`
   
-     AND sv08fchs   BETWEEN '$_GET[S]'  AND  '$_GET[FS]'";
+     AND sv08fchs  BETWEEN '$_GET[S]'  AND  '$_GET[FS]'";
          $query=$con->query($consulta);
  if ($query->num_rows>0) {
    while ($dato=$query->fetch_array()){

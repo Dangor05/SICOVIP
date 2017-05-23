@@ -102,7 +102,16 @@ return ((key >= 48 && key <= 57) || (key==8) || key==189)
     <input type="text" class="form-control" readonly="" value="<?php echo $GLOBALS['cit'];?>" name="cit">
     <input type="hidden" class="form-control" value="<?php echo $GLOBALS['codu'];?>" name="codu">
   </div>
-  <button type="submit" class="btn btn-default">Revisado</button>
+  <div class="col-md-3"></div>
+  <div class="col-md-3">
+   <a class="btn btn-danger" href="php/regreso.php?id=<?php echo $person->sv08conse;?>"> Regresar</a>
+  </div>
+  <div class="col-md-3"></div>
+  <div class="col-md-3">
+   <button type="submit" class="btn btn-default">Revisado</button>
+    
+  </div>
+  
 </form>
 <?php else:?>
   <p class="alert alert-danger">404 No se encuentra</p>

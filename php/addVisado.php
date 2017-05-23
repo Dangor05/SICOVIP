@@ -6,7 +6,7 @@ if(!empty($_POST)){
 $npln=mysqli_real_escape_string($con,$_POST['npln']);   
 $nfol=mysqli_real_escape_string($con,$_POST['nfol']);   
 $npre=mysqli_real_escape_string($con,$_POST['npred']);   
-$mnt=mysqli_real_escape_string($con,$_FILES['mnt']);    
+$mnt=$_FILES['mnt'];    
 $fvdp=mysqli_real_escape_string($con,$_POST['fch']);   
 $conse=mysqli_real_escape_string($con,$_POST['conse']);   
 $cedc=mysqli_real_escape_string($con,$_POST['cedc']);  
@@ -16,7 +16,7 @@ $impu=mysqli_real_escape_string($con,$_POST['impu']);
 $cdtp=mysqli_real_escape_string($con,$_POST['cit']); 
 $codu=mysqli_real_escape_string($con,$_POST['codu']);
 $code=mysqli_real_escape_string($con,$_POST['std']);
-$sv04apln=mysqli_real_escape_string($con,$_FILES['pln']);
+$sv04apln=$_FILES['pln'];
 
 $dir ="../archivos/".$cedp."\ ";
 

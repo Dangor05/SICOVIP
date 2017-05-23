@@ -21,15 +21,16 @@ if(!empty($_POST))
 				if ($pas==$vps) {
 
 					$pass=sha1($pas);
-					$stmt= "INSERT INTO sv01clnte(sv01cedc,sv01cdtpc,sv01nomc,sv01apdc,sv01emc,sv01telc,sv01pass)VALUES ('$cedt','$cod','$nom','$apel','$eml','$tel','$pass')";
-					$sen=$con->query($stmt);
-					if ($sen!=null) {
-						$con->close();
+					$stmt=$con->prepare( "CALL AgrClient(?,?,?,?,?,?,?);");
+					$stmt->bind_param("sssssis",$cedt,$cod,$nom,$apel,$eml,$tel,$pass);
+					$stmt->execute();
+					if ($stmt->error) {
+						print "<script>alert(\"No se pudo registrar.\");window.location='../registro.php';</script>";
+					}
+					else{
 						header("location: ../index.php");
-		}else{
-			print "<script>alert(\"No se pudo registrar.\");window.location='../registro.php';</script>";
-		}
-				}
+					}
+			}
 				else{
 					print "<script>alert(\"Las contraseñas no son igual, por favor, verifique que coincidan.\");window.location='../registro.php';</script>";
 				}

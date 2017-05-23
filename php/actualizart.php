@@ -4,6 +4,8 @@ if(!empty($_POST)){
 
 	if (isset($_POST['sv07cdtp']) && isset($_POST['sv07cedt']) && isset($_POST['sv07nomt']) && isset($_POST['sv07apdt']) && isset($_POST['sv07estd']) && isset($_POST['sv07pass']) && isset($_POST['sv07emt']) && isset($_POST['sv05codu']) && isset($_POST['pass2']) ) {
 
+		include "conexion.php";
+
      $sv07cdtp=mysqli_real_escape_string($con,$_POST['sv07cdtp']);
      $sv07cedt=mysqli_real_escape_string($con,$_POST['sv07cedt']);
      $sv07nomt=mysqli_real_escape_string($con,$_POST['sv07nomt']);
@@ -17,7 +19,7 @@ if(!empty($_POST)){
      if ($pass==$pass2) {
 
      	$sv07pass=sha1($pass);
-     		include "conexion.php";
+     		
 			
 			$sql="UPDATE `sv07tpgfo` SET `sv07cedt`='$sv07cedt',`sv07nomt`='$sv07nomt',`sv07apdt`='$sv07apdt',`sv07estd`='$sv07estd',`sv07pass`='$sv07pass',sv07emt='$sv07emt',`sv05codu`='$sv05codu' WHERE `sv07cdtp`='$sv07cdtp'";
 			

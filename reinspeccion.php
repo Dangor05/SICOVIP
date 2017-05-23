@@ -1,7 +1,7 @@
 <?php 
 session_start();
 if (isset($_SESSION['cd'])) {
-	if (isset($_GET['id'])) {
+if (isset($_GET['id'])) {
 	 ?>
  <!DOCTYPE html>
  <html lang="es">
@@ -29,17 +29,6 @@ if (isset($_SESSION['cd'])) {
   		<form action="php/agreReinspeccion.php" enctype="multipart/form-data" method="POST" onsubmit="return valrequi()">
  			<div class="container">
  			<div class="form-group row">
-          <label for="selecc" class="col-xs-2 form-label">Seleccione el archivo que requiere actualizar:</label>
-           <div class="col-xs-2">
-              <select name="opcion" class="form-control" id="opci" name="opcion" required>
-              <option value="1">Todos</option>
-              <option value="2">Plano</option>
-              <option value="3">Cartas de Agua</option>
-              <option value="4">AutoCad</option>
-              </select>
-             </div>
-             </div>
- 			<div class="form-group row">
     <label class="col-xs-1 col-form-label" for="sv08conse">Consecutivo</label>
     <div class="col-xs-2">
     <p><?php echo $cn;?></p>
@@ -54,23 +43,12 @@ if (isset($_SESSION['cd'])) {
       </div>
   </div>
   <div class="form-group row">
-    <label for="sv08fumt" class="col-xs-1 col-form-label" >Plano Agrimensura:</label>
+    <label for="sv08fumt" class="col-xs-1 col-form-label" >Documentos:</label>
     <div class="col-xs-2">
-    <input type="file" class="form-control-file" value="<?php echo $person->sv04apln;?>" name="pln" >
+    <input type="file" class="form-control-file" value="<?php echo $person->sv04doc;?>" name="pln" >
     </div>
     </div>
-    <div class="form-group row">
-    <label for="sv08fumt" class="col-xs-1 col-form-label" >Carta de Agua</label>
-    <div class="col-xs-2">
-    <input type="file" class="form-control-file" value="<?php echo $person->sv04acta; ?>" name="acta">
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="sv01cedc" class="col-xs-1 col-form-label" >AUTOCAD</label>
-    <div class="col-xs-2">
-    <input type="file"  class="form-control-file" value="<?php echo $person->sv04aact; ?>" name="aact">
-  </div>
-  </div>
+
    <button type="submit" class="btn btn-default">Actualizar</button>
  			</div>
  		</form>
