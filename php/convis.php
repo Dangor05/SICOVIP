@@ -2,8 +2,8 @@
 
 include "conexion.php";
 
-$user_id=null;
-$sql1= "SELECT DISTINCT  a.sv03cedp, a.sv03nomp, a.sv03apdp,d.sv08conse,b.`sv04nfin`,DATE_FORMAT(d.sv08fchs,'%d-%m-%Y') AS sv08fchs,
+$user=$_SESSION['sv07cdtp'];
+$sql1= "SELECT DISTINCT  a.sv03cedp, a.sv03nomp, a.sv03apdp,d.sv08conse,b.sv04nfin, b.sv04doc ,DATE_FORMAT(d.sv08fchs,'%d-%m-%Y') AS sv08fchs,
                  d.sv02code
 
  
@@ -11,7 +11,8 @@ $sql1= "SELECT DISTINCT  a.sv03cedp, a.sv03nomp, a.sv03apdp,d.sv08conse,b.`sv04n
   
  WHERE d.sv03cedp= a.sv03cedp
  AND b.sv04nfin = d.sv04nfin
- AND d.sv02code='8'";
+ AND d.sv02code='8'
+ AND e.sv07cdtp='$user'";
 $query = $con->query($sql1);
 ?>
 
