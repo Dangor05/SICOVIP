@@ -89,7 +89,7 @@ return ((key >= 48 && key <= 57) || (key==8))
 <div class="row">
 <div class="col-md-5 col-md-offset-3">  
 
-<form role="form-inline" Class="form" action="php/addPropie.php" method="POST" onsubmit="return validar();" > 
+<form role="form-inline" Class="form" action="php/addPropie.php" method="POST"> 
      <center><h3>Registro Propietario</h3></center>
    <div class="form-group">
    <label for="ced">Cedula</label>&nbsp

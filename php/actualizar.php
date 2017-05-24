@@ -40,7 +40,7 @@ if(!empty($_POST) && !empty($_FILES)){
 				$con->close();
 		}else{
 			$con->close();
-				print "<script>alert(\"Mierda.\");window.location='../VisadoMostrar.php';</script>";
+				print "<script>alert(\"Algo a ocurrido, por favor intenta de nuevo.\");window.location='../VisadoMostrar.php';</script>";
 
 			}
 		}

@@ -27,7 +27,7 @@ $dir ="../archivos/".$cedp."\ ";
 			$consu = "UPDATE sv08trmte SET sv02code ='$code', sv08fumt=NOW() WHERE  sv08conse='$conse'";
 			
 
-if (!empty($sv04plan['name'])) {
+if (!empty($sv04apln['name'])) {
 	$stm ="UPDATE sv04reqtos SET sv04apln='".$sv04apln['name']."' WHERE sv04nfin='$nfin'";
 		$query=$con->query($sql);
 		$senten=$con->query($consu);

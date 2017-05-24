@@ -51,13 +51,13 @@ return ((key >= 48 && key <= 57) || (key==8))
         include('php/navh2.php');
       } 
       include ("php/getPropietario.php");
-      if($query->num_rows>0):
       ?>
      <div class="col-md-11 col-md-offset-1">
   <div class="container">
    <h2>Registro Propietario</h2>
      <button class="btn btn-success" id="btnAgregar" type="button"  data-toggle="modal" data-target="#modal-1"> <span class="glyphicon glyphicon-pencil"></span> &nbsp; Nuevo Propietario</button>
      <br><br>
+     <?php if($query->num_rows>0): ?>
      <div class="table-responsive">   
  <div style="width: 999px" class="well well-sm text-left">
     

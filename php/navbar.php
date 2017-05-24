@@ -60,7 +60,7 @@
 <ul class="dropdown-menu">
 <li><a href="./config.php"> <span class="glyphicon glyphicon-user"></span> &nbsp;Perfil</a></li>
 <!--<li><a href="./vert.php">Topografos</a></li>-->
-<li><a href="./UsuariosMostrar.php">Topografos</a></li>
+<li><a href="./UsuariosMostrar.php"><span class="glyphicon glyphicon-briefcase">&nbsp;</span>Topografos</a></li>
 <li ><a href="php/logout.php" class="btn btn-defult"><span class="glyphicon glyphicon-log-out"></span> &nbsp; Cerrar sesion</a></li>
 </ul>
 </ul> 
