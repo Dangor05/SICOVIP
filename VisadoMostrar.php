@@ -39,7 +39,7 @@ if(isset ($_SESSION['sv07cdtp'])) {
 function Numeros(e)
 {
 var key = window.Event ? e.which : e.keyCode
-return ((key >= 48 && key <= 57) || (key==8))
+return ((key >= 48 && key <= 57) || (key==8) || (key==45))
 }
 </script>
 <body>
@@ -191,7 +191,7 @@ return ((key >= 48 && key <= 57) || (key==8))
 
         <label for="example-text-input" class="col-xs-2 col-form-label">Impuestos:</label>
           <div class="col-xs-4">
-            <select name="sv02code" class="form-control" name="svcode" >
+            <select name="svcode" class="form-control" name="svcode" >
             <option value="1">Al dia</option>
             <option value="2">Retrasado</option>
              </select>
@@ -226,7 +226,7 @@ return ((key >= 48 && key <= 57) || (key==8))
           <label for="example-text-input" class="col-xs-2 col-form-label">Topografo:</label>
           <div class="col-xs-4">
             <input class="form-control" type="text" id="sv07cdtp" readonly="" name="svcdtp" value="<?php echo $_SESSION['sv07cdtp'];?>">
-            <input class="form-control" type="hidden" id="svcodu" name="sv05codu" value="<?php echo $_SESSION['sv05codu'];?>">
+            <input class="form-control" type="hidden" id="svcodu" name="codu" value="<?php echo $_SESSION['sv05codu'];?>">
           </div>
                 </div>
     <div class="form-group row"><br>

@@ -3,6 +3,7 @@
 if(!empty($_POST) && !empty($_FILES)){
 	if (isset($_POST['sv09npln']) && isset($_POST['sv09nfol']) && isset($_POST['sv09npre']) && isset($_FILES['sv09mnt']) && isset($_POST['sv09fvdp']) && isset($_POST['sv08conse']) && isset($_POST['sv01cedc']) && isset($_POST['sv03cedp']) && isset($_POST['sv04nfin']) && isset($_POST['sv02code']) && isset($_POST['sv02std']) && isset($_POST['sv07cdtp'])) {
 		include("conexion.php");
+
 		$sv09npln=mysqli_real_escape_string($con,$_POST['sv09npln']);
 		$sv09nfol=mysqli_real_escape_string($con,$_POST['sv09nfol']);
 		$sv09npre=mysqli_real_escape_string($con,$_POST['sv09npre']);
@@ -25,8 +26,8 @@ if(!empty($_POST) && !empty($_FILES)){
 		
 		$sql="UPDATE sv08trmte SET sv02code='$sv02std' WHERE sv08conse='$sv08conse'";
 
-		if ($sv04plan!=null) {
-			$stm ="UPDATE sv04reqtos SET sv04apln='".$sv04plan['name']."' WHERE sv04nfin='$sv04nfin'";
+		if (!empty($sv04plan['name'])) {
+			$st ="UPDATE sv04reqtos SET sv04apln='".$sv04plan['name']."' WHERE sv04nfin='$sv04nfin'";
 		$stmt=$con->query($stm);
 		$qry=$con->query($sql);
 		$exec=$con->query($st);
@@ -39,7 +40,7 @@ if(!empty($_POST) && !empty($_FILES)){
 				$con->close();
 		}else{
 			$con->close();
-				print "<script>alert(\"No se pudo actualizar.\");window.location='../VisadoMostrar.php';</script>";
+				print "<script>alert(\"Mierda.\");window.location='../VisadoMostrar.php';</script>";
 
 			}
 		}

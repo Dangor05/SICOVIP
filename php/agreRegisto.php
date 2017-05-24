@@ -38,39 +38,6 @@ if(!empty($_POST))
 			}
 		}
 	
-
-	$sch="SELECT sv01cedc FROM sv01clnte WHERE sv01cedc='$Cedt'";
-	$stm=$con->query($sch);
-	if ($stm->num_rows>0) {
-		          session_start();
-                 $_SESSION['Cedt'] = $Cedt;
-                 $_SESSION['mail'] = $EmailT;
-                 mysqli_close($con);
-                 header("Location: ../Propietario.php");
-	}else{
-    
-
-	$sql1 = "INSERT INTO sv01clnte(sv01cedc,sv01cdtpc,sv01nomc,sv01apdc,sv01emc,sv01telc) 
-	VALUES ('$Cedt','$CodIT','$NomT','$ApelT','$EmailT','$TelT')";
-	
-
-
-	$query1=$con->query($sql1);
-
-	if($query1!=null){
-		                
-                 session_start();
-                 $_SESSION['Cedt'] =   $Cedt;
-                 $_SESSION['mail'] = $EmailT;
-                 mysqli_close($con);
-                 header("Location: ../Propietario.php"); 
-			}else{
-				mysqli_close($con);
-				echo "Error";
-				//print "<script>alert(\"No se pudo agregar.\");window.location='../Cliente.php';</script>";
-
-			}
-}
 }
 
 ?>

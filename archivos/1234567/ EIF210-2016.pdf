@@ -1,2 +1,0 @@
-<br />
-<b>Warning</b>:  readfile(sicovip\archivos/1234567/EIF210-2016.pdf): failed to open stream: No such file or directory in <b>C:\apache\htdocs\sicovip\php\plan.php</b> on line <b>8</b><br />

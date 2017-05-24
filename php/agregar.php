@@ -1,12 +1,13 @@
 <?php
 
 if(!empty($_POST)){
-	if (isset($_POST['svnpln']) && isset($_POST['svnfol']) && isset($_POST['svnpre']) && isset($_FILES['svmnt']) && isset($_POST['svfvdp']) && isset($_POST['svconse']) && isset($_POST['svcedc']) && isset($_POST['svcedp']) && isset($_POST['svnfin']) && isset($_POST['svcode']) && isset($_POST['svstd']) && isset($_POST['svcdtp']))
+	if (isset($_POST['svnpln']) && isset($_POST['svnfol']) && isset($_POST['svnpre']) && isset($_FILES['sv09mnt']) && isset($_POST['svfvdp']) && isset($_POST['svconse']) && isset($_POST['svcedc']) && isset($_POST['svcedp']) && isset($_POST['svnfin']) && isset($_POST['svcode']) && isset($_POST['svstd']) && isset($_POST['svcdtp']))
 	 {
+	 	include "conexion.php";
 $sv09npln=mysqli_real_escape_string($con,$_POST['svnpln']);   
 $sv09nfol=mysqli_real_escape_string($con,$_POST['svnfol']);   
 $sv09npre=mysqli_real_escape_string($con,$_POST['svnpre']);   
-$sv09mnt=mysqli_real_escape_string($con,$_FILES['svmnt']);    
+$sv09mnt=$_FILES['sv09mnt'];    
 $sv09fvdp=mysqli_real_escape_string($con,$_POST['svfvdp']);   
 $sv08conse=mysqli_real_escape_string($con,$_POST['svconse']);   
 $sv01cedc=mysqli_real_escape_string($con,$_POST['svcedc']);  
@@ -14,20 +15,44 @@ $sv03cedp=mysqli_real_escape_string($con,$_POST['svcedp']);
 $sv04nfin=mysqli_real_escape_string($con,$_POST['svnfin']); 
 $sv02code=mysqli_real_escape_string($con,$_POST['svcode']); 		
 $sv07cdtp=mysqli_real_escape_string($con,$_POST['svcdtp']); 
-$sv05codu=mysqli_real_escape_string($con,$_POST['svcodu']);
-$sv04apln=mysqli_real_escape_string($con,$_FILES['svplan']);
+$sv05codu=$_POST['codu'];
+$sv04apln=$_FILES['svplan'];
 $sv02std=mysqli_real_escape_string($con,$_POST['svstd']);
 
 
 $dir ="../archivos/".$sv03cedp."/";
 
-include "conexion.php";
+
+echo $sv09npln; echo  "nplano"; 
+echo "<br>";
+echo $sv09nfol; echo "nfolio";
+echo "<br>";
+echo $sv09npre; echo "predio";
+echo "<br>";
+echo $sv09mnt['name']; echo "Minnuta";
+echo "<br>";
+echo $sv09fvdp; echo "Fecha";
+echo "<br>";
+echo $sv08conse; echo "conse";
+echo "<br>";
+echo $sv01cedc; echo"cliente";
+echo "<br>";
+echo $sv03cedp; echo "propietario";
+echo "<br>";
+echo $sv04nfin; echo "nfinca";
+echo "<br>";
+echo $sv02code; echo "codigo";
+echo "<br>";
+echo $sv07cdtp; echo "topografo";
+echo "<br>";
+echo $sv05codu; echo "tipo";
+
 
 $sql = "INSERT INTO sv09vsdo (sv09npln,sv09nfol,sv09npre,sv09mnt,sv09fvdp,sv09fumv,sv08conse,sv01cedc,sv03cedp,sv04nfin,sv02code,sv07cdtp,sv05codu) values ('$sv09npln','$sv09nfol','$sv09npre','".$sv09mnt['name']."','$sv09fvdp',NOW(),'$sv08conse','$sv01cedc','$sv03cedp','$sv04nfin','$sv02code','$sv07cdtp','$sv05codu')";
 $consu = "UPDATE sv08trmte SET sv02code ='$sv02std' WHERE  sv08conse='$sv08conse'";
 
 
-if ($sv04apln!=null) {
+if (!empty($_FILES['svplan'])) {
 	$stm ="UPDATE sv04reqtos SET sv04apln='".$sv04apln['name']."' WHERE sv04nfin='$sv04nfin'";
 
 	$exec=$con->query($stm);

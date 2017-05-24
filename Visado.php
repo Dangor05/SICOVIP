@@ -23,7 +23,7 @@ include ('php/obtvisado.php');
 function Numeros(e)
 {
 var key = window.Event ? e.which : e.keyCode
-return ((key >= 48 && key <= 57) || (key==8) || key==189)
+return ((key >= 48 && key <= 57) || (key==8) || (key==45))
 }
 </script>
 

@@ -24,16 +24,16 @@ $dir ="../archivos/".$cedp."\ ";
 			$sql = "INSERT INTO sv09vsdo (sv09npln,sv09nfol,sv09npre,sv09mnt,sv09fvdp,sv09fumv,sv08conse,sv01cedc,sv03cedp,sv04nfin,sv02code,sv07cdtp,sv05codu) 
 			values ('$npln','$nfol','$npre','".$mnt['name']."','$fvdp',NOW(),'$conse','$cedc','$cedp','$nfin','$impu','$cdtp','$codu')";
 
-			$consu = "UPDATE sv08trmte SET sv02code ='$code' WHERE  sv08conse='$conse'";
+			$consu = "UPDATE sv08trmte SET sv02code ='$code', sv08fumt=NOW() WHERE  sv08conse='$conse'";
 			
 
-if ($sv04apln!=null) {
+if (!empty($sv04plan['name'])) {
 	$stm ="UPDATE sv04reqtos SET sv04apln='".$sv04apln['name']."' WHERE sv04nfin='$nfin'";
 		$query=$con->query($sql);
 		$senten=$con->query($consu);
 		$exec=$con->query($stm);
 			if($query!=null && $senten!=null && $exec!=null){
-		move_uploaded_file($sv09mnt['tmp_name'],$dir.$sv09mnt['name']);
+		move_uploaded_file($mnt['tmp_name'],$dir.$mnt['name']);
 		move_uploaded_file($sv04apln['tmp_name'],$dir.$sv04apln['name']);		
 		mysqli_close($con);
 

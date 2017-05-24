@@ -56,7 +56,7 @@ if(isset ($_SESSION['sv07cdtp'])) {
 
   <div class="form-group"> 
  <label for="sv03ptario">Documentos:</label>&nbsp
-  <input type="file" class="form-control-file" name="doc" required=""></div>
+  <input type="file" name="doc" required=""></div>
 
    <div class="form-group"> 
  <input type="hidden" class="form-control" value="<?php echo $GLOBALS['mail'];?>" name="mail"></div>
