@@ -34,12 +34,12 @@ return ((key >= 48 && key <= 57) || (key==8) || (key==45))
       }else if ($_SESSION['sv05codu'] == 2) {
         include('php/navh2.php');
       } ?>
-<div class="container">
+<<div class="container">
 <div class="row">
-<div class="col-md-4">
+<div class="col-md-5 col-md-offset-3">
     <h2>Visado</h2>
 <?php if($person!=null):?>
-
+<center></center>
 <form role="form" method="post" action="php/addVisado.php" onsubmit="return validar();" enctype="multipart/form-data">
   <div class="form-group">
   <label for="">Consecutivo</label>
@@ -102,16 +102,18 @@ return ((key >= 48 && key <= 57) || (key==8) || (key==45))
     <input type="text" class="form-control" readonly="" value="<?php echo $GLOBALS['cit'];?>" name="cit">
     <input type="hidden" class="form-control" value="<?php echo $GLOBALS['codu'];?>" name="codu">
   </div>
+  <center>
   <div class="col-md-3"></div>
   <div class="col-md-3">
    <a class="btn btn-danger" href="php/regreso.php?id=<?php echo $person->sv08conse;?>"> Regresar</a>
   </div>
-  <div class="col-md-3"></div>
+ 
   <div class="col-md-3">
    <button type="submit" class="btn btn-default">Revisado</button>
     
-  </div>
   
+  </div>
+ </Center> 
 </form>
 <?php else:?>
   <p class="alert alert-danger">404 No se encuentra</p>

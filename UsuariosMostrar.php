@@ -172,7 +172,7 @@ return ((key >= 48 && key <= 57) || (key==8))
               <input class="form-control" type="password" minlength="8" maxlength="16" id="clave" name="svpass" required>
                <span id="mjscl" class="help-block"></span></div>
               </div>
-        </div> 
+       
          <div class="form-group row">
             <label for="example-text-input" class="col-xs-2 col-form-label">Repetir contraseña:</label>
              <div class="col-xs-7">

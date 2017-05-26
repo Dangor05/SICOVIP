@@ -52,6 +52,7 @@
                          <li><a href="./verReportFS.php"><span class="glyphicon glyphicon-calendar"></span> Fecha Solicitud</a></li>
 
                           <li><a href="./verReportCIT.php"><span class="glyphicon glyphicon-briefcase">&nbsp;</span>Codigo IT</a></li>
+                          <li><a href="./verReportClient.php"><span class="glyphicon glyphicon-credit-card"></span>&nbsp;&nbsp;Codigo IT Clientes</a></li>
                         </ul>
                     </li>
                 </ul>

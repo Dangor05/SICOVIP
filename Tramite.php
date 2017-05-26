@@ -60,9 +60,10 @@ if(isset ($_SESSION['sv07cdtp'])) {
 
    <div class="form-group"> 
  <input type="hidden" class="form-control" value="<?php echo $GLOBALS['mail'];?>" name="mail"></div>
-     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  
+    <center>
+    <br>
   <button type="submit" class="btn btn-success">Finalizar Tramite</button>
-  
+  </center>
   </form>
 <?php else:?>
   <p class="alert alert-danger">404 no se encuentra</p>

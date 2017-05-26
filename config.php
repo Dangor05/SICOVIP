@@ -28,9 +28,7 @@ if(isset ($_SESSION['sv07cdtp'])) {
 <div class="container">
 <div class="row">
 <div class="col-md-6">
-		<h2>Datos Personales</h2>
-		<br>
-
+		
 <?php include "php/configura.php";?>
 
 </div>

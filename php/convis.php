@@ -3,7 +3,7 @@
 include "conexion.php";
 
 $user=$_SESSION['sv07cdtp'];
-$sql1= "SELECT DISTINCT  a.sv03cedp, a.sv03nomp, a.sv03apdp,d.sv08conse,b.sv04nfin, b.sv04doc ,DATE_FORMAT(d.sv08fchs,'%d-%m-%Y') AS sv08fchs,
+$sql1= "SELECT DISTINCT  a.sv03cedp, a.sv03nomp, a.sv03apdp,d.sv08conse,b.sv04nfin, b.sv04doc ,DATE_FORMAT(d.sv08fchs,'%d-%m-%Y') AS sv08fchs, DATE_FORMAT(d.sv08fumt,'%d-%m-%Y') AS sv08fumt,
                  d.sv02code
 
  
@@ -32,7 +32,7 @@ $query = $con->query($sql1);
 	
 	
 	<th>Solicitud</th>
-	
+	<th>Modificado</th>
 	<th>Estado</th>
 	
 	
@@ -48,7 +48,7 @@ $query = $con->query($sql1);
 	<td style="width: 5%"><?php echo $r["sv04nfin"]; ?></td>
 	
 	<td style="width: 5%"><?php echo $r["sv08fchs"]; ?></td>
-	
+	<td style="width: 5%"><?php echo $r["sv08fumt"]; ?></td>
 	<td style="width: 5%"><?php if($r["sv02code"]==5){echo 'Aprobado';}elseif($r["sv02code"]==6){echo 'Rechazado';}elseif($r["sv02code"]==8){echo 'Oficio';}else{echo 'En proceso';} ?></td>
 	
 	

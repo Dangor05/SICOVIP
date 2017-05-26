@@ -21,7 +21,7 @@ if(!empty($_POST) && !empty($_FILES)){
 
 		
 
-		$stm="UPDATE sv09vsdo set sv09nfol='$sv09nfol', sv09npre='$sv09npre', sv09mnt='$sv09mnt', sv09fvdp='$sv09fvdp', sv09fumv=NOW(), sv08conse='$sv08conse', sv03cedp='$sv03cedp', sv04nfin='$sv04nfin', sv02code='$sv02code', sv07cdtp='$sv07cdtp' WHERE sv09npln='$sv09npln'";
+		$stm="UPDATE sv09vsdo set sv09nfol='$sv09nfol', sv09npre='$sv09npre', sv09mnt='$sv09mnt', sv09fvdp='$sv09fvdp', sv09fumv=NOW(), sv08conse='$sv08conse',sv01cedc='$sv01cedc', sv03cedp='$sv03cedp', sv04nfin='$sv04nfin', sv02code='$sv02code', sv07cdtp='$sv07cdtp' WHERE sv09npln='$sv09npln'";
 		
 		$sql="UPDATE sv08trmte SET sv02code='$sv02std' WHERE sv08conse='$sv08conse'";
 

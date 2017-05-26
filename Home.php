@@ -7,6 +7,7 @@ if(isset ($_SESSION['sv07cdtp'])) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<meta http-equiv="refresh" content="45" />
 <TITLE>SICOVIP</TITLE>
 <link href="public\bootstrap\bootstrap\css\bootstrap.min.css" rel="stylesheet" media="screen">
 <link href="public\bootstrap\bootstrap\css\bootstrap-theme.min.css" rel="stylesheet" media="screen">
@@ -65,7 +66,7 @@ include("php/getnewTramite.php");
       
       
       <td style="width: 15%"><a href="php/doc.php?id=<?php echo $elementos['sv03cedp']?>&doc=<?php echo $elementos['sv04doc']?>"><?php echo $elementos["sv04doc"];?></a></td>
-      <td style="width: 10%"><?php if($elementos["sv02code"] == 7){echo 'En Proceso';}?></td>
+      <td style="width: 10%"><?php if($elementos["sv02code"] == 7){echo 'En Espera';}?></td>
       <!--variable de sesion-->
       
       <td align="center" style="width: 3%">

@@ -14,6 +14,13 @@ while ($r=$query->fetch_object()){
   }
 ?><?php if($person!=null):?>
 <form role="form" method="post" action="php/actualiUsu.php">
+<div class="container">
+<div class="row">
+<div class="col-md-5 col-md-offset-3">
+<h2>Datos Personales</h2>
+    <br>
+
+
   <div class="form-group">
     <label for="sv07cdtp">Codigo IT</label>
      <p><?php echo $person->sv07cdtp; ?></p>
@@ -49,7 +56,12 @@ while ($r=$query->fetch_object()){
   </div>
 
 <input type="hidden" name="id" value="<?php echo $person->sv07cdtp; ?>">
-  <button type="submit" class="btn btn-default">Actualizar</button>
+<center>
+<button type="submit" class="btn btn-default">Actualizar</button>
+  </center>
+  </div>
+  </div>
+  </div>
 </form>
 <?php else:?>
   <p class="alert alert-danger">404 No se encuentra</p>

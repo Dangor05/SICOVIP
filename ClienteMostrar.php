@@ -163,14 +163,14 @@ return ((key >= 48 && key <= 57) || (key==8))
               <div class="form-group row">
             <label for="example-text-input" class="col-xs-3 col-form-label">Contraseña:</label>
              <div class="col-xs-7">
-                <input class="form-control" id="clave" type="password" minlength="8" maxlength="16" value="abc123" name="svpass" required>
+                <input class="form-control" id="clave" type="password" minlength="8" maxlength="16" value="" name="svpass" required>
                 <span id="mjscl" class="help-block"></span>
              </div>
         </div>
               <div class="form-group row">
             <label for="example-text-input" class="col-xs-3 col-form-label">Repetir contraseña:</label>
              <div class="col-xs-7">
-                <input class="form-control" id="contra" type="password" minlength="8" maxlength="16" value="abc123" name="valpass" required>
+                <input class="form-control" id="contra" type="password" minlength="8" maxlength="16" value="" name="valpass" required>
                 <span id="mjsct" class="help-block"></span>
             <span id="mjs" class="help-block"></span>
              </div>
@@ -178,13 +178,15 @@ return ((key >= 48 && key <= 57) || (key==8))
     <div class="form-group row"><br>
       
     </div>
+    <center>
     <div class="form-group row">
-     <div class="col-xs-9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <div class="col-xs-9">
        <button type="submit" class="btn btn-success">Agregar</button>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        <a href="" class="btn btn-danger" data-dismiss="modal">Cancelar</a>
       </div>
       </div>
+      </center>
     
     </form>
 

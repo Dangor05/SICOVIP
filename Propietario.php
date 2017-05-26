@@ -113,9 +113,9 @@ return ((key >= 48 && key <= 57) || (key==8))
     <option value="1">Fisico</option>
     <option value="2">Juridico</option></select></div>
 <br>
-  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-   &nbsp&nbsp&nbsp&nbsp&nbsp   &nbsp&nbsp&nbsp&nbsp&nbsp   &nbsp&nbsp&nbsp&nbsp&nbsp
+   <center>
 <button type="submit" class="btn btn-default">Continuar</button>
+    </center>
     </div>
   </form>
 

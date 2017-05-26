@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset ($_SESSION['cd'])) {
+if(isset ($_SESSION['cd']) || isset ($_SESSION['sv07cdtp']) ) {
 ?>
  <!DOCTYPE html>
  <html lang="es">

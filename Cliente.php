@@ -127,8 +127,9 @@ return ((key >= 48 && key <= 57) || (key==8))
    <label for="sv01telc">Telefono</label>
    <input type='text' class="form-control" id="tel" value="<?php echo $tel; ?>" name='telt' onkeypress="return Numeros(event)"></div>
 
-<a class="btn btn-danger" href="Home.php"><span class="glyphicon glyphicon-circle-arrow-left"></span> &nbsp;Cancelar</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="submit" class="btn btn-default text-right">Continuar</button>
-    
+    <center>
+      <a class="btn btn-danger" href="Home.php"><span class="glyphicon glyphicon-remove"></span> &nbsp;Cancelar</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="submit" class="btn btn-default btn-md text-right">Continuar</button>
+    </center>
    </section>
    </div>
   </form>
