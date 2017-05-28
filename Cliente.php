@@ -41,42 +41,6 @@ var key = window.Event ? e.which : e.keyCode
 return ((key >= 48 && key <= 57) || (key==8))
 }
 </script>
-
-       <script>
- $(document).ready(function(){   
-        /*$( "#ced" ).autocomplete({
-              source: function(resquest, response){
-                $.ajax({
-                  url:"srchClient.php",
-                  dataType:"json",
-                  data:{q:resquest.term},
-                  success:function(data){
-                    response(data);
-                  }
-                });
-              } ,
-              minLength: 1,
-              select:function(event ui){
-                alert("selecciono: "+ ui.item.label);
-              }
-          });*/
-        $( "#ced" ).keyup(function(){
-            if($( "#ced" ).val()){
-              $.ajax({
-                  method:"post",
-                  url:"php/autClient.php",
-                  dataType:"json",
-                  data:{q:$(this).val()},
-                  done:function(data){
-                    var jsonobj=JSON.parse(data);
-                    console.info(jsonobj);
-                  }
-                });
-            }
-        });
-                 
-      });
-        </script>
 </head>
 <body>
   <?php

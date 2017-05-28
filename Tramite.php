@@ -7,6 +7,7 @@ if(isset ($_SESSION['sv07cdtp'])) {
      $Cedt = $_SESSION['Cedt'];
      $Cedp = $_SESSION['Cedp'];
      $mail= $_SESSION['mail'];
+     $mpro=$_SESSION['mpro'];
      ?>
 <?php if ($cons!=null):?>
  <!DOCTYPE html>
@@ -52,14 +53,15 @@ if(isset ($_SESSION['sv07cdtp'])) {
 
   <div class="form-group"> 
  <label for="sv03ptario">Nº Finca:</label>&nbsp
-<input type="text" class="form-control" name="fin" placeholder="Nº Finca" required onkeypress="return Numeros(event)"></div>
+<input type="text" class="form-control" name="fin" placeholder="Nº Finca" maxlength="30" required ></div>
 
   <div class="form-group"> 
  <label for="sv03ptario">Documentos:</label>&nbsp
   <input type="file" name="doc" required=""></div>
 
    <div class="form-group"> 
- <input type="hidden" class="form-control" value="<?php echo $GLOBALS['mail'];?>" name="mail"></div>
+ <input type="hidden" class="form-control" value="<?php echo $GLOBALS['mail'];?>" name="mail">
+ <input type="hidden" class="form-control" value="<?php echo $GLOBALS['mpro'];?>" name="pmail"></div>
     <center>
     <br>
   <button type="submit" class="btn btn-success">Finalizar Tramite</button>

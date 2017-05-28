@@ -16,6 +16,7 @@ if (!empty($_POST['cedp']) && !empty($_POST['nomp']) && !empty($_POST['emap']) &
 	if ($stm->num_rows>0) {
                  session_start();
                  $_SESSION['pr'] = $cedp;
+                 $_SESSION['mpr']=$emlp;
                  mysqli_close($con);
 				header("Location: ../Tramite.php"); 
 	}else{
@@ -29,6 +30,7 @@ if (!empty($_POST['cedp']) && !empty($_POST['nomp']) && !empty($_POST['emap']) &
 	}else{
 		session_start();
 		$_SESSION['pr']=$cedp;
+		$_SESSION['mpr']=$emlp;
 		header("location: ../tramit.php");
 	}
 }

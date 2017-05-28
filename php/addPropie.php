@@ -16,6 +16,7 @@ if(!empty($_POST))
 	if ($stm->num_rows>0) {
                  session_start();
                  $_SESSION['Cedp'] = $Cedp;
+                 $_SESSION['mpro']= $EmailP;
                  mysqli_close($con);
 				header("Location: ../Tramite.php"); 
 	}else{
@@ -28,6 +29,7 @@ if(!empty($_POST))
 			                
                  session_start();
                  $_SESSION['Cedp'] = $Cedp;
+                 $_SESSION['mpro']= $EmailP;
                  mysqli_close($con);
 				header("Location: ../Tramite.php"); 
 			}else{

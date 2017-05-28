@@ -19,12 +19,13 @@
 <body>
 	<div class="container">
 	<div class="row">
-	<div class="col-md-5">
+<div class="col-md-5 col-md-offset-3">
   <?php if($person!=null):?>
 
  <div class="container">
 <div class="row">
 <div class="col-md-5"> 
+<center><h2>Datos Personales</h2></center>
 	<form role="form" method="post" action="php/actualiCli.php">
   <div class="form-group">
     <label for="sv01cdtpc">Codigo IT</label>
@@ -64,7 +65,7 @@
     <span id="mjs" class="help-block"></span>
   </div>
 
- <button type="submit" class="btn btn-default">Actualizar</button>
+<center><button type="submit" class="btn btn-default">Actualizar</button></center>
 </form>
 		<?php else:?>
   <p class="alert alert-danger">404 No se encuentra</p>

@@ -18,7 +18,23 @@ if(isset ($_SESSION['cd']) || isset ($_SESSION['sv07cdtp']) ) {
 	</head>
 	<body>
 	
-	<?php include("php/navini.php"); ?>
+	<?php 
+
+	if (isset($_SESSION['cd'])) {
+		include("php/navini.php");
+	}elseif (isset($_SESSION['sv07cdtp'])) {
+		if ($_SESSION['sv05codu'] == 1) {
+      include "php/navbar.php"; 
+      }else if ($_SESSION['sv05codu'] == 2) {
+        include('php/navh2.php');
+       
+      }
+	}
+
+
+
+
+	 ?>
 	
 <div class="container">
 <div class="row">

@@ -1,18 +1,4 @@
 <?php
-function fecha($fchv, $id, $dc){
-	$datetime1 = new DateTime($fchv);
-	$datetime2 = new DateTime("now");
-	$interval = date_diff($datetime1, $datetime2);
-	$dias=$interval->format('%R%a días');
-if ($dias<=5) {?>
-<div class='alert alert-warning'>
-		<p>Estimado Señor, sus documentos no cumplen con los requisitos para obtener el sello APT, por favor sirvase a descargar la minuta y hacer los cambios respetivos para la </p> <a href="reinspeccion.php?id=<?php echo $id;?>&dn=<?php echo $dc; ?>">reinspeccion</a></div>
-		
-	<?php } else {?>
-		<p class='alert alert-info'>Sus documentos no cumplen con  los debidos requisitos para el visado atp</p>
-<?php }
-
-}
 
 include "conexion.php";
 
@@ -59,10 +45,13 @@ $query = $con->query($sql1);
 </div>
 </div>
 </div>
-<?php if ($std==6) {
-	fecha($fchv, $id, $dc);
-}
-?>
+<?php if ($std==6) {?>
+<div class='alert alert-warning'>
+		<p>Estimado Señor, sus documentos no cumplen con los requisitos para obtener el sello APT, por favor sirvase a descargar la minuta y hacer los cambios respetivos para la </p> <a href="reinspeccion.php?id=<?php echo $id;?>&dn=<?php echo $dc; ?>">reinspeccion</a></div>
+		
+	<?php 
+	
+} ?>
 
 <?php else:?>
 	<p class="alert alert-warning">No hay resultados</p>

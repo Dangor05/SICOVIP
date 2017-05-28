@@ -16,27 +16,6 @@ if(isset ($_SESSION['sv07cdtp'])) {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script type="text/javascript" src="public\JS\jquery-3.1.0.min.js"></script>
    
-    <script>
-          $(document).ready(function(){   
-        $( "#ced" ).autocomplete({
-              source: function(resquest, response){
-                $.ajax({
-                  url:"srchOwn.php",
-                  dataType:"json",
-                  data:{q:resquest.term},
-                  success:function(data){
-                    response(data);
-                  }
-                });
-              } ,
-              minLength: 1,
-              select:function(event ui){
-                alert("selecciono: "+ ui.item.label);
-              }
-          });
-                 
-      });
-        </script>
 <script type="text/javascript">
     function Letras(e) {
     key = e.keyCode || e.which;

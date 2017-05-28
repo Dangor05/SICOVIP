@@ -20,14 +20,14 @@ $msg = null;
         require "phpmailer/class.phpmailer.php";
     
           $mail = new PHPMailer;
-		  $nombre=null;
+		  
 		  //indico a la clase que use SMTP
           $mail->IsSMTP();
 		  
           //permite modo debug para ver mensajes de las cosas que van ocurriendo
           //$mail->SMTPDebug = 2;
 
-		  //Debo de hacer autenticación SMTP
+		  //Debo de hacer autenticaciÃ³n SMTP
           $mail->SMTPAuth = true;
           $mail->SMTPSecure = "ssl";
 
@@ -47,17 +47,17 @@ $msg = null;
         
           $mail->Subject = $asunto;
         
-          $mail->addAddress($email, $nombre);
+          $mail->addAddress($mpro, $nombre);
         
           $mail->MsgHTML($mensaje);  
         
           if($mail->Send())
         {
-    $msg= "En hora buena el mensaje ha sido enviado con exito a $email";
+    $msg= "En hora buena el mensaje ha sido enviado con exito a $eml";
     }
         else
         {
-    $msg = "Lo siento, ha habido un error al enviar el mensaje a $email";
+    $msg = "Lo siento, ha habido un error al enviar el mensaje a $eml";
     }
  
 ?>

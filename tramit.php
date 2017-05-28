@@ -4,6 +4,7 @@ if (isset($_SESSION['tp'])) {
 $cedp=$_SESSION['pr'];
 $cedt=$_SESSION['cd'];
 $eml=$_SESSION['em'];
+$mpr=$_SESSION['mpr'];
  ?>
  <?php
  include("php/expli.php");
@@ -50,7 +51,8 @@ $eml=$_SESSION['em'];
 	  <label for="sv03ptario">Documentos:</label>&nbsp
 	  <input type="file"  name="pln" placeholder="Plano" required="" ></div>
 	  <div class="form-group">
-	  <input type="hidden" class="form-control" value="<?php echo $eml;?>" name="mail"></div>
+	  <input type="hidden" class="form-control" value="<?php echo $eml;?>" name="mail">
+	  <input type="hidden" class="form-control" value="<?php echo $mpr;?>" name="pmail"></div>
 	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 	  <button type="submit" class="btn btn-primary">Finalizar Tramite</button>
 	  </form>

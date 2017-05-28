@@ -18,7 +18,7 @@
 <div class="container">
 <div class="row">
 <div class="col-sm-1"></div>
-<div class="col-md-12">
+ <div class="col-md-5 col-md-offset-2">
 		<h2>Consulta de Visados</h2>
 
 <form method="post" class="navbar-form navbar-left" role="search" action="./buscarCli.php">

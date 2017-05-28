@@ -12,7 +12,12 @@ if (!empty($_FILES) && !empty($_POST)) {
 		$sv04nfin=$_POST['nfin'];
 		$sv04apl=$_FILES['pln'];
 		$apl=$_FILES['pln']['name'];
-		
+		 
+		 $dir=$path.$pln;
+		 if (file_exists($dir)) {
+		 	print "<script>alert(\"Ya existe un archivo con este nombre para este propieaterio, por favor cambiele el nombre e intente de nuevo.\");window.location='../Home.php';</script>";
+		 }
+		 else{
 
 		$stm=$con->prepare("UPDATE sv04reqtos SET sv04doc=? WHERE sv04nfin=?");
 			$stm->bind_param("ss", $apl,$sv04nfin);
@@ -28,7 +33,7 @@ if (!empty($_FILES) && !empty($_POST)) {
 		print "<script>alert(\"Agregado exitosamente.\");window.location='../verlista.php';</script>";
 		}
 
-
+        }
 	  		}else{echo "es el plano";}
 	  } else{echo "es la cedula";} 
 	} else{echo "es la finca";}
