@@ -13,7 +13,7 @@
             
             <div class="collapse navbar-collapse" id="navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="./ClienteMostrar.php">Cliente-Top</a></li>
+                    <li><a href="./ClienteMostrar.php">Cliente</a></li>
                     <li><a href="./PropietarioMostrar.php">Propietario</a></li>
                   
                     <li class="dropdown">

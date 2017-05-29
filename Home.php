@@ -85,6 +85,10 @@ include("php/getnewTramite.php");
     <p class="alert alert-warning">No hay resultados</p>
     </div>
 <?php endif;?>
+
+<footer class="alert alert-info"></footer>
+
+
 </div>
 
 

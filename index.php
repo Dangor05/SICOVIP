@@ -15,7 +15,7 @@
 
 	<body>
 	<?php include "php/navindex.php"; ?>
-<div class="container">
+<div style="height: 600px;" class="container">
 <div class="row">
 <div class="col-sm-1"></div>
  <div class="col-md-5 col-md-offset-2">
@@ -39,8 +39,9 @@
 
 </div>
 </div>
-</div>
 
+</div>
+<footer class="alert alert-danger"></footer>
     <div class="container">
     <div class="modal fade" id="modal-1" role="dialog">
       <div class="modal-dialog modal-sm"><!--sm-->
@@ -84,7 +85,7 @@
            </div>
            </div>
            </div><!--fin modal -->
-            
+ 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="assets/jquery-1.11.3-jquery.min.js"></script>
 <script type="text/javascript" src="public/bootstrap/bootstrap/js/bootstrap.js"></script>
