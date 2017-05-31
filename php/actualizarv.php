@@ -44,12 +44,9 @@ if(!empty($_POST) && !empty($_FILES)){
 			}
 		}
 		else{
-
-			
-
-					$stmt=$con->query($stm);
-		$qry=$con->query($sql);
-		if ($stmt!=null && $qry!=null) {
+				$stmt=$con->query($stm);
+				$qry=$con->query($sql);
+				if ($stmt!=null && $qry!=null) {
 			
 				move_uploaded_file($mnt['tmp_name'],$path.$sv09mnt);
 				header("location='../verVisado.php'");

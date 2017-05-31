@@ -34,7 +34,7 @@ if(!empty($_POST))
 				header("Location: ../Tramite.php"); 
 			}else{
 				mysqli_close($con);
-				//print "<script>alert(\"No se pudo agregar.\");window.location='../Cliente.php';</script>";
+				print "<script>alert(\"No se pudo agregar.\");window.location='../Cliente.php';</script>";
 
 			}
 		}

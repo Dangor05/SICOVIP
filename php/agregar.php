@@ -23,30 +23,6 @@ $sv02std=mysqli_real_escape_string($con,$_POST['svstd']);
 $dir ="../archivos/".$sv03cedp."/";
 
 
-echo $sv09npln; echo  "nplano"; 
-echo "<br>";
-echo $sv09nfol; echo "nfolio";
-echo "<br>";
-echo $sv09npre; echo "predio";
-echo "<br>";
-echo $sv09mnt['name']; echo "Minnuta";
-echo "<br>";
-echo $sv09fvdp; echo "Fecha";
-echo "<br>";
-echo $sv08conse; echo "conse";
-echo "<br>";
-echo $sv01cedc; echo"cliente";
-echo "<br>";
-echo $sv03cedp; echo "propietario";
-echo "<br>";
-echo $sv04nfin; echo "nfinca";
-echo "<br>";
-echo $sv02code; echo "codigo";
-echo "<br>";
-echo $sv07cdtp; echo "topografo";
-echo "<br>";
-echo $sv05codu; echo "tipo";
-
 
 $sql = "INSERT INTO sv09vsdo (sv09npln,sv09nfol,sv09npre,sv09mnt,sv09fvdp,sv09fumv,sv08conse,sv01cedc,sv03cedp,sv04nfin,sv02code,sv07cdtp,sv05codu) values ('$sv09npln','$sv09nfol','$sv09npre','".$sv09mnt['name']."','$sv09fvdp',NOW(),'$sv08conse','$sv01cedc','$sv03cedp','$sv04nfin','$sv02code','$sv07cdtp','$sv05codu')";
 $consu = "UPDATE sv08trmte SET sv02code ='$sv02std' WHERE  sv08conse='$sv08conse'";

@@ -26,7 +26,7 @@ if (!empty($_FILES['pln']) && !empty($_POST['conse']) && !empty($_POST['fin']) &
 		$exec=$con->query($stm);
 		$exct=$con->query($stmt);
 		if ($stm!=NULL && $stmt!=NULL) {
-					if(file_exists($path)){
+		if(file_exists($path)){
 
 		move_uploaded_file($apln['tmp_name'],$path.$pln);
 
@@ -57,6 +57,8 @@ if (!empty($_FILES['pln']) && !empty($_POST['conse']) && !empty($_POST['fin']) &
 
 		     header("Location:../inicio.php");
 			}
+		}else{
+			print "<script>alert(\"Algo a sucedido, por favor revise que todo los datos, estan correctos!!\");window.location='../Tramit.php';</script>";
 		}
 		}
 	}else{

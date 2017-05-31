@@ -26,7 +26,7 @@ if (!empty($_FILES) && !empty($_POST)) {
 			$stm->bind_param("ss", $pln,$sv04nfin);
 			$stm->execute();
 			if ($stm->error) {
-			print "<script>alert(\"Jodase!!\");window.location='../Home.php';</script>";
+			print "<script>alert(\"Algo a sucedido, por favor revise que todo los datos, estan correctos!!\");window.location='../Home.php';</script>";
 		}else{
 			include("estd.php");
 		move_uploaded_file($sv04apl['tmp_name'],$path.$pln);

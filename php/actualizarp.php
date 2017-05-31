@@ -21,7 +21,7 @@ if(!empty($_POST)){
 				print "<script>alert(\"Actualizado exitosamente.\");window.location='../PropietarioMostrar.php';</script>";
 			}else{
 				mysqli_close($con);
-				print "<script>alert(\"No se pudo .\");window.location='../PropietarioMostrar.php';</script>";
+				print "<script>alert(\"No se pudo actualizar .\");window.location='../PropietarioMostrar.php';</script>";
 
 			}
 

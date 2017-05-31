@@ -37,8 +37,8 @@ if(!empty($_POST))
                  header("Location: ../Propietario.php"); 
 			}else{
 				mysqli_close($con);
-				echo "Error";
-				//print "<script>alert(\"No se pudo agregar.\");window.location='../Cliente.php';</script>";
+				
+				print "<script>alert(\"No se pudo agregar.\");window.location='../Cliente.php';</script>";
 
 			}
 }

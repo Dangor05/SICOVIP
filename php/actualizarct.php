@@ -20,7 +20,7 @@ include "conexion.php";
 		$stm->execute();
 
 		if ($stm->error) {
-			echo "Fallo al agregar".$res->error;
+			print "<script>alert(\"Algo a sucedido, intentelo de nuevo.\");window.location='../ClienteMostrar.php';</script>";
 		}
 
 		$stm->close();

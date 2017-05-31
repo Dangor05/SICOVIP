@@ -1,6 +1,6 @@
 <?php 
 include('conexion.php');
-if (!empty($_POST['cedp']) && !empty($_POST['nomp']) && !empty($_POST['emap']) && !empty($_POST['telp']) && !empty($_POST['tipro']) ) {
+if (!empty($_POST['cedp']) && !empty($_POST['nomp']) && !empty($_POST['tipro']) ) {
 
 	if (isset($_POST['cedp']) && isset($_POST['nomp']) && isset($_POST['apelp']) && isset($_POST['emap']) && isset($_POST['telp']) && isset($_POST['tipro']) ) {
 	
@@ -26,7 +26,7 @@ if (!empty($_POST['cedp']) && !empty($_POST['nomp']) && !empty($_POST['emap']) &
 	$stm->execute();
 	$stm->close();
 	if ($stm->error) {
-		echo "Fallo al agregar";
+		print "<script>alert(\"No se pudo registrar.\");window.location='../Propiet.php';</script>";
 	}else{
 		session_start();
 		$_SESSION['pr']=$cedp;

@@ -21,7 +21,8 @@
                       
                         <ul class="dropdown-menu">
                           <li><a href="./VisadoMostrar.php"><span class="glyphicon glyphicon-ok"></span>&nbsp;Visado</a></li>
-                            <li><a href="./verlista.php"><span class="glyphicon  glyphicon-copy"></span>&nbsp;Reinspeccion</a></li>   
+                            <li><a href="./verlista.php"><span class="glyphicon  glyphicon-copy"></span>&nbsp;Reinspeccion</a></li>
+                            <li><a href="./verVisado.php"><span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;Visados Oficio </a></li>      
                         </ul>
                     </li>
 
@@ -39,7 +40,6 @@
                         <ul class="dropdown-menu">
                           <li><a href="./verClient.php"><span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;Archivos Visados</a></li>
                           
-                            <li><a href="./verVisado.php"><span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;Visados Oficio </a></li>   
                         </ul>
                     </li>
 

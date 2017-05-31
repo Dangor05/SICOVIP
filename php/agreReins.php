@@ -23,7 +23,7 @@ if (!empty($_FILES) && !empty($_POST)) {
 			$stm->bind_param("ss", $apl,$sv04nfin);
 			$stm->execute();
 			if ($stm->error) {
-			print "<script>alert(\"Jodase!!\");window.location='../verlista.php';</script>";
+			print "<script>alert(\"Algo a sucedido, por favor revise que todo los datos, estan correctos!!\");window.location='../verlista.php';</script>";
 		}else{
 			include("estd.php");
 		move_uploaded_file($sv04apl['tmp_name'],$path.$apl);
