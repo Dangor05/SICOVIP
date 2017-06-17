@@ -58,13 +58,13 @@ return ((key >= 48 && key <= 57) || (key==8))
        <h4>Topografos Registados</h4><input type="text"  name="ced" class="form-control" placeholder="Cedula"> &nbsp;<button  type="submit" class="btn btn-default" >&nbsp;<i class="glyphicon glyphicon-search"></i></button>    
    </div>   
       </form>
-      <?php include("php/buscacli.php"); ?>
+      <?php include("php/svtop/buscacli.php"); ?>
        <div class="container">
       <div class="row">
 
       <div class="col-md-5 col-md-offset-3">  
 
-     <form role="form-inline" action="php/addCliente.php" method="POST" onsubmit="return valciente()" > 
+     <form role="form-inline" action="php/svtop/addCliente.php" method="POST" onsubmit="return valciente()" > 
      <div = class="group">
  
   <center><h3>Registro Cliente</h3></center>  

@@ -50,7 +50,7 @@ return ((key >= 48 && key <= 57) || (key==8))
       }else if ($_SESSION['sv05codu'] == 2) {
         include('php/navh2.php');
       } 
-      include ("php/getPropietario.php");
+      include ("php/svtop/getPropietario.php");
       ?>
      <div class="col-md-11 col-md-offset-1">
   <div class="container">
@@ -119,7 +119,7 @@ return ((key >= 48 && key <= 57) || (key==8))
             <h3 class="modal-title">Propietario</h3>
            </div>
            <div class="modal-body ">
-    <form name="Diagnostico" method="POST" action="php/agregarp.php" onsubmit="return validar();">
+    <form name="Diagnostico" method="POST" action="php/svtop/agregarp.php" onsubmit="return validar();">
     
     
      
@@ -192,7 +192,7 @@ return ((key >= 48 && key <= 57) || (key==8))
                         <h3 class="modal-title">Modificar Propietario</h3>
                      </div>
                      <div class="modal-body ">
-        <form name="Propietario" method="POST" action="php/actualizarp.php" onsubmit="return validar();">
+        <form name="Propietario" method="POST" action="php/svptario/actualizarp.php" onsubmit="return validar();">
    
         
          
@@ -252,42 +252,7 @@ return ((key >= 48 && key <= 57) || (key==8))
     </div>
     </div><!--fin modal -->
 
-    <div class="modal fade" id="modal-4" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h3 class="modal-title">Eliminar</h3>
-      </div>
-      <div class="modal-body form">
-        <form action="php/eliminarp.php" method="POST" id="form" class="form-horizontal">
-          <input type="hidden" value="" name="book_id"/>
-          <div class="form-body">
-            <div class="form-group">
-              <label class="control-label col-md-3">Cedula</label>
-              <div class="col-md-9">
-                <input class="form-control" type="text" value="" id="ced" name="sv03cedp">
-              </div>
-            </div>
-            
 
-          </div>
-           <div class="modal-footer" >
-            <div class="col-xs-5">
-           
-            </div>
-                <a href="" class="btn btn-default" data-dismiss="modal">Cancelar</a>
-              <button id="enviar" name="enviar" type="submit" class="btn btn-success">Eliminar     </button>
-      </div>
-      </form>
-      </div>
-                 <div class="modal-footer" >
-             <div class="col-xs-5">
-             </div>
-             </div>
-                </div><!-- /.modal-content -->
-              </div><!-- /.modal-dialog -->
-            </div><!-- /.modal -->
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="assets/jquery-1.11.3-jquery.min.js"></script>

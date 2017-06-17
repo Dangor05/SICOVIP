@@ -52,14 +52,15 @@ return ((key >= 48 && key <= 57) || (key==8))
       }else if ($_SESSION['sv05codu'] == 2) {
         include('php/navh2.php');
       } 
-      include ("php/getCliente.php");
-      if($query->num_rows>0):
-      ?>
+     ?>
       <div class="col-md-11 col-md-offset-1">
 	<div class="container">
  <h2> Registro Topografo</h2>
        <button class="btn btn-success" id="btnAgregar" type="button"  data-toggle="modal" data-target="#modal-1"> <span class="glyphicon glyphicon-pencil"></span> &nbsp; Nuevo Topografo</button>
      <br><br>
+	 <?php include ("php/svtop/getCliente.php");
+      if($query->num_rows>0):
+      ?>
        <div class="table-responsive">
 	<div style="width: 999px" class="well well-sm text-left">
     
@@ -104,7 +105,11 @@ return ((key >= 48 && key <= 57) || (key==8))
         </div>
 </div>
 <?php else:?>
+
+  <div align="center" class=" col-xs-7">
+
     <p class="alert alert-warning">No hay resultados</p>
+    </div>
 <?php endif; ?>
 
 </div>
@@ -119,7 +124,7 @@ return ((key >= 48 && key <= 57) || (key==8))
             <h3 class="modal-title">Topografo</h3>
            </div>
            <div class="modal-body ">
-    <form name="Diagnostico" method="POST" action="php/agregarct.php" onsubmit="return validar();">
+    <form name="Diagnostico" method="POST" action="php/svtop/agregarct.php" onsubmit="return validar();">
     
     
      
@@ -206,7 +211,7 @@ return ((key >= 48 && key <= 57) || (key==8))
                         <h3 class="modal-title">Modificar Topografo</h3>
                      </div>
                      <div class="modal-body ">
-        <form name="Propietario" method="POST" action="php/actualizarct.php" onsubmit="return validar();">
+        <form name="Propietario" method="POST" action="php/svclnt/actualizarct.php" onsubmit="return validar();">
         
         
          

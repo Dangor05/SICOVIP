@@ -63,7 +63,7 @@ return ((key >= 48 && key <= 57) || (key==8))
 <div class="row">
 <div class="col-md-5 col-md-offset-3">  
 
-    <form role="form-inline" action="php/agreRegisto.php" method="POST" onsubmit="return validar();" > 
+    <form role="form-inline" action="php/svclnt/agreRegisto.php" method="POST" onsubmit="return validar();" > 
      <div class="form-group">
    <center><h3>Registro</h3></center>  
   <div class="form-group" >

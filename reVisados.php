@@ -1,7 +1,7 @@
 <?php session_start();
 $cit=$_SESSION['sv07cdtp'];
 $codu=$_SESSION['sv05codu'];
-include ("php/obtrevisado.php"); ?>
+include ("php/svvsdo/obtrevisado.php"); ?>
  <!DOCTYPE html>
  <html lang="es">
  <head>
@@ -57,7 +57,7 @@ return ((key >= 48 && key <= 57) || (key==8) || (key==45))
     <h2>Visado</h2>
 <?php if($person!=null):?>
 
-<form role="form" method="post" action="php/actualizarvis.php" enctype="multipart/form-data">
+<form role="form" method="post" action="php/svvsdo/actualizarvis.php" enctype="multipart/form-data">
   <div class="form-group">
   <label for="">Consecutivo</label>
    <input type="text" class="form-control" readonly="" onkeypress="return Letras(event)" value="<?php echo $person->sv08conse; ?>" name="sv08conse" required>

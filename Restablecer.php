@@ -47,7 +47,7 @@
     <div class="container" role="main">
       <div class="col-md-4"></div>
       <div class="col-md-4">
-        <form action="php/chanpass.php" method="post"><!--action="cambiopassword.php"-->
+        <form action="php/svini/chanpass.php" method="post"><!--action="cambiopassword.php"-->
           <div class="panel panel-default">
             <div class="panel-heading"> Restaurar contraseña </div>
             <div class="panel-body">

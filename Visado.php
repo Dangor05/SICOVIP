@@ -3,7 +3,7 @@
 session_start();
 $cit=$_SESSION['sv07cdtp'];
 $codu=$_SESSION['sv05codu'];
-include ('php/obtvisado.php');
+include ('php/svvsdo/obtvisado.php');
 ?>
  <!DOCTYPE html>
  <html lang="es">
@@ -40,7 +40,7 @@ return ((key >= 48 && key <= 57) || (key==8) || (key==45))
     <h2>Visado</h2>
 <?php if($person!=null):?>
 <center></center>
-<form role="form" method="post" action="php/addVisado.php" onsubmit="return validar();" enctype="multipart/form-data">
+<form role="form" method="post" action="php/svvsdo/addVisado.php" onsubmit="return validar();" enctype="multipart/form-data">
   <div class="form-group">
   <label for="">Consecutivo</label>
    <input type="text" class="form-control" readonly="" value="<?php echo $person->sv08conse; ?>" name="conse" required>
@@ -105,7 +105,7 @@ return ((key >= 48 && key <= 57) || (key==8) || (key==45))
   <center>
   <div class="col-md-3"></div>
   <div class="col-md-3">
-   <a class="btn btn-danger" href="php/regreso.php?id=<?php echo $person->sv08conse;?>"> Regresar</a>
+   <a class="btn btn-danger" href="php/svvsdo/regreso.php?id=<?php echo $person->sv08conse;?>"> Regresar</a>
   </div>
  
   <div class="col-md-3">

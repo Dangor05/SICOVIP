@@ -20,7 +20,7 @@ if (isset($_GET['id'])) {
  <body>
  <header>
  	<?php include("php/navcli.php"); ?>
- 	<?php include("php/obtrequisi.php"); ?>
+ 	<?php include("php/svtrmt/obtrequisi.php"); ?>
  </header>
  	<div class="container">
  	<div class="row">

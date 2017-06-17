@@ -33,7 +33,7 @@ if(isset ($_SESSION['sv07cdtp'])) {
 
 
 
-<?php include "php/Htabla.php"; ?>
+<?php include "php/svvsdo/Htabla.php"; ?>
 </div>
 </div>
 </div>

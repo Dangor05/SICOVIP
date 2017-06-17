@@ -26,7 +26,7 @@
 <div class="col-md-4">
 		<h2>EDITAR</h2>
 
-<?php include "php/formulario.php";?>
+<?php include "php/svtop/formulario.php";?>
 
 </div>
 </div>

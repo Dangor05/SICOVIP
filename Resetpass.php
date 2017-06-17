@@ -35,7 +35,7 @@
       <br/><br/><br/><br/><br/><br/><br/>
       <div class="col-md-4"></div>
       <div class="col-md-4">
-        <form id="frmRestablecer" action="php/valmail.php" method="post">
+        <form id="frmRestablecer" action="php/svini/valmail.php" method="post">
           <div class="panel panel-default">
             <div class="panel-heading"> Restaurar contraseña </div>
             <div class="panel-body">

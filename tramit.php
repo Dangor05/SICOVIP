@@ -7,7 +7,7 @@ $eml=$_SESSION['em'];
 $mpr=$_SESSION['mpr'];
  ?>
  <?php
- include("php/expli.php");
+ include("php/svtrmt/expli.php");
   if ($cons!=null):?>
  <!DOCTYPE html>
  <html lang="es">
@@ -31,7 +31,7 @@ $mpr=$_SESSION['mpr'];
       <div class="row">
     <div class="col-md-4 col-md-offset-4"> 
       		<br><br>
-	  <form action="php/agreTrami.php" method="post" enctype="multipart/form-data">
+	  <form action="php/svtrmt/agreTrami.php" method="post" enctype="multipart/form-data">
 	  <center><h3>Registro de documentos</h3></center><br>
 	  <div class="form-group">
 	  <label for="sv03cedp">Nº Ced Propietario</label>&nbsp

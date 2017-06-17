@@ -28,12 +28,12 @@
     <br>
 
 <?php
-include ('php/obtreq.php');
+include ('php/svtop/obtreq.php');
 ?>
 
 <?php if($person!=null):?>
 
-<form role="form" method="post" action="php/agreReins.php" enctype="multipart/form-data">
+<form role="form" method="post" action="php/svtrmt/agreReins.php" enctype="multipart/form-data">
 
     <div class="form-group row">
     <label class="col-xs-3 col-form-label" for="sv08conse">Consecutivo</label>

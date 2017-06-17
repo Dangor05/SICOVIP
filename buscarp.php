@@ -21,7 +21,7 @@ if (isset($_SESSION['cd'])) { ?>
 <div class="container">
 <div class="row">
 <div class="col-md-12">
-<a href="buscarpro	.php"> 	
+<a href="buscarpro.php"> 	
 <button type="button" class="btn btn-default" ><span class="glyphicon glyphicon-circle-arrow-left"></span> &nbsp;Volver</button> </a>
 		<h2>Buscar propietario</h2>
 		<div class="alert alert-info">
@@ -39,7 +39,7 @@ if (isset($_SESSION['cd'])) { ?>
     <br>
 
 
-<?php include "php/busquedap.php"; ?>
+<?php include "php/svptario/busquedap.php"; ?>
 </div>
 </div>
 </div>

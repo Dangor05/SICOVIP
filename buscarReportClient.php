@@ -53,7 +53,7 @@ if (isset($_SESSION['cd'])) {
 </div>
 </div>
 
-<?php include "php/busqReportClient.php"; ?>
+<?php include "php/svclnt/busqReportClient.php"; ?>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="assets/jquery-1.11.3-jquery.min.js"></script>

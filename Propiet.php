@@ -50,7 +50,7 @@ return ((key >= 48 && key <= 57) || (key==8))
       <div class="row">
       <div class="col-md-4 col-md-offset-4"> 
           <br><br>
-<form Class="form" action="php/agrePropie.php" method="POST" onsubmit="return validar();" > 
+<form Class="form" action="php/svptario/agrePropie.php" method="POST" onsubmit="return validar();" > 
      <center><h3>Registro Propietario</h3></center><br>
   <div class="form-group">
 

@@ -50,7 +50,7 @@ if(isset ($_SESSION['sv07cdtp'])) {
 </div>
 
 
-<?php include "php/busqReportCIT.php"; ?>
+<?php include "php/svtop/busqReportCIT.php"; ?>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="assets/jquery-1.11.3-jquery.min.js"></script>
 <script type="text/javascript" src="public/bootstrap/bootstrap/js/bootstrap.js"></script>

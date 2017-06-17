@@ -2,14 +2,14 @@
 session_start();
 if(isset ($_SESSION['sv07cdtp'])) {
 
-  include("php/expli.php");
+  include("php/svtrmt/expli.php");
    
      $Cedt = $_SESSION['Cedt'];
      $Cedp = $_SESSION['Cedp'];
      $mail= $_SESSION['mail'];
      $mpro=$_SESSION['mpro'];
      ?>
-<?php if ($cons!=null):?>
+
  <!DOCTYPE html>
  <html lang="es">
  <head>
@@ -35,8 +35,9 @@ if(isset ($_SESSION['sv07cdtp'])) {
 <div class="row">
 <div class="col-md-5 col-md-offset-3">
 
-  <form action="php/agTramite.php" method="post" enctype="multipart/form-data"> 
+  <form action="php/svtrmt/agTramite.php" method="post" enctype="multipart/form-data"> 
   <center><h3>Tramite</h3></center>
+  <?php if ($cons!=null):?>
 <div class="form-group">
  <label for="sv03cedp">Nº Ced Propietario</label>&nbsp
  <!--<p><?php// echo $_SESSION['Cedp']; ?></p>-->

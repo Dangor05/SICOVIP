@@ -1,6 +1,6 @@
 <?php 
   require_once("dompdf/dompdf_config.inc.php");
- include("../php/conexion.php");
+ include("../php/lib/conexion.php");
 $s=$_GET['S'];
 $fs=$_GET['FS'];
 $codigoHTML='

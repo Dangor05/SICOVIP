@@ -49,21 +49,23 @@ return ((key >= 48 && key <= 57) || (key==8) || (key==45))
         include('php/navh2.php');
       } 
 ?>
-      
-
+        <div class="container">
+        <br><h2>Visados</h2>
+           <button class="btn btn-success" id="btnAgregar" type="button"  data-toggle="modal" data-target="#modal-1"> <span class="glyphicon glyphicon-pencil"></span> &nbsp; Nuevo Visado</button>
+    <br></div>
+<center>
 <div class="col-md-1 col-md-offset-1">
       <div class="container">
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h2>Visados</h2>
-           <button class="btn btn-success" id="btnAgregar" type="button"  data-toggle="modal" data-target="#modal-1"> <span class="glyphicon glyphicon-pencil"></span> &nbsp; Nuevo Visado</button>
-     <br><br>
-     <?php       include ("php/getvisados.php");
+         <br><br>
+     <?php       include ("php/svvsdo/getvisados.php");
       if($query->num_rows>0):?>
-   <div class="table-responsive">   
+     
  <div style="width: 99%" class="well well-sm text-left">
     
     <div class="content-loader">
+          <div class="table-responsive"> 
         
-        <table align="center" cellspacing="0" style="width:50px;" id="example" class="table table-striped table-bordered table-hover table-condensed small ">
+        <table align="center" cellspacing="0" style="width:95px;" id="example" class="table table-striped table-bordered table-hover table-condensed small ">
         <thead>
         <tr>
         <th>Top-Cliente</th>
@@ -101,7 +103,7 @@ return ((key >= 48 && key <= 57) || (key==8) || (key==45))
         <td><?php echo $r["sv09fvdp"]; ?></td>
         <td><?php echo $r["impu"]== 1 ? 'Al dia' : 'Retrasado' ; ?></td>
         <td ><?php if($r["estado"]==5){echo 'Aprobado';}elseif($r["estado"]==6){echo 'Rechazado';}elseif($r["estado"]==8){echo 'Oficio';}else{echo 'En proceso';} ?></td>
-       <td><a href="php/mnt.php?id=<?php echo $r['sv03cedp']?>&mnt=<?php echo $r['sv09mnt']?>"><?php echo $r["sv09mnt"];?></a></td>
+       <td style="width: 1%;"><a href="php/mnt.php?id=<?php echo $r['sv03cedp']?>&mnt=<?php echo $r['sv09mnt']?>"><?php echo $r["sv09mnt"];?></a></td>
        <td><?php echo $r["sv07cdtp"]; ?></td>
          <!--variable de sesion-->
             
@@ -113,10 +115,14 @@ return ((key >= 48 && key <= 57) || (key==8) || (key==45))
             <?php endwhile; ?>
         </tbody>
         </table>
+
        </div>
         </div>
         </div>
+       
         </div>
+      </center>
+       
      
        
 <?php else:?>
@@ -134,7 +140,7 @@ return ((key >= 48 && key <= 57) || (key==8) || (key==45))
             <h3 class="modal-title">Visado</h3>
            </div>
            <div class="modal-body ">
-    <form name="Diagnostico" method="POST"  action="php/agregar.php" enctype="multipart/form-data">
+    <form name="Diagnostico" method="POST"  action="php/svvsdo/agregar.php" enctype="multipart/form-data">
    
 
           <div class="form-group row">
@@ -263,7 +269,7 @@ return ((key >= 48 && key <= 57) || (key==8) || (key==45))
                         <h3 class="modal-title">Modificar Visado</h3>
                      </div>
                      <div class="modal-body ">
-        <form name="Diagnostico" method="post" action="php/actualizar.php" enctype="multipart/form-data">
+        <form name="Diagnostico" method="post" action="php/svvsdo/actualizar.php" enctype="multipart/form-data">
               
           <div class="form-group row">
          <label for="example-text-input" class="col-xs-2 col-form-label">N° Minuta de Plano:</label>
@@ -385,7 +391,7 @@ return ((key >= 48 && key <= 57) || (key==8) || (key==45))
         <h3 class="modal-title">Eliminar</h3>
       </div>
       <div class="modal-body form">
-        <form action="php/eliminar.php" method="POST" id="form" class="form-horizontal">
+        <form action="php/svvsdo/eliminar.php" method="POST" id="form" class="form-horizontal">
           <input type="hidden" value="" name="book_id"/>
           <div class="form-body">
             <div class="form-group">

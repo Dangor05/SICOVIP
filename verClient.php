@@ -24,6 +24,7 @@ if(isset ($_SESSION['sv07cdtp'])) {
         include('php/navh2.php');
       }
 	 ?>
+	 <center>
 <div class="container">
 <div class="row">
 <div class="col-md-12">
@@ -33,10 +34,11 @@ if(isset ($_SESSION['sv07cdtp'])) {
 <br><br>
  
 
-<?php include "php/concli.php"; ?>
+<?php include "php/svvsdo/concli.php"; ?>
 </div>
 </div>
 </div>
+</center>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="assets/jquery-1.11.3-jquery.min.js"></script>

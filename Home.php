@@ -33,7 +33,7 @@ if(isset ($_SESSION['sv07cdtp'])) {
 </form>
 <br>
 <?php
-include("php/getnewTramite.php");
+include("php/svtrmt/getnewTramite.php");
       if($query->num_rows>0): ?>
 <br>
 <div class="table-responsive">   
@@ -86,7 +86,7 @@ include("php/getnewTramite.php");
     </div>
 <?php endif;?>
 
-<footer class="alert alert-info"></footer>
+
 
 
 </div>
@@ -101,7 +101,7 @@ include("php/getnewTramite.php");
                         <h3 class="modal-title">Modificar Tramite</h3>
                      </div>
                      <div class="modal-body ">
-        <form name="Modificar" method="POST" action="php/actuaTramite.php" enctype="multipart/form-data">
+        <form name="Modificar" method="POST" action="php/svtrmt/actuaTramite.php" enctype="multipart/form-data">
     
           <div class="form-group row">
           

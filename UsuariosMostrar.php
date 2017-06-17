@@ -47,7 +47,7 @@ return ((key >= 48 && key <= 57) || (key==8))
 
 <body>
     <?php include "php/navbar.php"; 
-    include ("php/getTopo.php");
+    include ("php/svtop/getTopo.php");
       if($query->num_rows>0): ?>
  <div class="col-md-10 col-md-offset-1">
   <div class="container-fluid">
@@ -124,7 +124,7 @@ return ((key >= 48 && key <= 57) || (key==8))
             <h3 class="modal-title">Usuario</h3>
            </div>
            <div class="modal-body ">
-    <form name="Diagnostico" method="POST" action="php/agregart.php">
+    <form name="Diagnostico" method="POST" action="php/svtop/agregart.php">
       
      
           <div class="form-group row">
@@ -222,7 +222,7 @@ return ((key >= 48 && key <= 57) || (key==8))
                         <h3 class="modal-title">Modificar Usuario</h3>
                      </div>
                      <div class="modal-body ">
-        <form name="Propietario" method="POST" action="php/actualizart.php">
+        <form name="Propietario" method="POST" action="php/svtop/actualizart.php">
              
          
           <div class="form-group row">
@@ -319,7 +319,7 @@ return ((key >= 48 && key <= 57) || (key==8))
         <h3 class="modal-title">Desactivar</h3>
       </div>
       <div class="modal-body form">
-        <form action="php/DesacUsu.php" method="POST" id="form" class="form-horizontal">
+        <form action="php/svtop/DesacUsu.php" method="POST" id="form" class="form-horizontal">
           <input type="hidden" value="" name="book_id"/>
           <div class="form-body">
             <div class="form-group">
@@ -358,7 +358,7 @@ return ((key >= 48 && key <= 57) || (key==8))
         <h3 class="modal-title">Activar</h3>
       </div>
       <div class="modal-body form">
-        <form action="php/actiUsu.php" method="POST" id="form" class="form-horizontal">
+        <form action="php/svtop/actiUsu.php" method="POST" id="form" class="form-horizontal">
           <input type="hidden" value="" name="book_id"/>
           <div class="form-body">
             <div class="form-group">

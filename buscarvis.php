@@ -34,13 +34,13 @@ if(isset ($_SESSION['sv07cdtp'])) {
 <?php 
 if (isset($_POST['vis'])) {
 	if ($_POST['vis']==1) {
-	include "php/busquedavispro.php";
+	include "php/svtop/busquedavispro.php";
 }elseif ($_POST['vis']==2) {
-	include "php/busquedaviscon.php";
+	include "php/svtop/busquedaviscon.php";
 }elseif ($_POST['vis']==3) {
-	include "php/busquedavisfin.php";
+	include "php/svtop/busquedavisfin.php";
 }else{
-	include "php/busquedavispla.php";
+	include "php/svtop/busquedavispla.php";
 }
 }
  ?>  

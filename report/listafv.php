@@ -1,6 +1,6 @@
 <?php 
   require_once("dompdf/dompdf_config.inc.php");
-  include("../php/conexion.php");
+  include("../php/lib/conexion.php");
 
 $codigoHTML='
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

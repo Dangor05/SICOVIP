@@ -24,13 +24,13 @@
 <?php 
 if (isset($_POST['vis'])) {
 	if ($_POST['vis']==1) {
-	include "php/busquedaconcli.php";
+	include "php/svini/busquedaconcli.php";
 }elseif ($_POST['vis']==2) {
-	include "php/busquedaconse.php";
+	include "php/svini/busquedaconse.php";
 }elseif ($_POST['vis']==3) {
-	include "php/busquedaconfin.php";
+	include "php/svini/busquedaconfin.php";
 }else{
-	include "php/busquedaconpla.php";
+	include "php/svini/busquedaconpla.php";
 }
 }
  ?>   

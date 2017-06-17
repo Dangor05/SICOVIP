@@ -29,7 +29,7 @@ if(isset ($_SESSION['sv07cdtp'])) {
 <div class="row">
 <div class="col-md-6">
 		
-<?php include "php/configura.php";?>
+<?php include "php/svtop/configura.php";?>
 
 </div>
 </div>

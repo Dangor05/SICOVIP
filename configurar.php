@@ -14,7 +14,7 @@
 </head>
 <header>
 	<?php include ("php/navcli.php");
-  include("php/client.php");?>
+  include("php/svclnt/client.php");?>
 </header>
 <body>
 	<div class="container">
@@ -26,7 +26,7 @@
 <div class="row">
 <div class="col-md-5"> 
 <center><h2>Datos Personales</h2></center>
-	<form role="form" method="post" action="php/actualiCli.php">
+	<form role="form" method="post" action="php/svclnt/actualiCli.php">
   <div class="form-group">
     <label for="sv01cdtpc">Codigo IT</label>
      <p><?php echo $person->sv01cdtpc; ?></p>
