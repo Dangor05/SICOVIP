@@ -2,7 +2,7 @@
 	$token = $_GET['token'];
 	$idusuario = $_GET['idusuario'];
 	
-	include ("php/conexion.php");
+	include ("php/lib/conexion.php");
 
 	$sql = "SELECT * FROM sv11res WHERE sv11tok = '$token'";
 	$resultado = $con->query($sql);

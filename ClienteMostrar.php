@@ -162,7 +162,7 @@ return ((key >= 48 && key <= 57) || (key==8))
              <div class="form-group row">
             <label for="example-text-input" class="col-xs-3 col-form-label">Telefono:</label>
              <div class="col-xs-7">
-                <input class="form-control" type="text" id="tel" name="svtelc" onkeypress="return Numeros(event)">
+                <input class="form-control" type="text" id="tel" maxlength="11" name="svtelc" onkeypress="return Numeros(event)">
              </div>
         </div>
               <div class="form-group row">

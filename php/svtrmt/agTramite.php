@@ -15,7 +15,7 @@ if(!empty($_POST))
 
 
 		
-$dir ="../archivos/".$cedpr."\ ";
+$dir ="../../archivos/".$cedpr."\ ";
 
 $path=$dir.$pln;
  if (file_exists($path)) {

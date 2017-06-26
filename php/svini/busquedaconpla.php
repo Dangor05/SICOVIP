@@ -3,7 +3,7 @@
 
 include "conexion.php";
 
-$d=$_POST['s'];
+$d=mysqli_escape_string($con,$_POST['s']);
 	$sql1= "SELECT b.sv03cedp,b.sv03nomp, b.sv03apdp, c.sv04apln,e.sv02code,d.sv09mnt, d.sv09fvdp, e.sv08conse, c.sv04nfin
 FROM sv03ptario b, sv04reqtos c, sv09vsdo d, sv08trmte e
  WHERE c.sv04nfin=d.`sv04nfin`

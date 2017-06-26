@@ -10,7 +10,7 @@
 
 		$resultado = $con->query($sql);
 		if($resultado){
-			$enlace = $_SERVER["SERVER_NAME"].'/sicovip/Restablecer.php?idusuario='.sha1($idusuario).'&token='.$token;
+			$enlace = 'https://www.santacruz.go.cr/sicovip/Restablecer.php?idusuario='.sha1($idusuario).'&token='.$token;
 			return $enlace;
 		}
 		else
@@ -57,8 +57,10 @@
           $mail->Port = 465;
 
 		  //indico un usuario / clave de un usuario de gmail
-          $mail->Username = "catastopo.munisantacruz@gmail.com";
-          $mail->Password = "VISA99topo";
+         /* $mail->Username = "catastopo.munisantacruz@gmail.com";
+          $mail->Password = "VISA99topo";*/
+          $mail->Username = "danielramosr45@gmail.com";
+          $mail->Password = "juanpaulo";
        
           $mail->From = "tuemail@gmail.com";
         
@@ -79,13 +81,13 @@
     $msg = "Lo siento, ha habido un error al enviar el mensaje a $email";
     }
 	}
-	
-	$email = $_POST['email'];
+	include ("conexion.php");
+
+	$email = mysqli_real_escape_string($con,$_POST['email']);
 	//$respuesta = new stdClass();
 
 	if( $email != "" ){   
-   		include ("conexion.php");
-   		$sql = " SELECT sv07cdtp, sv07emt FROM sv07tpgfo WHERE sv07emt = '$email' ";
+   		   		$sql = " SELECT sv07cdtp, sv07emt FROM sv07tpgfo WHERE sv07emt = '$email' ";
    		$resultado = $con->query($sql);
 
    		if($resultado->num_rows > 0){
@@ -96,10 +98,22 @@
         		header("location:../../mjsSi.html");
         		
       		}
-   		}
-   		else{
+   		}else{
+   			$stm=" SELECT sv01cdtc, sv01emc FROM sv01clnte WHERE sv01emc = '$email' ";
+   			$res=$con->query($stm);
+   			if ($res->num_rows > 0) {
+   				$use= $res->fetch_assoc();
+   				$linkTemporal= generarLinkTemporal($use['sv01cdtc']);
+   				if ($linkTemporal) {
+   					enviarEmail($email,$linkTemporal);
+   					header("location:../../mjsSi.html");
+   				}
+   			}else{
    			header("location:../../mjsNo.html");
-   		}}
+   		}
+
+   		}
+   	}
 	else{
    		$respuesta->mensaje= "Debes introducir el email de la cuenta";
 	}

@@ -27,7 +27,17 @@ if( $password1 != "" && $password2 != "" && $idusuario != "" && $token != "" ){
 				}
 				else{
 
-					print "<script>alert(\"Ocurrió un error al actualizar la contraseña, intentalo más tarde.\");window.location='../../Restablecer.php';</script>";
+				$stm="UPDATE sv01clnte SET sv01pass = '$pass1' WHERE sv01cdtpc = ".$usuario['sv07cdtp'];
+				$res = $con->query($stm);
+				if($res =! null){
+					$sql = "DELETE FROM sv11res WHERE sv11tok = '$token';";
+					$resultado = $con->query( $sql );
+				
+				print "<script>alert(\" La contraseña se actualizó con exito.\");window.location='../../index.php';</script>";
+				}
+				else{
+
+					print "<script>alert(\"Ocurrió un error al actualizar la contraseña, intentalo más tarde.\");window.location='../../Restablecer.php';</script>"; }
 			
 				}
 			}

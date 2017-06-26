@@ -14,7 +14,7 @@ if (!empty($_FILES['pln']) && !empty($_POST['conse']) && !empty($_POST['fin']) &
 		$pln=$_FILES['pln']['name'];
 		$apln=$_FILES['pln'];
 
-		$path ="../archivos/".$cedpr."\ ";
+		$path ="../../archivos/".$cedpr."\ ";
 		 $dir=$path.$pln;
 		 if (file_exists($dir)) {
 		 	print "<script>alert(\"Ya existe un archivo con este nombre para este propieaterio, por favor cambiele el nombre e intente de nuevo.\");window.location='../../Tramit.php';</script>";
