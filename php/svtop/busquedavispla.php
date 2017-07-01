@@ -1,7 +1,8 @@
 <?php
 
-include('conexion.php');
-
+include('php/lib/conexion.php');
+$mysql = new conexion();
+$con=$mysql->get_connection();
 $id=$_POST['s'];
 $sql1= " SELECT DISTINCT DATE_FORMAT(d.sv08fchs,'%d-%m-%Y') AS sv08fchs,  a.sv03cedp, a.sv03nomp, a.sv03apdp,b.sv04apln,b.sv04doc, e.sv09npln,e.sv09nfol,d.sv02code, e.sv09mnt,DATE_FORMAT(e.sv09fvdp,'%d-%m-%Y') AS sv09fvdp,
     e.sv08conse,e.sv09npre, e.sv07cdtp, e.sv04nfin

@@ -4,7 +4,9 @@
 		$cadena = $idusuario.rand(1,9999999).date('Y-m-d');
 		$token = sha1($cadena);
 		
-		include("conexion.php");
+		include('../lib/conexion.php');
+    $mysql = new conexion();
+    $con=$mysql->get_connection();
 
 		$sql = "INSERT INTO sv11res (sv07cdtp,sv11tok,sv11fchs) VALUES ('$idusuario','$token',NOW());";
 
@@ -81,7 +83,9 @@
     $msg = "Lo siento, ha habido un error al enviar el mensaje a $email";
     }
 	}
-	include ("conexion.php");
+include('php/lib/conexion.php');
+$mysql = new conexion();
+      $con=$mysql->get_connection();
 
 	$email = mysqli_real_escape_string($con,$_POST['email']);
 	//$respuesta = new stdClass();

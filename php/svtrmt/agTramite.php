@@ -1,6 +1,7 @@
 <?php
-   include('conexion.php');
-
+   include('../lib/conexion.php');
+$mysql = new conexion();
+$con=$mysql->get_connection();
 session_start();
 if(!empty($_POST))
 	{

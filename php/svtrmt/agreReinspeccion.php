@@ -1,5 +1,7 @@
 <?php 
-include ('conexion.php');
+include('../lib/conexion.php');
+$mysql = new conexion();
+$con=$mysql->get_connection();
 if (!empty($_FILES) && !empty($_POST)) {
 	if(isset($_POST['nfin'])) {
 	 if (isset($_POST['cedp'])) {

@@ -1,13 +1,15 @@
 <?php 
 
 	include('../lib/conexion.php');
+	$mysql = new conexion();
+			$con=$mysql->get_connection();
 	
 	session_start();
 	
 	if(isset($_SESSION["sv07cdtp"])){
-		header("../Home.php");
+		header("../../Home.php");
 	}
-	//print "<script>alert(\"El nombre o contraseña son incorrectos.\");window.location='../index.php';</script>";
+	
 	if(!empty($_POST))
 	{
 		$usuario = mysqli_real_escape_string($con,$_POST['usuario']);

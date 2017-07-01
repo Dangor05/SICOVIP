@@ -3,7 +3,8 @@ include('../lib/conexion.php');
 
 if(!empty($_POST))
 {
-
+$mysql = new conexion();
+$con=$mysql->get_connection();
     $Cedp=mysqli_real_escape_string($con,$_POST['cedp']);
 	$NomP=mysqli_real_escape_string($con,$_POST['nomp']);
 	$ApelP=mysqli_real_escape_string($con,$_POST['apelp']);

@@ -1,6 +1,8 @@
 <?php
 
-include('conexion.php');
+include('php/lib/conexion.php');
+$mysql = new conexion();
+      $con=$mysql->get_connection();
 
 $user_id=null;
 $sql1= "SELECT c.sv03cedp, c.sv03nomp, c.sv03apdp, a.sv08conse, b.sv04nfin, DATE_FORMAT(a.sv08fumt,'%d-%m-%Y') AS sv08fumt, a.sv02code,b.sv04doc

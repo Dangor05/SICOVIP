@@ -1,6 +1,9 @@
 <?php
 
-include "conexion.php";
+include('php/lib/conexion.php');
+
+$mysql = new conexion();
+$con=$mysql->get_connection();
 
 $user=mysqli_escape_string($con,$_POST['s']);
 	$sql1= "SELECT b.sv03cedp,b.sv03nomp, b.sv03apdp, c.sv04apln,e.sv02code,d.sv09mnt, d.sv09fvdp, e.sv08conse, c.sv04nfin

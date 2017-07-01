@@ -3,6 +3,9 @@ if(!empty($_POST)){
      if (isset($_POST['sv07cdtp']) && isset($_POST['sv07cedt']) && isset($_POST['sv07nomt']) && isset($_POST['sv07apdt']) && isset($_POST['sv07pass']) && isset($_POST['sv07emt']) && isset($_POST['valpass']) ) {
 
           include "../lib/conexion.php";
+          $mysql = new conexion();
+          $con=$mysql->get_connection();
+          
      $sv07cdtp=mysqli_real_escape_string($con,$_POST['sv07cdtp']);
      $sv07cedt=mysqli_real_escape_string($con,$_POST['sv07cedt']);
      $sv07nomt=mysqli_real_escape_string($con,$_POST['sv07nomt']);

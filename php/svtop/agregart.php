@@ -18,6 +18,9 @@ if(!empty($_POST)){
 
              include "../lib/conexion.php";
 
+             $mysql = new conexion();
+            $con=$mysql->get_connection();
+
      $sch="SELECT sv07cdtp, sv07cedt FROM sv07tpgfo WHERE sv07cdtp='$sv07cdtp' and sv07cedt='$sv07cedt'";
     $stm=$con->query($sch);
     if ($stm->num_rows>0) {

@@ -4,7 +4,9 @@ if(!empty($_POST)){
 			
 	if (isset($_POST['sv07cdtp'])) {
 			
-			include "conexion.php";
+		include('../lib/conexion.php');
+		$mysql = new conexion();
+		$con=$mysql->get_connection();
 			$id=$_POST["sv07cdtp"];
 			$sql = "UPDATE sv07tpgfo  SET sv07estd='2' WHERE sv07cdtp='$id'";
 			$query = $con->query($sql);

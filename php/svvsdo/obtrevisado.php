@@ -1,5 +1,7 @@
 <?php 
-include ('conexion.php');
+include('php/lib/conexion.php');
+$mysql = new conexion();
+			$con=$mysql->get_connection();
 //$stm="UPDATE sv08trmte SET sv02code='8' WHERE sv08conse=".$_GET['conse'];
 //$sent= $con->query($stm);
 //if ($sent!=null) {

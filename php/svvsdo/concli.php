@@ -1,6 +1,8 @@
 <?php
 
-include "conexion.php";
+include('php/lib/conexion.php');
+$mysql = new conexion();
+			$con=$mysql->get_connection();
 
 $user_id=null;
 $sql1= "SELECT DISTINCT b.sv03cedp,b.sv03nomp,b.sv03apdp,

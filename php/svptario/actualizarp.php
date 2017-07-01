@@ -4,6 +4,8 @@ if(!empty($_POST)){
 		if (isset($_POST['sv03cedp']) && isset($_POST['sv03nomp']) && isset($_POST['sv03apdp']) && isset($_POST['sv03emp']) && isset($_POST['sv03telp']) && isset($_POST['sv06codp'])) {
 
 			include "../lib/conexion.php";
+			$mysql = new conexion();
+			$con=$mysql->get_connection();
 
 		$sv03cedp=mysqli_real_escape_string($con,$_POST['sv03cedp']);
 		$sv03nomp=mysqli_real_escape_string($con,$_POST['sv03nomp']);

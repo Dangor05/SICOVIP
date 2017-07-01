@@ -3,8 +3,10 @@ if (!empty($_FILES['pln']) && !empty($_POST['conse']) && !empty($_POST['fin']) &
 
 	if (isset($_POST['conse']) && isset($_POST['fin']) && isset($_POST['pr']) && isset($_POST['cedc']) &&isset($_POST['mail']) && isset($_FILES['pln']) ) {
 		
-		include ("conexion.php");
-
+		include('../lib/conexion.php');
+		$mysql = new conexion();
+		$con=$mysql->get_connection();
+		
 		$conse=$_POST['conse'];
 		$cedpr=$_POST['pr'];
 		$cedcli=$_POST['cedc'];

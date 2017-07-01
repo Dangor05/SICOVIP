@@ -2,7 +2,10 @@
 
 if(!empty($_POST) && !empty($_FILES)){
 	if (isset($_POST['sv09npln']) && isset($_POST['sv09nfol']) && isset($_POST['sv09npre']) && isset($_FILES['sv09mnt']) && isset($_POST['sv09fvdp']) && isset($_POST['sv08conse']) && isset($_POST['sv01cedc']) && isset($_POST['sv03cedp']) && isset($_POST['sv04nfin']) && isset($_POST['sv02code']) && isset($_POST['sv02std']) && isset($_POST['sv07cdtp'])) {
-		include("conexion.php");
+		include('../lib/conexion.php');
+
+		$mysql = new conexion();
+			$con=$mysql->get_connection();
 
 		$sv09npln=$_POST['sv09npln']);
 		$sv09nfol=$_POST['sv09nfol']);

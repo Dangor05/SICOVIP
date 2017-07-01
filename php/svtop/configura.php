@@ -1,5 +1,7 @@
 <?php
-include "conexion.php";
+include('php/lib/conexion.php');
+$mysql = new conexion();
+$con=$mysql->get_connection();
 
 $user=$_SESSION['sv07cdtp'];
 $sql1= "SELECT sv07cdtp,sv07cedt,sv07nomt,sv07apdt,sv07estd,sv07emt from sv07tpgfo where sv07cdtp = '$user'";

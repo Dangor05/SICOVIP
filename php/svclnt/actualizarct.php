@@ -5,6 +5,11 @@ if(!empty($_POST)){
 		if (isset($_POST['sv01cedc']) && isset($_POST['sv01cdtpc']) && isset($_POST['sv01nomc']) &&
 			isset($_POST['sv01apdc']) && isset($_POST['sv01emc']) && isset($_POST['sv01telc'])) {
 include "../lib/conexion.php";
+
+$mysql = new conexion();
+
+$con=$mysql->get_connection();
+
      $sv01cedc=mysqli_real_escape_string($con,$_POST['sv01cedc']);
      $sv01cdtpc=mysqli_real_escape_string($con,$_POST['sv01cdtpc']);
      $sv01nomc=mysqli_real_escape_string($con,$_POST['sv01nomc']);

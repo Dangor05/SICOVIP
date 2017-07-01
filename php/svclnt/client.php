@@ -1,6 +1,8 @@
 <?php
 session_start();
-include '../lib/conexion.php';
+include('php/lib/conexion.php');
+$mysql = new conexion();
+$con=$mysql->get_connection();
 $id=$_SESSION['tp'];
 $stm="SELECT sv01cedc,sv01cdtpc,sv01nomc,sv01apdc,sv01emc,sv01telc,sv01pass  FROM sv01clnte WHERE sv01cdtpc='$id'";
 $query = $con->query($stm);

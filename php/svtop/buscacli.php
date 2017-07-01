@@ -1,8 +1,9 @@
 <?php 
-include ("conexion.php");
+include('php/lib/conexion.php');
 
 if (isset($_GET['ced'])) {
-
+$mysql = new conexion();
+			$con=$mysql->get_connection();
 		$cedp=$_GET['ced'];
 		$sch="SELECT sv01cedc, sv01cdtpc, sv01nomc, sv01apdc, sv01emc, sv01telc FROM sv01clnte WHERE sv01cedc='$cedp' OR sv01cdtpc='$cedp'";
 	$query=$con->query($sch);

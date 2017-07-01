@@ -1,6 +1,9 @@
 <?php
 
-require "conexion.php";
+include('php/lib/conexion.php');
+
+$mysql = new conexion();
+$con=$mysql->get_connection();
  
 $user=$_GET['S'];
 $sql1= "SELECT DISTINCT a.`sv03cedp`,a.`sv03nomp`,a.`sv03apdp`,

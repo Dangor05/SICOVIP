@@ -1,6 +1,8 @@
 <?php
 
-include('conexion.php'); 
+include('php/lib/conexion.php');
+$mysql = new conexion();
+$con=$mysql->get_connection();
 $user=$_GET['S'];
 $sql1= "  SELECT DISTINCT  a.sv03cedp, a.sv03nomp, a.sv03apdp,DATE_FORMAT(d.sv08fchs,'%d-%m-%Y') AS sv08fchs,
                          e.sv08conse,DATE_FORMAT(e.sv09fvdp,'%d-%m-%Y') AS sv09fvdp,d.sv02code,e.sv07cdtp

@@ -3,6 +3,9 @@
 if(!empty($_POST)){
 
 		include "../lib/conexion.php";
+	$mysql = new conexion();
+	$con=$mysql->get_connection();
+	
      $sv01cedc=$_POST['svcedc'];
      $sv01cdtpc=$_POST['svcdtpc'];
      $sv01nomc=$_POST['svnomc'];

@@ -1,6 +1,8 @@
 <?php
 
-include('conexion.php');
+include('php/lib/conexion.php');
+$mysql = new conexion();
+			$con=$mysql->get_connection();
  
 $user=$_GET['S'];
 $fs=$_GET['FS'];

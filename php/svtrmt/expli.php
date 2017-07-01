@@ -1,5 +1,7 @@
 <?php 
-include("conexion.php");
+include('php/lib/conexion.php');
+$mysql = new conexion();
+$con=$mysql->get_connection();
 $last="SELECT COUNT(*) FROM `sv08trmte` WHERE `sv08conse` LIKE CONCAT('%',YEAR(NOW()),'%');";
 $resp = $con->query($last);
 $cons=null;

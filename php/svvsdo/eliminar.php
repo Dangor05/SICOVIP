@@ -17,8 +17,9 @@ if(!empty($_GET)){
 else{
 	if (isset($_POST['sv09npln']) && isset($_POST['sv08conse'])) {
 			
-			include "conexion.php";
-
+			include('../lib/conexion.php');
+$mysql = new conexion();
+			$con=$mysql->get_connection();
 
 			$id=$_POST["sv09npln"];
 			$sql = "DELETE FROM sv09vsdo WHERE sv09npln='$id'";

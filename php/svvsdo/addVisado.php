@@ -1,5 +1,8 @@
 <?php
-include('conexion.php');
+include('../lib/conexion.php');
+
+$mysql = new conexion();
+			$con=$mysql->get_connection();
 if(!empty($_POST)){
 	if(isset($_POST['npln']) && isset($_POST['nfol']) && isset($_POST['npred']) && isset($_POST['fch']) && isset($_POST['conse']) && isset($_POST['cedc']) && isset($_POST['cedp']) && isset($_POST['nfin']) && isset($_POST['impu'])&& isset($_POST['cit']) && isset($_POST['codu']) && isset($_POST['std']))
 	{

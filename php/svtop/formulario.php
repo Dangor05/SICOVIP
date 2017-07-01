@@ -1,5 +1,7 @@
 <?php
-include "conexion.php";
+include('php/lib/conexion.php');
+$mysql = new conexion();
+$con=$mysql->get_connection();
 $id=$_GET["sv09npln"];
 $user_id=null;
 $sql1= "SELECT  sv09npln,sv09nfol,sv09npre,sv09mnt,sv09fvdp,sv09fumv,sv08conse,sv01cedc,sv03cedp,sv04nfin,sv02code,sv07cdtp,sv05codu FROM sv09vsdo where sv08conse ='$id'";

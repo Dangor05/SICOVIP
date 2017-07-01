@@ -3,7 +3,9 @@
 if(!empty($_POST)){
 	if (isset($_POST['svnpln']) && isset($_POST['svnfol']) && isset($_POST['svnpre']) && isset($_FILES['sv09mnt']) && isset($_POST['svfvdp']) && isset($_POST['svconse']) && isset($_POST['svcedc']) && isset($_POST['svcedp']) && isset($_POST['svnfin']) && isset($_POST['svcode']) && isset($_POST['svstd']) && isset($_POST['svcdtp']))
 	 {
-	 	include "conexion.php";
+	 	include('../lib/conexion.php');
+	 	$mysql = new conexion();
+			$con=$mysql->get_connection();
 $sv09npln=mysqli_real_escape_string($con,$_POST['svnpln']);   
 $sv09nfol=mysqli_real_escape_string($con,$_POST['svnfol']);   
 $sv09npre=mysqli_real_escape_string($con,$_POST['svnpre']);   

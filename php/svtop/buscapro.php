@@ -1,7 +1,10 @@
 <?php 
-include('conexion.php');
+include('php/lib/conexion.php');
 
 if (isset($_GET['ced'])) {
+
+	$mysql = new conexion();
+			$con=$mysql->get_connection();
 
 		$cedp=$_GET['ced'];
 		$sch="SELECT sv03cedp, sv03nomp, sv03apdp, sv03emp, sv03telp, sv06codp FROM sv03ptario WHERE sv03cedp='$cedp'";

@@ -1,6 +1,10 @@
 <?php
 
-include('conexion.php');
+require_once('php/lib/conexion.php');
+
+$mysql = new conexion();
+
+$con=$mysql->get_connection();
 
 $user_id=null;
 $sql1= "SELECT a.sv08conse, DATE_FORMAT(a.sv08fchs,'%d-%m-%Y') AS sv08fchs, 

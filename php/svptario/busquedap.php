@@ -1,6 +1,8 @@
 <?php
 
-include "conexion.php";
+include('php/lib/conexion.php');
+$mysql = new conexion();
+$con=$mysql->get_connection();
 if (isset($_GET['s'])) {
 	$user=$_GET['s'];
 $sql1= "select * from sv03ptario

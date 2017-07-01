@@ -1,6 +1,8 @@
 <?php 
 if (isset($_GET['id'])) {
-	include("conexion.php");
+	include('../lib/conexion.php');
+	$mysql = new conexion();
+			$con=$mysql->get_connection();
 $id=$_GET['id'];
 	$stm=$con->prepare("UPDATE sv08trmte SET sv02code='7' WHERE sv08conse=?");
 	$stm->bind_param("s",$id);

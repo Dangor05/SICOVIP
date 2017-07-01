@@ -13,6 +13,10 @@ if(!empty($_POST))
 			$vps=$_POST['vpass'];
 			include('../lib/conexion.php');
 
+			$mysql = new conexion();
+
+$con=$mysql->get_connection();
+
 			$sch="SELECT sv01cedc, sv01cdtpc FROM sv01clnte WHERE sv01cedc='$cedt' AND sv01cdtpc='$cod'";
 			$stm=$con->query($sch);
 			if ($stm->num_rows>0) {

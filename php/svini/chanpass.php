@@ -10,6 +10,8 @@ if( $password1 != "" && $password2 != "" && $idusuario != "" && $token != "" ){
 	$pass1=sha1($password1);
 
 	include("../lib/conexion.php");
+	$mysql = new conexion();
+	$con=$mysql->get_connection();
 	$consulta = " SELECT * FROM sv11res WHERE sv11tok = '$token' ";
 
 	$resultado = $con->query($consulta);

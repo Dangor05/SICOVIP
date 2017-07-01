@@ -1,8 +1,12 @@
 <?php 
 include('../lib/conexion.php');
 
+
 if(!empty($_POST))
 {
+	$mysql = new conexion();
+	$con=$mysql->get_connection();
+	
 	$Cedt=mysqli_real_escape_string($con,$_POST['cedt']);
 	$CodIT=mysqli_real_escape_string($con,$_POST['cit']);
 	$NomT=mysqli_real_escape_string($con,$_POST['nomt']);
