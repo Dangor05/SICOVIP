@@ -15,7 +15,7 @@ if(isset ($_SESSION['sv07cdtp'])) {
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <title>Solicitud</title>
+    <title>Tramite Archivos</title>
 <link href="public\bootstrap\bootstrap\css\bootstrap.min.css" rel="stylesheet" media="screen">
 <link href="public\bootstrap\bootstrap\css\bootstrap-theme.min.css" rel="stylesheet" media="screen">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">

@@ -24,6 +24,8 @@
 
  <div class="container">
 <div class="row">
+<button href="./home.php" aling="left" type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-remove"</span></button>
+
 <div class="col-md-5"> 
 <center><h2>Datos Personales</h2></center>
 	<form role="form" method="post" action="php/svclnt/actualiCli.php">

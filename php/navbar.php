@@ -51,7 +51,7 @@
                           
                          <li><a href="./verReportFS.php"><span class="glyphicon glyphicon-calendar"></span> Fecha Solicitud</a></li>
 
-                          <li><a href="./verReportCIT.php"><span class="glyphicon glyphicon-briefcase">&nbsp;</span>Codigo IT</a></li>
+                          <li><a href="./verReportCIT.php"><span class="glyphicon glyphicon-briefcase"></span>&nbsp;&nbsp;Codigo IT</a></li>
                           <li><a href="./verReportClient.php"><span class="glyphicon glyphicon-credit-card"></span>&nbsp;&nbsp;Codigo IT Clientes</a></li>
                         </ul>
                     </li>
@@ -61,7 +61,7 @@
 <ul class="dropdown-menu">
 <li><a href="./config.php"> <span class="glyphicon glyphicon-user"></span> &nbsp;Perfil</a></li>
 <!--<li><a href="./vert.php">Topografos</a></li>-->
-<li><a href="./UsuariosMostrar.php"><span class="glyphicon glyphicon-briefcase">&nbsp;</span>Topografos</a></li>
+<li><a href="./UsuariosMostrar.php"><span class="glyphicon glyphicon-briefcase"></span>&nbsp;&nbsp;Topografos</a></li>
 <li ><a href="php/logout.php" class="btn btn-defult"><span class="glyphicon glyphicon-log-out"></span> &nbsp; Cerrar sesion</a></li>
 </ul>
 </ul> 

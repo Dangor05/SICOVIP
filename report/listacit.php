@@ -36,6 +36,7 @@ $codigoHTML='
         <td bgcolor="#0099FF"><strong>CIT</strong></td>
       </tr>';
 
+
         $consulta="SELECT DISTINCT  a.sv03cedp, a.sv03nomp, a.sv03apdp,
                           DATE_FORMAT(d.sv08fchs,'%d-%m-%Y') AS sv08fchs,
                          e.sv08conse,DATE_FORMAT(e.sv09fvdp,'%d-%m-%Y') AS sv09fvdp,s.sv02dete,e.sv07cdtp

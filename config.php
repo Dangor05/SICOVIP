@@ -33,11 +33,15 @@ if(isset ($_SESSION['sv07cdtp'])) {
 <?php if($person!=null):?>
 <form role="form" method="post" action="php/svtop/actualiUsu.php">
 <div class="container">
+
+
 <div class="row">
+<button href="./home.php" aling="left" type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-remove"</span></button>
+
 <div class="col-md-5 col-md-offset-3">
+
 <h2>Datos Personales</h2>
     <br>
-
 
   <div class="form-group">
     <label for="sv07cdtp">Codigo IT</label>

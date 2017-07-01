@@ -5,7 +5,7 @@ if (isset($_SESSION['cd']) || isset ($_SESSION['sv07cdtp']) ) { ?>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-		<title>Reportes</title>
+		<title>Reporte CIT</title>
 <link href="public\bootstrap\bootstrap\css\bootstrap.min.css" rel="stylesheet" media="screen">
 <link href="public\bootstrap\bootstrap\css\bootstrap-theme.min.css" rel="stylesheet" media="screen">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -39,7 +39,7 @@ if (isset($_SESSION['cd'])) {
 	  ?>
 <div class="container-fluid">
 <div class="row">
-<div class="col-md-5 col-md-offset-1">
+<div class="col-md-5 col-md-offset-2">
 <a href="verReportClient.php"> 	
 <br>
 <button type="button" class="btn btn-default" ><span class="glyphicon glyphicon-circle-arrow-left"></span> &nbsp;Volver</button></a>&nbsp;

@@ -4,10 +4,10 @@ if(isset ($_SESSION['sv07cdtp'])) {
 ?>
  <!DOCTYPE html>
  <html lang="es">
- <head>
+ <head> 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-		<title>Visado</title>
+		<title>Visado Oficio</title>
 <link href="public\bootstrap\bootstrap\css\bootstrap.min.css" rel="stylesheet" media="screen">
 <link href="public\bootstrap\bootstrap\css\bootstrap-theme.min.css" rel="stylesheet" media="screen">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -31,13 +31,15 @@ if(isset ($_SESSION['sv07cdtp'])) {
 <div class="row">
 <div class="col-md-5">
 <br>
-        <center> <h2>Visados</h2> </center>
+   
          
 
     <div class="container">
       <div class="row">
+      <div class="col-md-4 col-md-offset-2">
+           <center> <h2>Visados</h2> </center></div>
       <div class="col-md-5 col-md-offset-3">
-<h3 class="modal-title">Tipo de busqueda:</h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <h3 class="modal-title">Tipo de busqueda:</h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  <form method="post" class="navbar-form navbar-left" role="search" action="./buscarvis.php">
        
      <div class="form-group row">
@@ -72,7 +74,8 @@ if(isset ($_SESSION['sv07cdtp'])) {
 
 <?php include "php/svvsdo/convis.php"; ?>
 <?php if($query->num_rows>0):?>
-  <div class="col-md-11 col-md-offset-1">
+  <center>
+  <div class="col-md-10 col-md-offset-1">
 <div class="table-responsive">
  <div style="width: 98%" class="well well-sm text-left">
     
@@ -97,7 +100,7 @@ if(isset ($_SESSION['sv07cdtp'])) {
 <tr>
 
   <td style="width: 5%"><?php echo $r["sv03cedp"]; ?></td>
-  <td style="width: 10%"><?php echo $r["sv03nomp"];?> <?php echo $r["sv03apdp"]; ?></td>
+  <td style="width: 7%"><?php echo $r["sv03nomp"];?> <?php echo $r["sv03apdp"]; ?></td>
   <td style="width: 5%"><?php echo $r["sv08conse"]; ?></td>
   
   <td style="width: 5%"><?php echo $r["sv04nfin"]; ?></td>
@@ -116,7 +119,7 @@ if(isset ($_SESSION['sv07cdtp'])) {
 </table>
 </div>
 </div>
-</div></div>
+</div></div></center>
 <?php else:?>
   <center><div align="center" class="col-xs-7"> 
   <p class="alert alert-warning">No hay resultados</p>
