@@ -35,8 +35,7 @@ if (!empty($_POST['cedp']) && !empty($_POST['nomp']) && !empty($_POST['emap']) &
 		$_SESSION['mpr']=$emlp;
 
 		$dir ="../../archivos/".$cedp."/ ";
-
-
+		mkdir($dir,7055);
 
 		header("location: ../../tramit.php");
 	}

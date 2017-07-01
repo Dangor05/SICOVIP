@@ -32,10 +32,13 @@ $con=$mysql->get_connection();
                  $_SESSION['Cedp'] = $Cedp;
                  $_SESSION['mpro']= $EmailP;
                  mysqli_close($con);
+                 
+                 $dir ="../../archivos/".$Cedp."/ ";
+                 mkdir($dir,7055);
 				header("Location: ../../Tramite.php"); 
 			}else{
 				mysqli_close($con);
-				//print "<script>alert(\"No se pudo agregar.\");window.location='../Cliente.php';</script>";
+				print "<script>alert(\"Algo a sucedido, intentalo más tarde.\");window.location='../../Cliente.php';</script>";
 
 			}
 		}

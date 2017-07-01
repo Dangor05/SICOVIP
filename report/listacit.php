@@ -1,6 +1,8 @@
 <?php 
   require_once("dompdf/dompdf_config.inc.php");
  include("../php/lib/conexion.php");
+ $mysql = new conexion();
+      $con=$mysql->get_connection();
  $id=$_GET['S'];
 
 $codigoHTML='

@@ -23,10 +23,12 @@ $sv06codp = $_POST['svcodp'];
 			$query = $con->query($sql);
 			if($query!=null){
 				mysqli_close($con);
+				$dir ="../../archivos/".$sv03cedp."/ ";
+		mkdir($dir,7055);
 				print "<script>alert(\"Agregado exitosamente.\");window.location='../../PropietarioMostrar.php';</script>";
 			}else{
 				mysqli_close($con);
-				print "<script>alert(\"No se pudo agregar.\");window.location='../../PropietarioMostrar.php';</script>";
+				print "<script>alert(\"Algo a sucedido, Verifica los datos e intenta más tarde.\");window.location='../../PropietarioMostrar.php';</script>";
 
 			}
 	}
