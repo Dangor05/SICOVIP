@@ -73,6 +73,9 @@ return ((key >= 48 && key <= 57) || (key==8))
         <th>Telefono</th>
         <th>Tipo Propietario</th>
         <th></th>
+         <?php if($_SESSION['sv05codu'] == 1){ ?>
+        <th></th>
+         <?php } ?>
         </tr>
         </thead>
         <tbody>
@@ -91,6 +94,9 @@ return ((key >= 48 && key <= 57) || (key==8))
             
             <td align="center">
              <button class="btn btn-info" id="btnModi" type="button" onclick="seleccionarTabla()" data-toggle="modal" data-target="#modal-2"> <span class="glyphicon glyphicon-edit"></span> &nbsp; Modificar</button></td>
+             <?php if($_SESSION['sv05codu'] == 1){ ?>
+              <td style="width: 1%;" align="center"> <button class="btn btn-danger" id="btnModi" type="button" onclick="seleccionarTabla()" data-toggle="modal" data-target="#modal-4"><span class="glyphicon glyphicon-trash"></span></button></td>
+              <?php } ?>
             </tr>
             <?php
          endwhile;        

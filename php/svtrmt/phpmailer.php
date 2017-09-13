@@ -16,6 +16,8 @@ $msg = null;
       
     </body>
     </html>';
+
+      include ("../lib/conf.php");
         
         require "phpmailer/class.phpmailer.php";
     
@@ -27,7 +29,7 @@ $msg = null;
           //permite modo debug para ver mensajes de las cosas que van ocurriendo
           //$mail->SMTPDebug = 2;
 
-		  //Debo de hacer autenticación SMTP
+		  //Debo de hacer autenticaciï¿½n SMTP
           $mail->SMTPAuth = true;
           $mail->SMTPSecure = "ssl";
 
@@ -38,10 +40,8 @@ $msg = null;
           $mail->Port = 465;
 
 		  //indico un usuario / clave de un usuario de gmail
-         $mail->Username = "danielramosr45@gmail.com";
-          $mail->Password = "juanpaulo";
-          /*$mail->Username = "catastopo.munisantacruz@gmail.com";
-          $mail->Password = "VISA99topo";*/
+         $mail->Username = MAIL;
+         $mail->Password = PASS;
        
           $mail->From = "tuemail@gmail.com";
         

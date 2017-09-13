@@ -50,7 +50,7 @@ return ((key >= 48 && key <= 57) || (key==8))
      if ($_SESSION['sv05codu'] == 1) {
       include "php/navbar.php";  
       }else if ($_SESSION['sv05codu'] == 2) {
-        include('php/navh2.php');
+      include('php/navh2.php');
       } 
      ?>
       <div class="col-md-11 col-md-offset-1">
@@ -76,6 +76,9 @@ return ((key >= 48 && key <= 57) || (key==8))
         <th>Correo</th>
         <th>Telefono</th>
         <th></th>
+        <?php if($_SESSION['sv05codu'] == 1){ ?>
+        <th></th>
+         <?php } ?>
         </tr>
         </thead>
         <tbody>
@@ -92,6 +95,9 @@ return ((key >= 48 && key <= 57) || (key==8))
             <!--variable de sesion-->
             <td style="width:70px;" align="center">
              <button class="btn btn-info" id="btnModi" type="button" onclick="seleccionarTabla()" data-toggle="modal" data-target="#modal-2"> <span class="glyphicon glyphicon-edit"></span> &nbsp;Modificar</button></td>
+             <?php if($_SESSION['sv05codu'] == 1){ ?>
+              <td style="width: 1%;" align="center"> <button class="btn btn-danger" id="btnModi" type="button" onclick="seleccionarTabla()" data-toggle="modal" data-target="#modal-4"><span class="glyphicon glyphicon-trash"></span></button></td>
+              <?php } ?>
             </tr>
             <?php
         endwhile;
@@ -280,7 +286,7 @@ return ((key >= 48 && key <= 57) || (key==8))
         <h3 class="modal-title">Eliminar</h3>
       </div>
       <div class="modal-body form">
-        <form action="php/eliminarct.php" method="POST" id="form" class="form-horizontal">
+        <form action="php/svclnt/elemclnt.php" method="POST" id="form" class="form-horizontal">
           <input type="hidden" value="" name="book_id"/>
           <div class="form-body">
             <div class="form-group">

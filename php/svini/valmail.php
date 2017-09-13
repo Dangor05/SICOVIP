@@ -39,6 +39,7 @@
 		</html>';
 
 		 require "phpmailer/class.phpmailer.php";
+        include ("../lib/conf.php");
     
           $mail = new PHPMailer;
 		  
@@ -59,10 +60,9 @@
           $mail->Port = 465;
 
 		  //indico un usuario / clave de un usuario de gmail
-         /* $mail->Username = "catastopo.munisantacruz@gmail.com";
-          $mail->Password = "VISA99topo";*/
-          $mail->Username = "danielramosr45@gmail.com";
-          $mail->Password = "juanpaulo";
+
+        $mail->Username = MAIL;
+        $mail->Password = PASS;
        
           $mail->From = "tuemail@gmail.com";
         
