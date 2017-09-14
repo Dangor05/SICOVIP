@@ -260,6 +260,44 @@ return ((key >= 48 && key <= 57) || (key==8))
 
 
 
+  <div class="modal fade" id="modal-4" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title">Eliminar</h3>
+      </div>
+      <div class="modal-body form">
+        <form action="php/svptario/elimptr.php" method="POST" id="form" class="form-horizontal">
+          <input type="hidden" value="" name="book_id"/>
+          <div class="form-body">
+            <div class="form-group">
+              <label class="control-label col-md-3">Cedula</label>
+              <div class="col-md-9">
+                <input class="form-control" type="text" value="" id="sv03cedp" name="sv03cedp">
+              </div>
+            </div>
+            
+
+          </div>
+           <div class="modal-footer" >
+            <div class="col-xs-5">
+           
+            </div>
+                <a href="" class="btn btn-default" data-dismiss="modal">Cancelar</a>
+              <button id="enviar" name="enviar" type="submit" class="btn btn-success">Eliminar</button>
+      </div>
+      </form>
+      </div>
+                 <div class="modal-footer" >
+             <div class="col-xs-5">
+             </div>
+             </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="assets/jquery-1.11.3-jquery.min.js"></script>
 <script type="text/javascript" src="public/bootstrap/bootstrap/js/bootstrap.js"></script>
