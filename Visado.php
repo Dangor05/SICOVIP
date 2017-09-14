@@ -36,71 +36,90 @@ return ((key >= 48 && key <= 57) || (key==8) || (key==45))
       } ?>
 <<div class="container">
 <div class="row">
-<div class="col-md-5 col-md-offset-3">
+<div class="col-md-7 col-md-offset-2">
     <h2>Visado</h2>
 <?php if($person!=null):?>
 <center></center>
 <form role="form" method="post" action="php/svvsdo/addVisado.php" onsubmit="return validar();" enctype="multipart/form-data">
-  <div class="form-group">
-  <label for="">Consecutivo</label>
-   <input type="text" class="form-control" readonly="" value="<?php echo $person->sv08conse; ?>" name="conse" required>
+  <div class="form-group row">
+  <label for="conse" class="col-xs-2 col-form-label">Consecutivo</label>
+  <div class="col-xs-4">
+   <input id="conse" type="text" class="form-control" readonly="" value="<?php echo $person->sv08conse; ?>" name="conse" required>
   </div>
-  <div class="form-group">
-  <label for="">Topografo</label>
-  <input type="text" class="form-control" readonly="" value="<?php echo $person->sv01cedc; ?>" name="cedc" required>
+  <label for="clnt" class="col-xs-2 col-form-label">Topografo</label>
+  <div class="col-xs-4">
+  <input type="text" class="form-control" readonly="" id="clnt" value="<?php echo $person->sv01cedc; ?>" name="cedc" required>
   </div>
-  <div class="form-group">
-  <label for="">Propietario</label>
-   <input type="text" class="form-control" readonly="" value="<?php echo $person->sv03cedp; ?>" name="cedp" required>
+</div>
+  <div class="form-group row">
+  <label for="ptrio" class="col-xs-2 col-form-label">Propietario</label>
+  <div class="col-xs-4">
+   <input type="text" class="form-control" readonly="" id="ptrio" value="<?php echo $person->sv03cedp; ?>" name="cedp" required>
+ </div>
+  <label for="fin" class="col-xs-2 col-form-label">N°Finca</label>
+  <div class="col-xs-4">
+   <input type="text" class="form-control" readonly="" id="fin" value="<?php echo $person->sv04nfin; ?>" name="nfin" required>
+ </div>
   </div>
-  <div class="form-group">
-  <label for="">N°Finca</label>
-   <input type="text" class="form-control" readonly="" value="<?php echo $person->sv04nfin; ?>" name="nfin" required>
-  </div>
-  <div class="form-group">
-    <label for="npln">Nº Minuta de Plano</label>
+  <div class="form-group row">
+    <label for="npln" class="col-xs-2 col-form-label">Nº Minuta de Plano</label>
+    <div class="col-xs-4">
     <input type="text" id="npln" class="form-control" name="npln" required="">
   </div>
-  <div class="form-group">
-    <label for="">Nº Folio Real</label>
+ 
+    <label for="" class="col-xs-2 col-form-label">Nº Folio Real</label>
+    <div class="col-xs-4">
     <input type="text" id="fol" class="form-control" name="nfol">
   </div>
-  <div class="form-group">
-    <label for="">Localizacion Municipal</label>
+   </div>
+  <div class="form-group row">
+ 
+    <label for="" class="col-xs-2 col-form-label">Localizacion Municipal</label>
+    <div class="col-xs-4">
     <input type="text" id="pred" class="form-control" name="npred">
   </div>
-    <div class="form-group">
-    <label for="">Oficio</label>
+  
+    <label for="" class="col-xs-2 col-form-label">Oficio</label>
+    <div class="col-xs-4">
     <input type="file" class="form-control-file" name="mnt">
   </div>
-  <div class="form-group">
-    <label for="">Fecha</label>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-xs-2 col-form-label">Fecha</label>
+    <div class="col-xs-4">
     <input type="date" class="form-control" value="<?php echo date("Y-m-d");?>" name="fch">
   </div>
-      <div class="form-group">
-    <label for="">Plano Visado</label>
+  
+    <label for="" class="col-xs-2 col-form-label">Plano Visado</label>
+    <div class="col-xs-4">
     <input type="file" class="form-control-file" name="pln">
   </div>
-  <div class="form-group">
-    <label for="">Impuestos</label>
+   </div>
+  <div class="form-group row">
+
+    <label for="" class="col-xs-2 col-form-label">Impuestos</label>
+    <div class="col-xs-4">
  <select name="impu" class="form-control" name="impu" >
   <option value="1">Al dia</option>
  <option value="2">Retrasado</option>
  </select>
-  </div>
-    <div class="form-group">
-    <label for="">Estado</label>
+</div>
+    <label for="" class="col-xs-2 col-form-label">Estado</label>
+    <div class="col-xs-4">
  <select name="std" class="form-control" name="std" >
  <option value="8">Oficio</option>
   <option value="5">Aprobado</option>
  <option value="6">Rechazado</option>
  <option value="7">En Proceso</option>
  </select>
-  </div>
-  <div class="form-group">
-    <label for="">Revisado por:</label>
+</div>
+ </div>
+  <div class="form-group row">
+    <label for="" class="col-xs-2 col-form-label">Revisado por:</label>
+    <div class="col-xs-4">
     <input type="text" class="form-control" readonly="" value="<?php echo $GLOBALS['cit'];?>" name="cit">
     <input type="hidden" class="form-control" value="<?php echo $GLOBALS['codu'];?>" name="codu">
+  </div>
   </div>
   <center>
   <div class="col-md-3"></div>
@@ -109,7 +128,7 @@ return ((key >= 48 && key <= 57) || (key==8) || (key==45))
   </div>
  
   <div class="col-md-3">
-   <button type="submit" class="btn btn-default">Revisado</button>
+   <button type="submit" class="btn btn-success">Revisado</button>
     
   
   </div>
