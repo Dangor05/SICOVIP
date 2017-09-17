@@ -13,14 +13,7 @@
 <script type="text/javascript" src="public\JS\jquery-3.1.0.min.js"></script>
 	</head>
 	<body>
-	<?php 
-	   session_start();
-     if ($_SESSION['sv05codu'] == 1) {
-      include('php/navbar.php');  
-      }else if ($_SESSION['sv05codu'] == 2) {
-        include('php/navh2.php');
-      }
-	 ?>
+<?php  include('php/navbar.php');  ?>  
 <div class="container">
 <div class="row">
 <div class="col-md-4">

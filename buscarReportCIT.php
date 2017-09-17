@@ -26,14 +26,7 @@ if(isset ($_SESSION['sv07cdtp'])) {
 	
 	</head>
 	<body>
-	<?php
-   
-     if ($_SESSION['sv05codu'] == 1) {
-      include "php/navbar.php"; 
-      }else if ($_SESSION['sv05codu'] == 2) {
-        include('php/navh2.php');
-       
-      } ?>
+<?php  include('php/navbar.php');  ?>  
 <div class="container-fluid">
 <div class="row">
 <div class="col-md-5 col-md-offset-2">
