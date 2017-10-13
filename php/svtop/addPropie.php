@@ -33,7 +33,7 @@ $con=$mysql->get_connection();
                  $_SESSION['mpro']= $EmailP;
                  mysqli_close($con);
                  
-                 $dir ="../../archivos/".$Cedp."/ ";
+                 $dir ="../../archivos/".$Cedp;
                  mkdir($dir,7055);
 				header("Location: ../../Tramite.php"); 
 			}else{

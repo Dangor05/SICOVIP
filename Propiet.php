@@ -64,10 +64,10 @@ return ((key >= 48 && key <= 57) || (key==8))
     <input type='text' class="form-control" id="apl" name='apelp' maxlength="25" onkeypress="return Letras(event)"></div>
 <div class="form-group">
     <label for="emp">Email</label>&nbsp
-   <input type='email' class="form-control" id="eml" name='emap' maxlength="50" required ></div>
+   <input type='email' class="form-control" id="eml" name='emap' maxlength="50" ></div>
 <div class="form-group">
     <label for="telp">Telefono</label>&nbsp
-   <input type='text' class="form-control" id="tel" name='telp' maxlength="10" onkeypress="return Numeros(event)" required=""></div>
+   <input type='text' class="form-control" id="tel" name='telp' maxlength="10" onkeypress="return Numeros(event)"></div>
 <div class="form-group">
     <label for="sv06codp">Tipo Usuario</label>
     <select name="tipro" class="form-control" id="tip" name="tipro" >

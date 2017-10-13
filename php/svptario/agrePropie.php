@@ -2,7 +2,7 @@
 include('../lib/conexion.php');
 $mysql = new conexion();
 $con=$mysql->get_connection();
-if (!empty($_POST['cedp']) && !empty($_POST['nomp']) && !empty($_POST['emap']) && !empty($_POST['telp']) && !empty($_POST['tipro']) ) {
+if (!empty($_POST['cedp']) && !empty($_POST['nomp']) && !empty($_POST['emap']) && !empty($_POST['tipro']) ) {
 
 	if (isset($_POST['cedp']) && isset($_POST['nomp']) && isset($_POST['apelp']) && isset($_POST['emap']) && isset($_POST['telp']) && isset($_POST['tipro']) ) {
 	
@@ -34,7 +34,7 @@ if (!empty($_POST['cedp']) && !empty($_POST['nomp']) && !empty($_POST['emap']) &
 		$_SESSION['pr']=$cedp;
 		$_SESSION['mpr']=$emlp;
 
-		$dir ="../../archivos/".$cedp."/ ";
+		$dir ="../../archivos/".$cedp;
 		mkdir($dir,7055);
 
 		header("location: ../../tramit.php");
