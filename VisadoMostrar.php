@@ -43,12 +43,7 @@ return ((key >= 48 && key <= 57) || (key==8) || (key==45))
 }
 </script>
 <body>
-<?php     if ($_SESSION['sv05codu'] == 1) {
-           include('php/navbar.php');  
-      }else if ($_SESSION['sv05codu'] == 2) {
-        include('php/navh2.php');
-      } 
-?>
+<?php  include('php/navbar.php');  ?>  
         <div class="container">
         <br><h2>Visados</h2>
            <button class="btn btn-success" id="btnAgregar" type="button"  data-toggle="modal" data-target="#modal-1"> <span class="glyphicon glyphicon-pencil"></span> &nbsp; Nuevo Visado</button>
